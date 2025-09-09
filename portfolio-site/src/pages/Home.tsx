@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, Users, Eye, FileText } from 'lucide-react'
+import { NAME, AVATAR_PATH, RESUME_URL, GITHUB_URL, LINKEDIN_URL, DEVTO_URL, EMAIL } from '../config/constants'
 
 const Home = () => {
   const techStack = [
@@ -53,8 +54,8 @@ const Home = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <img
-              src="/placeholder-avatar.jpg"
-              alt="Your Name"
+              src={AVATAR_PATH}
+              alt={NAME}
               style={{
                 width: '200px',
                 height: '200px',
@@ -66,7 +67,7 @@ const Home = () => {
             />
           </motion.div>
 
-          <h1>Hi, I'm Your Name</h1>
+          <h1>Hi, I'm {NAME}</h1>
           <p className="hero-subtitle">
             Full-Stack Developer & Tech Writer passionate about building scalable applications 
             and sharing knowledge with the developer community.
@@ -84,7 +85,7 @@ const Home = () => {
           </div>
 
           <div className="hero-links">
-            <a href="/resume.pdf" className="btn-primary">
+            <a href={RESUME_URL} className="btn-primary">
               <FileText size={20} />
               Download Resume
             </a>
@@ -166,19 +167,19 @@ const Home = () => {
       >
         <h2 className="mb-8">Let's Connect</h2>
         <div className="social-links">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
             <Github size={24} />
             GitHub
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
             <Linkedin size={24} />
             LinkedIn
           </a>
-          <a href="https://dev.to/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href={DEVTO_URL} target="_blank" rel="noopener noreferrer">
             <ExternalLink size={24} />
             Dev.to
           </a>
-          <a href="mailto:your.email@example.com">
+          <a href={`mailto:${EMAIL}`}>
             <Mail size={24} />
             Email
           </a>

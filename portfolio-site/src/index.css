@@ -3,17 +3,17 @@
   line-height: 1.6;
   font-weight: 400;
 
-  /* Light beige/creamy theme */
-  color: #2d3748;
+  /* Light theme: soft lavender */
+  color: #1f2937;
   background-color: #fefcf8;
   
   /* Accent colors */
-  --primary: #8b5a3c;
-  --primary-light: #a67c5a;
+  --primary: #8b5cf6; /* violet-500 */
+  --primary-light: #a78bfa; /* violet-300 */
   --secondary: #6b7280;
-  --accent: #d4af8c;
-  --text-light: #718096;
-  --border: #e2e8f0;
+  --accent: #f3e8ff; /* light lavender hover */
+  --text-light: #6b7280;
+  --border: #e5e7eb;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

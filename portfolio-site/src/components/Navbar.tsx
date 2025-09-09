@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Github, Linkedin, Mail, FileText, Menu, X } from 'lucide-react'
+import { NAME, GITHUB_URL, LINKEDIN_URL, EMAIL, RESUME_URL } from '../config/constants'
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -18,17 +19,17 @@ const Navbar = () => {
   ]
 
   const quickLinks = [
-    { href: '/resume.pdf', icon: FileText, label: 'Resume' },
-    { href: 'https://github.com/yourusername', icon: Github, label: 'GitHub' },
-    { href: 'https://linkedin.com/in/yourusername', icon: Linkedin, label: 'LinkedIn' },
-    { href: 'mailto:your.email@example.com', icon: Mail, label: 'Email' },
+    { href: RESUME_URL, icon: FileText, label: 'Resume' },
+    { href: GITHUB_URL, icon: Github, label: 'GitHub' },
+    { href: LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn' },
+    { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email' },
   ]
 
   return (
     <nav className="navbar">
       <div className="navbar-content">
         <Link to="/" className="navbar-brand">
-          Your Name
+          {NAME}
         </Link>
 
         <ul className="navbar-nav">

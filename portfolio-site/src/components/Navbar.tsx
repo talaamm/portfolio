@@ -18,12 +18,12 @@ const Navbar = () => {
     { path: '/contact', label: 'Contact' },
   ]
 
-  const quickLinks = [
-    { href: RESUME_URL, icon: FileText, label: 'Resume' },
-    { href: GITHUB_URL, icon: Github, label: 'GitHub' },
-    { href: LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn' },
-    { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email' },
-  ]
+  // const quickLinks = [
+  //   { href: RESUME_URL, icon: FileText, label: 'Resume' },
+  //   { href: GITHUB_URL, icon: Github, label: 'GitHub' },
+  //   { href: LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn' },
+  //   { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email' },
+  // ]
 
   return (
     <nav className="navbar">
@@ -45,7 +45,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="navbar-links">
+        {/* <div className="navbar-links">
           {quickLinks.map((link) => (
             <a
               key={link.href}
@@ -58,7 +58,7 @@ const Navbar = () => {
               <span className="hidden-mobile">{link.label}</span>
             </a>
           ))}
-        </div>
+        </div> */}
 
         <button
           className="mobile-menu-toggle"

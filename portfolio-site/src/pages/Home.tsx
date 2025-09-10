@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, ExternalLink, Users, Eye, FileText } from 'lucide-react'
+import { Github, Linkedin, Mail, ExternalLink, Users, Eye, FileText, FolderOpen } from 'lucide-react'
 import { NAME, AVATAR_PATH, RESUME_URL, GITHUB_URL, LINKEDIN_URL, DEVTO_URL, EMAIL } from '../config/constants'
 
 const Home = () => {
@@ -74,6 +74,10 @@ const Home = () => {
           </p>
 
           <div className="hero-stats mb-8">
+            <div className="stat-item">
+              <FolderOpen size={24} />
+              <span>20+ Projects</span>
+            </div>
             <div className="stat-item">
               <Users size={24} />
               <span>1,400+ Dev.to Followers</span>

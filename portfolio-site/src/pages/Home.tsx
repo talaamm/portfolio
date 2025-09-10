@@ -1,41 +1,63 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, Users, Eye, FileText, FolderOpen } from 'lucide-react'
 import { NAME, AVATAR_PATH, RESUME_URL, GITHUB_URL, LINKEDIN_URL, DEVTO_URL, EMAIL } from '../config/constants'
+import Counter from '../components/Counter'
 
 const Home = () => {
   const techStack = [
-    { name: 'Go', logo: '🐹' },
-    { name: 'JavaScript', logo: '🟨' },
-    { name: 'TypeScript', logo: '🔷' },
-    { name: 'React', logo: '⚛️' },
-    { name: 'Node.js', logo: '🟢' },
-    { name: 'SQL', logo: '🗄️' },
-    { name: 'Python', logo: '🐍' },
-    { name: 'Docker', logo: '🐳' },
-    { name: 'AWS', logo: '☁️' },
-    { name: 'Git', logo: '📦' },
+    { name: 'Go', logo: 'https://www.nicepng.com/png/full/264-2641184_111-kb-png-golang-logo.png' },
+    { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
+    {name: 'Rust', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png'},
+    // { name: 'TypeScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
+    { name: 'React Native', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
+    { name: 'Node.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
+    {name: 'Java', logo: 'https://img.icons8.com/color/512/java-coffee-cup-logo--v2.png'},
+    { name: 'SQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png' },
+    { name: 'Python', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
+    { name: 'Docker', logo: 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png' },
+    // { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+    { name: 'Git', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg' },
+    {name: 'Vue.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg'},
+    // {name: 'Tailwind CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg'},
+    {name: 'HTML', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg'},
+    {name: 'CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png'},
+    // {name: 'Sass', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg'},
+    // {name: 'Bootstrap', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_Bootstrap.svg'},
+    // {name: 'Material UI', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Material-UI.svg'},
+    // {name: 'Ant Design', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Material-UI.svg'},
+    {name: 'C' , logo:'https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png'},
+    {name: 'Supabase', logo: 'https://img.icons8.com/fluent/512/supabase.png'},
+ {name: 'Slack', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png'},
+ {name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+ {name: 'Jira', logo: 'https://cdn.worldvectorlogo.com/logos/jira-1.svg'},
+ {name: 'Cursor' , logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/cursor.png'},
+ {name:'GitHub' , logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png'}
+//  {name: 'Confluence', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+//  {name: 'Notion', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+//  {name: 'Trello', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+ 
   ]
 
-  const featuredBlogs = [
-    {
-      title: "Building Scalable APIs with Go",
-      url: "https://dev.to/yourusername/building-scalable-apis-with-go",
-      views: "15.2k",
-      date: "2024-01-15"
-    },
-    {
-      title: "React Performance Optimization Tips",
-      url: "https://dev.to/yourusername/react-performance-optimization-tips",
-      views: "12.8k",
-      date: "2024-02-03"
-    },
-    {
-      title: "Database Design Best Practices",
-      url: "https://dev.to/yourusername/database-design-best-practices",
-      views: "9.5k",
-      date: "2024-02-20"
-    }
-  ]
+  // const featuredBlogs = [
+  //   {
+  //     title: "Building Scalable APIs with Go",
+  //     url: "https://dev.to/yourusername/building-scalable-apis-with-go",
+  //     views: "15.2k",
+  //     date: "2024-01-15"
+  //   },
+  //   {
+  //     title: "React Performance Optimization Tips",
+  //     url: "https://dev.to/yourusername/react-performance-optimization-tips",
+  //     views: "12.8k",
+  //     date: "2024-02-03"
+  //   },
+  //   {
+  //     title: "Database Design Best Practices",
+  //     url: "https://dev.to/yourusername/database-design-best-practices",
+  //     views: "9.5k",
+  //     date: "2024-02-20"
+  //   }
+  // ]
 
   return (
     <div className="container">
@@ -76,20 +98,20 @@ const Home = () => {
           <div className="hero-stats mb-8">
             <div className="stat-item">
               <FolderOpen size={24} />
-              <span>20+ Projects</span>
+              <span><Counter target={20} suffix="+ Projects" /></span>
             </div>
             <div className="stat-item">
               <Users size={24} />
-              <span>1,400+ Dev.to Followers</span>
+              <span><Counter target={1400} suffix="+ Dev.to Followers" /></span>
             </div>
             <div className="stat-item">
               <Eye size={24} />
-              <span>2,000+ Blog Readers</span>
+              <span><Counter target={2000} suffix="+ Blog Readers" /></span>
             </div>
           </div>
 
           <div className="hero-links">
-            <a href={RESUME_URL} className="btn-primary">
+            <a href={RESUME_URL} className="btn-primary" download>
               <FileText size={20} />
               Download Resume
             </a>
@@ -119,14 +141,24 @@ const Home = () => {
               transition={{ delay: 0.6 + index * 0.1, duration: 0.4 }}
               whileHover={{ scale: 1.1, y: -5 }}
             >
-              <div className="tech-logo">{tech.logo}</div>
+              <div className="tech-logo">
+                {typeof tech.logo === 'string' && (tech.logo.startsWith('http://') || tech.logo.startsWith('https://')) ? (
+                  <img 
+                    src={tech.logo} 
+                    alt={`${tech.name} logo`} 
+                    style={{ width: '52px', height: '52px', objectFit: 'contain' }} 
+                  />
+                ) : (
+                  <span>{tech.logo}</span>
+                )}
+              </div>
               <span className="tech-name">{tech.name}</span>
             </motion.div>
           ))}
         </div>
       </motion.section>
 
-      {/* Featured Blog Posts */}
+     {/* { Featured Blog Posts
       <motion.section 
         className="section"
         initial={{ opacity: 0, y: 30 }}
@@ -134,8 +166,8 @@ const Home = () => {
         transition={{ delay: 0.8, duration: 0.6 }}
       >
         <h2 className="text-center mb-8">Featured Blog Posts</h2>
-        <div className="grid grid-3">
-          {featuredBlogs.map((blog, index) => (
+        {/* {<div className="grid grid-3">
+          {/* {featuredBlogs.map((blog, index) => (
             <motion.div
               key={blog.title}
               className="card blog-card"
@@ -159,8 +191,8 @@ const Home = () => {
               </a>
             </motion.div>
           ))}
-        </div>
-      </motion.section>
+        </div>}
+      </motion.section>} */}
 
       {/* Quick Links */}
       <motion.section 

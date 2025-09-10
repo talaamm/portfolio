@@ -22,26 +22,49 @@ const Contact = () => {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
-      
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus('idle'), 3000)
-    }, 2000)
-  }
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        const errorText = await response.text();
+        let errorMessage = response.statusText;
+        try {
+          const maybeJson = JSON.parse(errorText);
+          errorMessage = maybeJson.error || errorMessage;
+        } catch {
+          if (errorText) errorMessage = errorText;
+        }
+        setSubmitStatus('error');
+        console.error('Server error:', errorMessage);
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+      console.error('Network error:', err);
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus('idle'), 3000); // Reset status after 3 seconds
+    }
+  };
 
   const contactInfo = [
     {
       icon: Mail,
       title: 'Email',
-      value: 'your.email@example.com',
-      link: 'mailto:your.email@example.com'
+      value: 'tala.aunv@gmail.com',
+      link: 'mailto:tala.aunv@gmail.com'
     },
     {
       icon: Phone,

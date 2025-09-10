@@ -1,79 +1,72 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Eye, Calendar, Tag, TrendingUp } from 'lucide-react'
+import { DEVTO_USERNAME } from '../config/constants'
+import React, { useState, useEffect } from 'react'
+
+interface BlogPost {
+  title: string;
+  description: string;
+  url: string;
+  public_reactions_count: number;
+  published_at: string;
+  tag_list: string[];
+  reading_time_minutes: number;
+  cover_image: string | null;
+}
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      title: 'Building Scalable APIs with Go: A Complete Guide',
-      excerpt: 'Learn how to build high-performance APIs using Go, covering best practices, testing, and deployment strategies.',
-      url: 'https://dev.to/yourusername/building-scalable-apis-with-go',
-      views: '15.2k',
-      date: '2024-01-15',
-      tags: ['Go', 'API', 'Backend', 'Performance'],
-      readTime: '12 min read',
-      featured: true
-    },
-    {
-      title: 'React Performance Optimization: 10 Essential Tips',
-      excerpt: 'Discover proven techniques to optimize React applications for better performance and user experience.',
-      url: 'https://dev.to/yourusername/react-performance-optimization-tips',
-      views: '12.8k',
-      date: '2024-02-03',
-      tags: ['React', 'Performance', 'Frontend', 'JavaScript'],
-      readTime: '8 min read',
-      featured: true
-    },
-    {
-      title: 'Database Design Best Practices for Modern Applications',
-      excerpt: 'Essential database design principles and patterns for building scalable and maintainable applications.',
-      url: 'https://dev.to/yourusername/database-design-best-practices',
-      views: '9.5k',
-      date: '2024-02-20',
-      tags: ['Database', 'SQL', 'Design', 'Architecture'],
-      readTime: '15 min read',
-      featured: true
-    },
-    {
-      title: 'Getting Started with Kubernetes: A Developer\'s Guide',
-      excerpt: 'Everything you need to know to start deploying applications with Kubernetes in production.',
-      url: 'https://dev.to/yourusername/getting-started-with-kubernetes',
-      views: '7.3k',
-      date: '2023-12-10',
-      tags: ['Kubernetes', 'DevOps', 'Docker', 'Cloud'],
-      readTime: '20 min read',
-      featured: false
-    },
-    {
-      title: 'Building Real-time Applications with WebSockets',
-      excerpt: 'Learn how to implement real-time features in your web applications using WebSockets and Socket.io.',
-      url: 'https://dev.to/yourusername/building-realtime-apps-websockets',
-      views: '6.1k',
-      date: '2023-11-25',
-      tags: ['WebSockets', 'Real-time', 'Node.js', 'JavaScript'],
-      readTime: '10 min read',
-      featured: false
-    },
-    {
-      title: 'The Complete Guide to TypeScript for JavaScript Developers',
-      excerpt: 'Master TypeScript from basics to advanced concepts, with practical examples and best practices.',
-      url: 'https://dev.to/yourusername/complete-typescript-guide',
-      views: '8.9k',
-      date: '2023-10-18',
-      tags: ['TypeScript', 'JavaScript', 'Web Development', 'Tutorial'],
-      readTime: '18 min read',
-      featured: false
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await fetch(`https://dev.to/api/articles?username=${DEVTO_USERNAME}`);
+        if (!response.ok) {
+          throw new Error(`Error fetching articles: ${response.statusText}`);
+        }
+        const data: BlogPost[] = await response.json();
+        setBlogPosts(data);
+      } catch (err) {
+        setError((err as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogPosts();
+  }, []);
+
+  // Sort posts by date (newest first) and then by reactions for featured
+  const sortedPosts = [...blogPosts].sort((a, b) => {
+    const dateA = new Date(a.published_at).getTime();
+    const dateB = new Date(b.published_at).getTime();
+    if (dateA !== dateB) {
+      return dateB - dateA;
     }
-  ]
+    return b.public_reactions_count - a.public_reactions_count;
+  });
+
+  const featuredPosts = sortedPosts.slice(0, 3);
+  const regularPosts = sortedPosts.slice(3);
+
+  const totalViews = blogPosts.reduce((sum, post) => sum + (post.page_views_count || 0), 0); // Dev.to API might not have page_views_count consistently, public_reactions_count is a good proxy
 
   const stats = {
-    totalPosts: '25+',
-    totalViews: '150k+',
-    followers: '1,400+',
-    avgRating: '4.8'
+    totalPosts: blogPosts.length,
+    totalViews: totalViews.toLocaleString(),
+    followers: '1,400+', // This would require another API call or manual update
+    avgRating: '4.8' // This is not directly available from the API
   }
 
-  const featuredPosts = blogPosts.filter(post => post.featured)
-  const regularPosts = blogPosts.filter(post => !post.featured)
+  if (loading) {
+    return <div className="container section text-center">Loading blog posts...</div>;
+  }
+
+  if (error) {
+    return <div className="container section text-center text-error">Error: {error}</div>;
+  }
 
   return (
     <div className="container">
@@ -101,7 +94,7 @@ const Blog = () => {
             <div className="stat-item">
               <TrendingUp size={24} />
               <div className="stat-content">
-                <span className="stat-number">{stats.totalPosts}</span>
+                <span className="stat-number">{stats.totalPosts}+</span>
                 <span className="stat-label">Articles Published</span>
               </div>
             </div>
@@ -137,13 +130,13 @@ const Blog = () => {
         >
           <h2 className="text-center mb-6">Featured Articles</h2>
           <div className="featured-posts">
-            {featuredPosts.map((post, index) => (
+            {featuredPosts.map((post) => (
               <motion.div
-                key={index}
+                key={post.url}
                 className="featured-post-card"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
                 whileHover={{ y: -5 }}
               >
                 <div className="post-header">
@@ -151,20 +144,26 @@ const Blog = () => {
                   <div className="post-meta">
                     <div className="post-views">
                       <Eye size={16} />
-                      <span>{post.views}</span>
+                      <span>{post.public_reactions_count} reactions</span>
                     </div>
                     <div className="post-date">
                       <Calendar size={16} />
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
+                      <span>{new Date(post.published_at).toLocaleDateString()}</span>
                     </div>
-                    <div className="post-read-time">{post.readTime}</div>
+                    <div className="post-read-time">{post.reading_time_minutes} min read</div>
                   </div>
                 </div>
                 
-                <p className="post-excerpt">{post.excerpt}</p>
+                <p className="post-excerpt">{post.description}</p>
                 
+                {post.cover_image && (
+                  <div className="post-cover-image mb-4">
+                    <img src={post.cover_image} alt={post.title} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                  </div>
+                )}
+
                 <div className="post-tags">
-                  {post.tags.map((tag) => (
+                  {post.tag_list.map((tag) => (
                     <span key={tag} className="post-tag">{tag}</span>
                   ))}
                 </div>
@@ -190,33 +189,33 @@ const Blog = () => {
         >
           <h2 className="text-center mb-6">More Articles</h2>
           <div className="regular-posts">
-            {regularPosts.map((post, index) => (
+            {regularPosts.map((post) => (
               <motion.div
-                key={index}
+                key={post.url}
                 className="regular-post-card"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
+                transition={{ delay: 1, duration: 0.5 }}
                 whileHover={{ y: -3 }}
               >
                 <div className="post-content">
                   <h4>{post.title}</h4>
-                  <p className="post-excerpt-small">{post.excerpt}</p>
+                  <p className="post-excerpt-small">{post.description}</p>
                   
                   <div className="post-meta-small">
                     <span className="post-views-small">
                       <Eye size={14} />
-                      {post.views}
+                      {post.public_reactions_count} reactions
                     </span>
                     <span className="post-date-small">
                       <Calendar size={14} />
-                      {new Date(post.date).toLocaleDateString()}
+                      {new Date(post.published_at).toLocaleDateString()}
                     </span>
-                    <span className="post-read-time-small">{post.readTime}</span>
+                    <span className="post-read-time-small">{post.reading_time_minutes} min read</span>
                   </div>
                   
                   <div className="post-tags-small">
-                    {post.tags.slice(0, 3).map((tag) => (
+                    {post.tag_list.slice(0, 3).map((tag) => (
                       <span key={tag} className="post-tag-small">{tag}</span>
                     ))}
                   </div>
@@ -246,7 +245,7 @@ const Blog = () => {
             <h3>Follow My Writing Journey</h3>
             <p>Get notified when I publish new articles about technology, development, and career growth.</p>
             <a 
-              href="https://dev.to/yourusername" 
+              href={`https://dev.to/${DEVTO_USERNAME}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-primary"

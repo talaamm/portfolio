@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=./index.html">
+  </head>
+  <body>
+    <p>Redirecting...</p>
+    <script>
+      (function() {
+        var l = window.location;
+        var base = l.pathname.split('/').slice(0, -1).join('/') + '/';
+        var redirect = base + 'index.html' + l.search + l.hash;
+        l.replace(redirect);
+      })();
+    </script>
+  </body>
+</html>

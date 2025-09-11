@@ -115,7 +115,7 @@ const Home = () => {
               <FileText size={20} />
               Download Resume
             </a>
-            <a href="#contact" className="btn-secondary">
+            <a href={`mailto:${EMAIL}`} className="btn-secondary">
               <Mail size={20} />
               Get In Touch
             </a>
@@ -215,14 +215,4 @@ const Home = () => {
             <ExternalLink size={24} />
             Dev.to
           </a>
-          <a href={`mailto:${EMAIL}`}>
-            <Mail size={24} />
-            Email
-          </a>
-        </div>
-      </motion.section>
-    </div>
-  )
-}
-
-export default Home
+          <a href={`mailto:${EMAIL}`

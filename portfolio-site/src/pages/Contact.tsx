@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react'
+import { GITHUB_URL, LINKEDIN_URL, DEVTO_URL } from '../config/constants'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -93,19 +94,19 @@ const Contact = () => {
     {
       icon: Github,
       name: 'GitHub',
-      url: 'https://github.com/yourusername',
+      url: GITHUB_URL,
       description: 'View my code and projects'
     },
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourusername',
+      url: LINKEDIN_URL,
       description: 'Connect professionally'
     },
     {
       icon: ExternalLink,
       name: 'Dev.to',
-      url: 'https://dev.to/yourusername',
+      url: DEVTO_URL,
       description: 'Read my articles'
     }
   ]

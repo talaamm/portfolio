@@ -215,4 +215,15 @@ const Home = () => {
             <ExternalLink size={24} />
             Dev.to
           </a>
-          <a href={`mailto:${EMAIL}`
+          {/* <a href={`mailto:${EMAIL}`} target="_blank" rel="noopener noreferrer"></a> */}
+          <a href={`mailto:${EMAIL}`} target="_blank" rel="noopener noreferrer">
+            <Mail size={24} />
+            Email
+          </a>
+        </div>
+      </motion.section>
+    </div>
+  )
+}
+
+export default Home

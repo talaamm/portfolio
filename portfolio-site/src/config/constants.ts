@@ -6,7 +6,9 @@ export const LINKEDIN_USERNAME = 'tala-al-amm'
 export const DEVTO_USERNAME = 'talaamm'
 
 export const RESUME_PATH = 'https://docs.google.com/document/d/14-9TlOulogwBaeOJLC7_ufAYUJNjC086551PfwHGoLM/export?format=pdf'
-export const AVATAR_PATH = '/avatar.jpeg'
+
+const BASE = import.meta.env.BASE_URL || '/'
+export const AVATAR_PATH = `${BASE}avatar.jpeg`
 
 export const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}`
 export const LINKEDIN_URL = `https://linkedin.com/in/${LINKEDIN_USERNAME}`

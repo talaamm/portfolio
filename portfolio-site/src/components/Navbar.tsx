@@ -31,6 +31,8 @@ const Navbar = () => {
     { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email' },
   ]
 
+  const showQuickLinks = import.meta.env.DEV;
+
   return (
     <nav className="navbar">
       <div className="navbar-content">
@@ -51,20 +53,22 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="navbar-links">
-          {quickLinks.map((link: QuickLinkItem) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.href.startsWith('http') ? '_blank' : undefined}
-              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              title={link.label}
-            >
-              <link.icon size={16} />
-              <span className="hidden-mobile">{link.label}</span>
-            </a>
-          ))}
-        </div>
+        {showQuickLinks && (
+          <div className="navbar-links">
+            {quickLinks.map((link: QuickLinkItem) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                title={link.label}
+              >
+                <link.icon size={16} />
+                <span className="hidden-mobile">{link.label}</span>
+              </a>
+            ))}
+          </div>
+        )}
 
         <button
           className="mobile-menu-toggle"
@@ -90,20 +94,22 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="mobile-links">
-            {quickLinks.map((link: QuickLinkItem) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target={link.href.startsWith('http') ? '_blank' : undefined}
-                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <link.icon size={16} />
-                {link.label}
-              </a>
-            ))}
-          </div>
+          {showQuickLinks && (
+            <div className="mobile-links">
+              {quickLinks.map((link: QuickLinkItem) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <link.icon size={16} />
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </nav>

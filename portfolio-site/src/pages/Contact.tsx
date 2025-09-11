@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react'
 import { GITHUB_URL, LINKEDIN_URL, DEVTO_URL } from '../config/constants'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,45 +28,32 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // If hosted statically (no backend), short-circuit with message
-    const isStaticHost = typeof window !== 'undefined' && window.location.hostname.endsWith('github.io');
-    if (isStaticHost) {
-      setSubmitStatus('error');
-      console.error('Contact form disabled on static hosting. Use email link instead.');
-      setIsSubmitting(false);
-      return;
-    }
-
     try {
-      const response = await fetch('/api/sendMail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const result = await emailjs.send(
+        "service_07pcigp",
+        "template_07pcigp", // You need to create a template in EmailJS
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
         },
-        body: JSON.stringify(formData),
-      });
+        "OgFsKoR-z0TMHcXUT"
+      );
 
-      if (response.ok) {
+      if (result.status === 200) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        const errorText = await response.text();
-        let errorMessage = response.statusText;
-        try {
-          const maybeJson = JSON.parse(errorText);
-          errorMessage = maybeJson.error || errorMessage;
-        } catch {
-          if (errorText) errorMessage = errorText;
-        }
         setSubmitStatus('error');
-        console.error('Server error:', errorMessage);
+        console.error('EmailJS error:', result);
       }
-    } catch (err) {
+    } catch (error) {
       setSubmitStatus('error');
-      console.error('Network error:', err);
+      console.error('EmailJS error:', error);
     } finally {
       setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus('idle'), 3000); // Reset status after 3 seconds
+      setTimeout(() => setSubmitStatus('idle'), 3000);
     }
   };
 
@@ -79,14 +67,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+972 522335226',
+      link: 'tel:+972522335226'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
-      link: 'https://maps.google.com/?q=San+Francisco,CA'
+      value: 'East Jerusalem',
+      link: 'https://maps.google.com/?q=East+Jerusalem'
     }
   ]
 
@@ -113,7 +101,7 @@ const Contact = () => {
 
   return (
     <div className="container">
-      <motion.section 
+      <motion.section
         className="section"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -189,8 +177,8 @@ const Contact = () => {
                   />
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn-primary submit-btn"
                   disabled={isSubmitting}
                 >

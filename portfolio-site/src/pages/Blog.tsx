@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Eye, Calendar, Tag, TrendingUp } from 'lucide-react'
 import { DEVTO_USERNAME } from '../config/constants'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 interface BlogPost {
   title: string;

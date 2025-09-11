@@ -5,7 +5,7 @@ import { NAME, GITHUB_URL, LINKEDIN_URL, EMAIL, RESUME_URL } from '../config/con
 
 interface QuickLinkItem {
   href: string
-  icon: (props: { size?: number }) => JSX.Element
+  icon: React.ComponentType<{ size?: number }>
   label: string
 }
 

@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { Github, ExternalLink, Calendar, ArrowLeft, Users, Clock } from 'lucide-react'
 
 const ProjectDetail = () => {
-  const { id } = useParams()
+  useParams()
   
   // In a real app, you'd fetch this data based on the ID
   const project = {

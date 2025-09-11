@@ -31,7 +31,7 @@ const Contact = () => {
     try {
       const result = await emailjs.send(
         "service_07pcigp",
-        "template_07pcigp", // You need to create a template in EmailJS
+        "template_ozeyocr", // You need to create a template in EmailJS
         {
           from_name: formData.name,
           from_email: formData.email,

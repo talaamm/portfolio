@@ -29,7 +29,7 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
-      const msg = "YOU RECEIVED A MESSAGE FROM: {formData.name} \nEMAIL: {formData.email}\nSUBJECT: {formData.subject}\nMESSAGE: {formData.message}"
+      const msg = `YOU RECEIVED A MESSAGE FROM: ${formData.name}\n\nEMAIL: ${formData.email}\n\nSUBJECT: ${formData.subject}\n\nMESSAGE: ${formData.message}`
       const result = await emailjs.send(
         "service_07pcigp",
         "template_ozeyocr", // You need to create a template in EmailJS

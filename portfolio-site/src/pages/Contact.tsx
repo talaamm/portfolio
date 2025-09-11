@@ -29,19 +29,22 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
+      const msg = "YOU RECEIVED A MESSAGE FROM: {formData.name} \nEMAIL: {formData.email}\nSUBJECT: {formData.subject}\nMESSAGE: {formData.message}"
       const result = await emailjs.send(
         "service_07pcigp",
         "template_ozeyocr", // You need to create a template in EmailJS
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
+          name: formData.name,
+          time: new Date().toLocaleString(), // matches {{time}}
+          message: msg,
+          // from_email: formData.email,
+          // subject: formData.subject,
+          // message: formData.message,
         },
         "OgFsKoR-z0TMHcXUT"
       );
 
-      if (result.status === 200) {
+      if (result.text === "OK") { //  EmailJS does not return .status == 200
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {

@@ -22,3 +22,47 @@ How to run so 500s go away:
 If you still see 500:
 - Check the function logs in the Vercel dev terminal; it will print the exact error.
 - Ensure the serverless dev is actually running and reachable: open `http://localhost:3000/api/sendMail` in the browser (GET should show 405 JSON).
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+I'll add a small Express server to serve the API routes locally, remove the extra node-fetch dependency by using Node's built-in fetch, and update the Blog page to use followers as the fallback for views. Then I'll update package.json with a server script and explain how to run both servers.
+
+[1 tool called]
+
+I'll update the backend to use Node's built-in fetch (removing the missing dependency causing the 500), add a simple Express server for the /api routes on port 3000, and change the Blog fallback to use followers instead of reactions. Then I'll add scripts and instructions to run both servers.
+
+[1 tool called]
+
+I'll fix the 500 by removing the node-fetch import, add an Express server to actually serve /api locally, and update the Blog fallback to use your followers number. Then I'll add npm scripts and dependencies so you can run both servers easily.
+
+[9 tools called]
+
+- The 500 came from the API handler failing. I fixed the handler to use Node’s built‑in fetch and added an Express server to actually serve `/api` in dev.
+
+How to run locally:
+- In one terminal:
+  - Set your API key: on Windows PowerShell:
+    - $env:DEVTO_API_KEY = "YOUR_KEY"
+  - Start API server:
+    - cd portfolio-site
+    - npm run dev:server
+- In another terminal:
+  - cd portfolio-site
+  - npm run dev
+- Open `http://localhost:5173`. The Vite proxy forwards `/api/*` to `http://localhost:3000`.
+
+Production:
+- Build: `npm run build`
+- Serve built app + API: set `DEVTO_API_KEY` in the environment, then `npm run serve`.
+
+Fallback change:
+- If the API doesn’t return `totalViews`, the Blog page now uses your followers count as the fallback (set to 1,400).
+
+If you still see 500:
+- Verify `DEVTO_API_KEY` is set in the same shell running `npm run dev:server`.
+- Confirm your Node version is 18+ (for global fetch).
+- Check console where the API server runs for any error logs.
+
+- Implemented `api/devtoStats.js` using authenticated DEV.to endpoint and added `server.js` with Express to host `/api`; updated `Blog.tsx` to fall back to followers for views.

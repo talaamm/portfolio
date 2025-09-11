@@ -56,4 +56,4 @@ module.exports = async (req, res) => {
     console.error('[sendMail] Error:', error);
     return res.status(500).json({ error: error?.message || 'Failed to send email.' });
   }
-}; 
+};

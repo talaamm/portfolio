@@ -26,6 +26,15 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    // If hosted statically (no backend), short-circuit with message
+    const isStaticHost = typeof window !== 'undefined' && window.location.hostname.endsWith('github.io');
+    if (isStaticHost) {
+      setSubmitStatus('error');
+      console.error('Contact form disabled on static hosting. Use email link instead.');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       const response = await fetch('/api/sendMail', {
         method: 'POST',

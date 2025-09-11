@@ -5,13 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev:server": "node server.cjs",
+    "dev:all": "concurrently \"npm:dev:server\" \"npm:dev\"",
+    "bake:devto": "node scripts/fetchDevto.cjs",
+    "build": "tsc -b && npm run bake:devto && vite build",
+    "serve": "NODE_ENV=production node server.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "classnames": "^2.5.1",
     "dotenv": "^17.2.2",
+    "express": "^4.21.1",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.542.0",
     "nodemailer": "^7.0.6",
@@ -25,6 +30,7 @@
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",

@@ -18,6 +18,43 @@ const Blog = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [backendTotalViews, setBackendTotalViews] = useState<number | null>(null);
+
+  const followersApprox = 1400; // keep in sync with displayed followers for now
+
+  useEffect(() => {
+    // Try baked JSON first (works on static hosting)
+    const tryBaked = async () => {
+      try {
+        const r = await fetch('/devto.json', { cache: 'no-store' });
+        if (r.ok) {
+          const j = await r.json();
+          if (typeof j.totalViews === 'number') {
+            setBackendTotalViews(j.totalViews);
+            return true;
+          }
+        }
+      } catch {}
+      return false;
+    };
+
+    const tryApi = async () => {
+      try {
+        const res = await fetch('/api/devtoStats');
+        if (res.ok) {
+          const json = await res.json();
+          if (typeof json.totalViews === 'number') {
+            setBackendTotalViews(json.totalViews);
+          }
+        }
+      } catch {}
+    };
+
+    (async () => {
+      const ok = await tryBaked();
+      if (!ok) await tryApi();
+    })();
+  }, []);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
@@ -40,22 +77,23 @@ const Blog = () => {
 
   // Sort posts by date (newest first) and then by reactions for featured
   const sortedPosts = [...blogPosts].sort((a, b) => {
+    const reactionsDiff = (b.public_reactions_count || 0) - (a.public_reactions_count || 0);
+    if (reactionsDiff !== 0) {
+      return reactionsDiff;
+    }
     const dateA = new Date(a.published_at).getTime();
     const dateB = new Date(b.published_at).getTime();
-    if (dateA !== dateB) {
-      return dateB - dateA;
-    }
-    return b.public_reactions_count - a.public_reactions_count;
+    return dateB - dateA;
   });
 
   const featuredPosts = sortedPosts.slice(0, 3);
   const regularPosts = sortedPosts.slice(3);
 
-  const totalViews = blogPosts.reduce((sum, post) => sum + (post.page_views_count || 0), 0); // Dev.to API might not have page_views_count consistently, public_reactions_count is a good proxy
+  const totalViewsComputed = backendTotalViews ?? followersApprox;
 
   const stats = {
     totalPosts: blogPosts.length,
-    totalViews: totalViews.toLocaleString(),
+    totalViews: totalViewsComputed.toLocaleString(),
     followers: '1,400+', // This would require another API call or manual update
     avgRating: '4.8' // This is not directly available from the API
   }

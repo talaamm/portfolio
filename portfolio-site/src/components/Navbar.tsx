@@ -3,6 +3,12 @@ import { Link, useLocation } from 'react-router-dom'
 import { Github, Linkedin, Mail, FileText, Menu, X } from 'lucide-react'
 import { NAME, GITHUB_URL, LINKEDIN_URL, EMAIL, RESUME_URL } from '../config/constants'
 
+interface QuickLinkItem {
+  href: string
+  icon: (props: { size?: number }) => JSX.Element
+  label: string
+}
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
@@ -18,12 +24,12 @@ const Navbar = () => {
     { path: '/contact', label: 'Contact' },
   ]
 
-  // const quickLinks = [
-  //   { href: RESUME_URL, icon: FileText, label: 'Resume' },
-  //   { href: GITHUB_URL, icon: Github, label: 'GitHub' },
-  //   { href: LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn' },
-  //   { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email' },
-  // ]
+  const quickLinks: QuickLinkItem[] = [
+    { href: RESUME_URL, icon: FileText, label: 'Resume' },
+    { href: GITHUB_URL, icon: Github, label: 'GitHub' },
+    { href: LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn' },
+    { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email' },
+  ]
 
   return (
     <nav className="navbar">
@@ -45,8 +51,8 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* <div className="navbar-links">
-          {quickLinks.map((link) => (
+        <div className="navbar-links">
+          {quickLinks.map((link: QuickLinkItem) => (
             <a
               key={link.href}
               href={link.href}
@@ -58,7 +64,7 @@ const Navbar = () => {
               <span className="hidden-mobile">{link.label}</span>
             </a>
           ))}
-        </div> */}
+        </div>
 
         <button
           className="mobile-menu-toggle"
@@ -85,7 +91,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="mobile-links">
-            {quickLinks.map((link) => (
+            {quickLinks.map((link: QuickLinkItem) => (
               <a
                 key={link.href}
                 href={link.href}

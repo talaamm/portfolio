@@ -1,71 +1,28 @@
 import { motion } from 'framer-motion'
-import { Calendar, MapPin, Users, Code, GraduationCap } from 'lucide-react'
+import { Users } from 'lucide-react'
+// import { motion } from 'framer-motion'
+import { Calendar, MapPin, Code, GraduationCap } from 'lucide-react'
 
 const Experience = () => {
   const experiences = [
     {
       type: 'teaching',
       title: 'Coding & Robotics Instructor',
-      company: 'Tech Academy',
-      location: 'Remote',
-      period: '2023-01 - Present',
-      description: 'Teaching programming fundamentals and robotics to students aged 12-18. Developed curriculum and hands-on projects.',
+      company: 'TechnoGeeks',
+      location: 'On-site',
+      period: 'March 2024 - December 2024',
+      description: 'Teaching programming fundamentals and robotics to school students. Developed curriculum and hands-on projects.',
       achievements: [
-        'Taught 200+ students across multiple cohorts',
-        'Developed interactive coding curriculum',
+        'Taught 200+ students across multiple cohorts and schools',
+        // 'Developed interactive coding curriculum',
         'Mentored students in robotics competitions',
-        'Achieved 95% student satisfaction rate'
+        'Achieved more than 95% student satisfaction rate'
       ],
       skills: ['Teaching', 'Curriculum Development', 'Python', 'Arduino', 'Robotics']
     },
-    {
-      type: 'freelance',
-      title: 'Full-Stack Developer',
-      company: 'Freelance',
-      location: 'Remote',
-      period: '2022-06 - Present',
-      description: 'Building custom web applications and providing technical consulting for startups and small businesses.',
-      achievements: [
-        'Delivered 15+ successful projects',
-        'Increased client revenue by 40% through automation',
-        'Built scalable e-commerce solutions',
-        'Provided technical mentorship to junior developers'
-      ],
-      skills: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker']
-    },
-    {
-      type: 'internship',
-      title: 'Software Engineering Intern',
-      company: 'TechCorp',
-      location: 'San Francisco, CA',
-      period: '2022-06 - 2022-12',
-      description: 'Worked on microservices architecture and API development. Collaborated with senior engineers on production systems.',
-      achievements: [
-        'Contributed to 3 major product features',
-        'Optimized API response times by 60%',
-        'Participated in code reviews and testing',
-        'Presented technical solutions to stakeholders'
-      ],
-      skills: ['Go', 'Kubernetes', 'gRPC', 'Redis', 'Git']
-    },
-    {
-      type: 'hackathon',
-      title: 'Hackathon Winner',
-      company: 'TechHack 2023',
-      location: 'Virtual',
-      period: '2023-03',
-      description: 'Led a team of 4 developers to build an AI-powered learning platform in 48 hours.',
-      achievements: [
-        'Won 1st place out of 50+ teams',
-        'Built MVP with AI integration',
-        'Secured $10k in funding',
-        'Featured in tech publications'
-      ],
-      skills: ['AI/ML', 'React', 'Python', 'Team Leadership', 'Rapid Prototyping']
-    }
   ]
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: any) => {
     switch (type) {
       case 'teaching': return <GraduationCap size={20} />
       case 'freelance': return <Code size={20} />
@@ -85,9 +42,69 @@ const Experience = () => {
     }
   }
 
+  const volunteering = [
+    {
+      title: 'Coding Summer Camp - Tech Mentor and Team Leader',
+      organization: 'Coding Academy of Jerusalem',
+      period: 'June 2022 - July 2022',
+      description: 'Led and mentored groups of students in an intensive summer camp focused on coding, robotics, and problem-solving. Designed and delivered interactive workshops on:Robotics, Coding fundamentals and hands-on programming, 3D Design with SketchUp, Problem-solving & logic including teaching students how to solve the Rubik\’s Cube, How to play Chess and other games that depend on logic.',
+      // impact: 'Helped 50+ students from underserved communities learn programming and secure tech internships.',
+      skills: ['Mentoring', 'Public Speaking', 'Community Building', 'Team Leading', 'Java'],
+      hours: '80+ hours',
+      location: 'On-site / Jerusalem'
+    },
+    {
+      title: 'Data Collection Volunteer',
+      organization: 'PALLAM Chatbot Project at BZU',
+      period: 'March 2025 - April 2025',
+      description: 'Assisted in building a specialized chatbot by collecting and organizing thousands of question-answer pairs to support the training of a fine-tuned large language model (LLM).',
+      impact: 'Contributed to the creation of a cross-platform educational chatbot and API, improving accuracy and accessibility of knowledge for students and researchers.',
+      skills: ['Data Collection', 'Research', 'Team Collaboration', 'Documentation'],
+      hours: '40+ hours',
+      location: 'Remote'
+    },
+    {
+      title: 'Volunteer Hardware & Software Developer',
+      organization: 'Rosary Sister\'s High School - NASA Competition Team',
+      period: 'January 2022 - March 2022',
+      description: 'Volunteered to design and build a demo tool for a student team competing in a NASA challenge. Developed an Arduino-based device with a light sensor to analyze leaf color and determine nutritional needs, displaying results on a screen.',
+      impact: 'Enabled the team to demonstrate a functional prototype of their project for the competition, supporting their hands-on research and presentation.',
+      skills: ['Arduino', 'Sensor Integration', 'Programming', 'Team Collaboration', 'Problem Solving'],
+      hours: '30+ hours',
+      location: 'On-site / Jerusalem'
+    },    
+    // {
+    //   title: 'STEM Education Volunteer',
+    //   organization: 'Local School District',
+    //   period: '2022-09 - 2023-06',
+    //   description: 'Teaching robotics and programming to elementary and middle school students during after-school programs.',
+    //   impact: 'Introduced 200+ students to STEM fields, with 30% expressing interest in pursuing tech careers.',
+    //   skills: ['Teaching', 'Robotics', 'Arduino', 'Scratch', 'Event Planning'],
+    //   hours: '150+ hours',
+    //   location: 'Local Schools'
+    // },
+    // {
+    //   title: 'Tech for Social Good',
+    //   organization: 'Non-Profit Tech Alliance',
+    //   period: '2023-03 - Present',
+    //   description: 'Building web applications and digital tools for non-profit organizations to improve their operations.',
+    //   impact: 'Developed 5 digital solutions that improved efficiency for 3 non-profits, serving 1000+ beneficiaries.',
+    //   skills: ['Web Development', 'Database Design', 'User Research', 'Project Management'],
+    //   hours: '100+ hours',
+    //   location: 'Remote'
+    // }
+  ]
+
+  // const totalImpact = {
+  //   students: '250+',
+  //   hours: '750+',
+  //   projects: '15+',
+  //   organizations: '8+'
+  // }
+
   return (
     <div className="container">
-      <motion.section 
+      <motion.section
         className="section"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -120,7 +137,7 @@ const Experience = () => {
                     <span>{exp.period}</span>
                   </div>
                 </div>
-                
+
                 <h3>{exp.title}</h3>
                 <div className="experience-company">
                   <span className="company-name">{exp.company}</span>
@@ -129,9 +146,9 @@ const Experience = () => {
                     <span>{exp.location}</span>
                   </div>
                 </div>
-                
+
                 <p className="experience-description">{exp.description}</p>
-                
+
                 <div className="experience-achievements">
                   <h4>Key Achievements:</h4>
                   <ul>
@@ -140,7 +157,7 @@ const Experience = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="experience-skills">
                   <h4>Technologies Used:</h4>
                   <div className="skills-tags">
@@ -148,6 +165,104 @@ const Experience = () => {
                       <span key={skill} className="skill-tag">{skill}</span>
                     ))}
                   </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+      {/* <div className="container"> */}
+      <motion.section
+        className="section"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="text-center mb-8">
+          <h1>Volunteering & Community Impact</h1>
+          <p className="section-subtitle">
+            Giving back to the community through technology education and open source contributions.
+          </p>
+        </div>
+        {/* 
+        {/* Impact Summary 
+        <motion.div 
+          className="impact-summary"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <div className="impact-stats">
+            <div className="impact-stat">
+              <Users size={32} />
+              <div className="stat-content">
+                <span className="stat-number">{totalImpact.students}</span>
+                <span className="stat-label">Students Mentored</span>
+              </div>
+            </div>
+            <div className="impact-stat">
+              <Heart size={32} />
+              <div className="stat-content">
+                <span className="stat-number">{totalImpact.hours}</span>
+                <span className="stat-label">Volunteer Hours</span>
+              </div>
+            </div>
+            <div className="impact-stat">
+              <Globe size={32} />
+              <div className="stat-content">
+                <span className="stat-number">{totalImpact.projects}</span>
+                <span className="stat-label">Projects Completed</span>
+              </div>
+            </div>
+            <div className="impact-stat">
+              <Award size={32} />
+              <div className="stat-content">
+                <span className="stat-number">{totalImpact.organizations}</span>
+                <span className="stat-label">Organizations Helped</span>
+              </div>
+            </div>
+          </div>
+        </motion.div> */}
+
+        <div className="volunteering-grid">
+          {volunteering.map((volunteer, index) => (
+            <motion.div
+              key={index}
+              className="volunteering-card"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="volunteer-header">
+                <h3>{volunteer.title}</h3>
+                <div className="volunteer-organization">{volunteer.organization}</div>
+                <div className="volunteer-period">{volunteer.period}</div>
+              </div>
+
+              <p className="volunteer-description">{volunteer.description}</p>
+
+              {volunteer.impact && (
+                <div className="volunteer-impact">
+                  <h4>Impact Created:</h4>
+                  <p>{volunteer.impact}</p>
+                </div>
+              )}
+              <div className="volunteer-details">
+                <div className="detail-item">
+                  <strong>Hours:</strong> {volunteer.hours}
+                </div>
+                <div className="detail-item">
+                  <strong>Location:</strong> {volunteer.location}
+                </div>
+              </div>
+
+              <div className="volunteer-skills">
+                <h4>Skills Gained:</h4>
+                <div className="skills-tags">
+                  {volunteer.skills.map((skill) => (
+                    <span key={skill} className="skill-tag">{skill}</span>
+                  ))}
                 </div>
               </div>
             </motion.div>

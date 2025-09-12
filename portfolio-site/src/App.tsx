@@ -9,6 +9,7 @@ import Volunteering from './pages/Volunteering'
 import Recommendations from './pages/Recommendations'
 import Blog from './pages/Blog'
 import LanguageSkills from './pages/LanguageSkills'
+import Education from './pages/Education'
 import Contact from './pages/Contact'
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/languages" element={<LanguageSkills />} />
+          <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

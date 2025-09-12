@@ -734,6 +734,23 @@ main {
   color: var(--primary-light);
 }
 
+/* Additional Certificates styling */
+.additional-cert {
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.02) 0%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+.additional-cert .cert-logo span {
+  background: var(--accent);
+  border-radius: 12px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
 /* Experience page styles */
 .experience-timeline {
   max-width: 800px;
@@ -1757,5 +1774,324 @@ main {
     font-size: 2rem;
     width: 50px;
     height: 50px;
+  }
+}
+
+/* Education page styles */
+.education-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.education-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.education-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.education-logo {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+}
+
+.education-info {
+  flex: 1;
+}
+
+.education-level {
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.education-institution {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.education-degree {
+  margin: 0 0 1.5rem 0;
+  color: var(--secondary);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.status-badge {
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.education-description {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.achievements-section {
+  margin-top: 2rem;
+}
+
+.achievements-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.achievement-card {
+  background: var(--accent);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.achievement-card:hover {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.achievement-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement-title {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.achievement-description {
+  margin: 0 0 1rem 0;
+  color: var(--text-light);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.achievement-highlight {
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.academic-summary {
+  margin-top: 4rem;
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.academic-summary h2 {
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.summary-stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--accent);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.summary-stat:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.summary-stat .stat-icon {
+  color: var(--primary);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.summary-stat:hover .stat-icon {
+  color: white;
+}
+
+.summary-stat .stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-stat .stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.summary-stat:hover .stat-number {
+  color: white;
+}
+
+.summary-stat .stat-label {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+.summary-stat:hover .stat-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .education-timeline {
+    gap: 2rem;
+  }
+  
+  .education-card {
+    padding: 1.5rem;
+  }
+  
+  .education-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .education-logo {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+  }
+  
+  .education-institution {
+    font-size: 1.5rem;
+  }
+  
+  .education-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .achievement-card {
+    padding: 1rem;
+  }
+  
+  .summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .summary-stat {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
 }

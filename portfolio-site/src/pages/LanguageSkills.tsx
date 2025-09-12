@@ -6,51 +6,43 @@ const LanguageSkills = () => {
     {
       id: 'english',
       name: 'English',
-      proficiency: 95,
-      level: 'Native',
-      flag: '🇺🇸',
-      description: 'Native speaker with excellent communication skills'
+      proficiency: 90,
+      level: 'Fluent',
+      flag: 'EN',
+      description: 'Fluent in both written and spoken Spanish, English is my second language'
     },
     {
       id: 'spanish',
-      name: 'Spanish',
-      proficiency: 90,
-      level: 'Fluent',
-      flag: '🇪🇸',
-      description: 'Fluent in both written and spoken Spanish'
+      name: 'Arabic',
+      proficiency: 100,
+      level: 'Native',
+      flag: 'AR',
+      description: 'Native Speaker with excellent communication skills'
     },
     {
       id: 'french',
       name: 'French',
-      proficiency: 75,
-      level: 'Advanced',
+      proficiency: 60,
+      level: 'Intermediate',
       flag: '🇫🇷',
-      description: 'Advanced conversational and business French'
+      description: 'Advanced French skills with a level B1 certification'
     },
     {
       id: 'german',
-      name: 'German',
-      proficiency: 60,
-      level: 'Intermediate',
-      flag: '🇩🇪',
-      description: 'Intermediate level with good reading comprehension'
+      name: 'Turkish',
+      proficiency: 45,
+      level: 'Beginner',
+      flag: 'TR',
+      description: 'Beginner with basic converstional skills'
     },
     {
       id: 'japanese',
-      name: 'Japanese',
-      proficiency: 40,
-      level: 'Beginner',
-      flag: '🇯🇵',
-      description: 'Basic conversational Japanese, learning Kanji'
+      name: 'Hebrew',
+      proficiency: 80,
+      level: 'Advanced Intermediate',
+      flag: 'IL',
+      description: 'Good in reading, writing, and comprehension. Currently working on improving converstional skills '
     },
-    {
-      id: 'mandarin',
-      name: 'Mandarin',
-      proficiency: 30,
-      level: 'Beginner',
-      flag: '🇨🇳',
-      description: 'Learning basic phrases and pronunciation'
-    }
   ]
 
   const getProficiencyColor = (proficiency: number) => {
@@ -93,7 +85,7 @@ const LanguageSkills = () => {
         </div>
 
         {/* Language Stats */}
-        <motion.div 
+        {/* {<motion.div 
           className="language-stats"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -122,7 +114,7 @@ const LanguageSkills = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div>} */}
 
         {/* Languages Grid */}
         <div className="languages-grid">

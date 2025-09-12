@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Github, Linkedin, Mail, FileText, Menu, X } from 'lucide-react'
-import { NAME, GITHUB_URL, LINKEDIN_URL, EMAIL, RESUME_URL } from '../config/constants'
+import { Menu, X } from 'lucide-react'
+import { NAME } from '../config/constants'
 
 interface QuickLinkItem {
   href: string
@@ -16,23 +16,24 @@ const Navbar = () => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/projects', label: 'Projects' },
+    { path: '/education', label: 'Education' },
     { path: '/certifications', label: 'Certifications' },
     { path: '/experience', label: 'Experience' },
-    { path: '/volunteering', label: 'Volunteering' },
+    // { path: '/volunteering', label: 'Volunteering' },
     { path: '/recommendations', label: 'Recommendations' },
     { path: '/blog', label: 'Blog' },
     { path: '/languages', label: 'Languages' },
     { path: '/contact', label: 'Contact' },
   ]
 
-  const quickLinks: QuickLinkItem[] = [
-    { href: RESUME_URL, icon: FileText, label: 'Resume' },
-    { href: GITHUB_URL, icon: Github, label: 'GitHub' },
-    { href: LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn' },
-    { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email' },
-  ]
+  // const quickLinks: QuickLinkItem[] = [
+  //   { href: RESUME_URL, icon: FileText, label: 'Resume' },
+  //   { href: GITHUB_URL, icon: Github, label: 'GitHub' },
+  //   { href: LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn' },
+  //   { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email' },
+  // ]
 
-  const showQuickLinks = import.meta.env.DEV;
+  // const showQuickLinks = import.meta.env.DEV;
 
   return (
     <nav className="navbar">
@@ -54,7 +55,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {showQuickLinks && (
+        {/* {{showQuickLinks && (
           <div className="navbar-links">
             {quickLinks.map((link: QuickLinkItem) => (
               <a
@@ -69,7 +70,7 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-        )}
+        )}} */}
 
         <button
           className="mobile-menu-toggle"
@@ -95,7 +96,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          {showQuickLinks && (
+          {/* {{showQuickLinks && (
             <div className="mobile-links">
               {quickLinks.map((link: QuickLinkItem) => (
                 <a
@@ -110,7 +111,7 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-          )}
+          )}} */}
         </div>
       )}
     </nav>

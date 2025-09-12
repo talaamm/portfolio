@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { GraduationCap, Award, Trophy, Star, BookOpen, Calendar, MapPin, ExternalLink } from 'lucide-react'
+import { Trophy, BookOpen, Calendar, MapPin, ExternalLink } from 'lucide-react'
 
 const Education = () => {
   const educationData = [

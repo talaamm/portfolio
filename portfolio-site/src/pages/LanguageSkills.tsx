@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Globe, MessageCircle, BookOpen, Star } from 'lucide-react'
+import { Star } from 'lucide-react'
 
 const LanguageSkills = () => {
   const languages = [

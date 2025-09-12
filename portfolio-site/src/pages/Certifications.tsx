@@ -4,29 +4,26 @@ import { ExternalLink, Award, Calendar } from 'lucide-react'
 const Certifications = () => {
   const certifications = [
     {
-      title: 'Google Cloud Associate Engineer',
-      issuer: 'Google Cloud',
-      date: '2024-01',
-      credentialId: 'GCP-ACE-2024-001',
-      verifyUrl: 'https://www.credential.net/verify',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Google_Cloud_logo.svg/1200px-Google_Cloud_logo.svg.png',
-      description: 'Demonstrated expertise in deploying, monitoring, and maintaining applications on Google Cloud Platform.'
+      title: 'Element of AI for Business',
+      issuer: 'Minna Learn',
+      date: 'August 2025',
+      verifyUrl: 'https://courses.minnalearn.com/certificate/ar/elements-of-ai-for-business/c16b935b-cc79-4631-8a74-e811a5e816bf',
+      logo: 'https://www.vaia.be/files/partners-organisers/_1200x590_crop_center-center_none/Logo-MinnaLearn.svg',
+      description: 'Learned Fundemnetals and Concepts in AI'
     },
     {
-      title: 'AWS Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023-11',
-      credentialId: 'AWS-SAA-2023-002',
-      verifyUrl: 'https://aws.amazon.com/verification',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
-      description: 'Proven ability to design distributed systems on AWS with high availability and scalability.'
+      title: 'Certificate of Completion',
+      issuer: 'HackerRank',
+      date: 'May 2025',
+      verifyUrl: 'https://www.hackerrank.com/certificates/8f3224ab3c0f',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png',
+      description: 'Passed the HackerRank skill certification test for Golang'
     },
     {
-      title: 'Kubernetes Administrator',
-      issuer: 'Cloud Native Computing Foundation',
-      date: '2023-09',
-      credentialId: 'CKA-2023-003',
-      verifyUrl: 'https://cncf.io/certification/verify',
+      title: 'Git & GitHub Workshop',
+      issuer: 'Microsoft Learn Student Ambassadors',
+      date: 'October 2024',
+      verifyUrl: 'https://drive.google.com/file/d/1psfZL1huy_dywDbY5nrlM8Ks0f3TI1ik/view',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Kubernetes-logo.svg',
       description: 'Certified in Kubernetes cluster administration, troubleshooting, and application lifecycle management.'
     },

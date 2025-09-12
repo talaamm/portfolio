@@ -66,6 +66,39 @@ const Projects = () => {
     }
   ]
 
+  const otherProjects = [
+    {
+      id: 'weather-app',
+      title: 'Weather App',
+      githubUrl: 'https://github.com/yourusername/weather-app'
+    },
+    {
+      id: 'todo-list',
+      title: 'Todo List App',
+      githubUrl: 'https://github.com/yourusername/todo-list'
+    },
+    {
+      id: 'blog-platform',
+      title: 'Blog Platform',
+      githubUrl: 'https://github.com/yourusername/blog-platform'
+    },
+    {
+      id: 'recipe-finder',
+      title: 'Recipe Finder',
+      githubUrl: 'https://github.com/yourusername/recipe-finder'
+    },
+    {
+      id: 'expense-tracker',
+      title: 'Expense Tracker',
+      githubUrl: 'https://github.com/yourusername/expense-tracker'
+    },
+    {
+      id: 'portfolio-v1',
+      title: 'Portfolio V1',
+      githubUrl: 'https://github.com/yourusername/portfolio-v1'
+    }
+  ]
+
   return (
     <div className="container">
       <motion.section 
@@ -156,6 +189,45 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Other Projects Section */}
+        <motion.section 
+          className="section mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="text-center mb-8">
+            <h2>Other Projects</h2>
+            <p className="section-subtitle">
+              Additional projects and experiments from my GitHub repositories.
+            </p>
+          </div>
+
+          <div className="other-projects-grid">
+            {otherProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                className="other-project-card"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.4 }}
+                whileHover={{ y: -3, scale: 1.02 }}
+              >
+                <h3 className="other-project-title">{project.title}</h3>
+                <a 
+                  href={project.githubUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  <Github size={16} />
+                  View on GitHub
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
       </motion.section>
     </div>
   )

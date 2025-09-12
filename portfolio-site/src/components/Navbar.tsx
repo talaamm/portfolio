@@ -21,6 +21,7 @@ const Navbar = () => {
     { path: '/volunteering', label: 'Volunteering' },
     { path: '/recommendations', label: 'Recommendations' },
     { path: '/blog', label: 'Blog' },
+    { path: '/languages', label: 'Languages' },
     { path: '/contact', label: 'Contact' },
   ]
 

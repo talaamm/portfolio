@@ -3,11 +3,11 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { NAME } from '../config/constants'
 
-interface QuickLinkItem {
-  href: string
-  icon: React.ComponentType<{ size?: number }>
-  label: string
-}
+// interface QuickLinkItem {
+//   href: string
+//   icon: React.ComponentType<{ size?: number }>
+//   label: string
+// }
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)

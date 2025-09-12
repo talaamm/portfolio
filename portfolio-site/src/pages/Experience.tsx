@@ -11,14 +11,14 @@ const Experience = () => {
       company: 'TechnoGeeks',
       location: 'On-site',
       period: 'March 2024 - December 2024',
-      description: 'Teaching programming fundamentals and robotics to school students. Developed curriculum and hands-on projects.',
+      description: 'Teaching programming fundamentals and robotics to school students. Developed curriculum and hands-on projects. During fun activities, I was a VR activator, where students played games with VR Headsets.',
       achievements: [
-        'Taught 200+ students across multiple cohorts and schools',
+        'Taught 500+ students across multiple cohorts and schools',
         // 'Developed interactive coding curriculum',
         'Mentored students in robotics competitions',
         'Achieved more than 95% student satisfaction rate'
       ],
-      skills: ['Teaching', 'Curriculum Development', 'Python', 'Arduino', 'Robotics']
+      skills: ['Teaching', 'Curriculum Development', 'Python', 'Arduino', 'Robotics' , 'VR']
     },
   ]
 
@@ -72,27 +72,17 @@ const Experience = () => {
       skills: ['Arduino', 'Sensor Integration', 'Programming', 'Team Collaboration', 'Problem Solving'],
       hours: '30+ hours',
       location: 'On-site / Jerusalem'
+    },
+    {
+      title: 'Mentor - Hour of Code Events',
+      organization: "Rosary Sister's High School",
+      period: 'Multiple Sessions',
+      description: 'Mentored students in coding and computational thinking during Hour of Code events at school, guiding beginners through interactive programming exercises and fostering interest in technology.',
+      impact: 'Helped over a lot of students gain hands-on experience with coding, inspiring interest in computer science and developing foundational programming skills.',
+      skills: ['Mentoring', 'Teaching', 'Java', 'Problem Solving', 'Patience'],
+      hours: '12+ hours',
+      location: 'Hybrid / Jerusalem'
     },    
-    // {
-    //   title: 'STEM Education Volunteer',
-    //   organization: 'Local School District',
-    //   period: '2022-09 - 2023-06',
-    //   description: 'Teaching robotics and programming to elementary and middle school students during after-school programs.',
-    //   impact: 'Introduced 200+ students to STEM fields, with 30% expressing interest in pursuing tech careers.',
-    //   skills: ['Teaching', 'Robotics', 'Arduino', 'Scratch', 'Event Planning'],
-    //   hours: '150+ hours',
-    //   location: 'Local Schools'
-    // },
-    // {
-    //   title: 'Tech for Social Good',
-    //   organization: 'Non-Profit Tech Alliance',
-    //   period: '2023-03 - Present',
-    //   description: 'Building web applications and digital tools for non-profit organizations to improve their operations.',
-    //   impact: 'Developed 5 digital solutions that improved efficiency for 3 non-profits, serving 1000+ beneficiaries.',
-    //   skills: ['Web Development', 'Database Design', 'User Research', 'Project Management'],
-    //   hours: '100+ hours',
-    //   location: 'Remote'
-    // }
   ]
 
   // const totalImpact = {

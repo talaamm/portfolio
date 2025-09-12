@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { GraduationCap, Award, Trophy, Star, BookOpen, Calendar, MapPin } from 'lucide-react'
+import { GraduationCap, Award, Trophy, Star, BookOpen, Calendar, MapPin, ExternalLink } from 'lucide-react'
 
 const Education = () => {
   const educationData = [
@@ -7,23 +7,23 @@ const Education = () => {
       id: 'bachelor',
       level: 'Bachelor Degree',
       institution: 'Birzeit University',
-      degree: 'Bachelor of Science in Computer Science',
-      location: 'Birzeit, Palestine',
-      startDate: '2021',
-      endDate: '2025',
+      degree: 'Bachelor of Engineering in Computer Engineering',
+      location: 'Birzeit City',
+      startDate: '2024',
+      endDate: '2028',
       status: 'In Progress',
-      gpa: '3.8/4.0',
+      gpa: '89/100',
       achievements: [
         {
           title: 'Honor\'s List',
-          description: 'Dean\'s List for 2 consecutive semesters',
+          description: 'Honor\'s List and Academic Excellence scholarship for 2 consecutive semesters so far',
           icon: '🏆',
           highlight: '2x Consecutive',
           color: '#fbbf24'
         },
         {
           title: 'Calculus Excellence',
-          description: 'Achieved 99% in Advanced Calculus',
+          description: 'Achieved 99% in the Calculus Course',
           icon: '📊',
           highlight: '99% Grade',
           color: '#10b981'
@@ -36,51 +36,106 @@ const Education = () => {
           color: '#3b82f6'
         }
       ],
-      description: 'Pursuing a comprehensive Computer Science degree with focus on software engineering, algorithms, and modern development practices.',
-      logo: '🎓'
+      description: 'Pursuing a Computer Engineering degree with focus on software engineering, algorithms, and modern development practices.',
+      logo: 'https://upload.wikimedia.org/wikipedia/ar/thumb/1/16/Birzeit_University_logo.svg/1280px-Birzeit_University_logo.svg.png'
+    },
+    {
+      id: 'certificate',
+      level: 'Certificate',
+      institution: 'Notre Dame University x 01-Talent',
+      degree: 'Adam Coding & Beyond Program: Full-stack Development',
+      location: 'Jerusalem',
+      startDate: 'January 2024',
+      endDate: 'December 2025',
+      status: 'In Progress',
+      gpa: 'A+',
+      achievements: [
+        {
+          title: 'Honor\'s List',
+          description: 'Academic Excellence scholarship for 3 consecutive semesters',
+          icon: '🏆',
+          highlight: '3x Consecutive',
+          color: '#fbbf24'
+        },
+        {
+          title: 'Networking Hero',
+          description: 'Built strong professional connections with IT mentors and industry professionals while still a student, expanding my network and gaining early exposure to practical work experience.',
+          icon: '👥',
+          highlight: 'STRONG CONNECTIONS',
+          color: '#fbbf24'
+        },
+        {
+          title: 'Academic Excellence',
+          description: 'Consistently high performance across all subjects',
+          icon: '⭐',
+          highlight: 'Top Performer',
+          color: '#3b82f6'
+        }
+      ],
+      description: 'Enrolled in a comprehensive coding and professional development program that combines technical training with mentorship. The program connected me with multiple experienced IT mentors, providing insights into real-world work environments and guidance on building a career in technology.',
+      logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGVx9FXWENtIw/company-logo_200_200/company-logo_200_200/0/1734096794786/notre_dame_international_jerusalem_logo?e=2147483647&v=beta&t=QCkMEwPTF7WMIC-MfUjjZi8vujBjgU4fWu5fwhcciBg'
     },
     {
       id: 'high-school',
       level: 'High School',
-      institution: 'Al-Iman Secondary School',
-      degree: 'Tawjihi (Palestinian General Secondary Education)',
-      location: 'Jerusalem, Palestine',
-      startDate: '2017',
-      endDate: '2021',
+      institution: 'Rosary Sister\'s High School',
+      degree: 'Tawjihi (General Second Secondary Education - Scientific Stream)',
+      location: 'Jerusalem',
+      startDate: '2009',
+      endDate: '2023',
       status: 'Completed',
-      gpa: '98.5/100',
+      gpa: '99.4/100',
       achievements: [
         {
+          title: 'Mathmatics Contest Winner',
+          description: 'First place in a Mathmatics competiton 2016',
+          icon: '🏆',
+          highlight: 'Golden Cup',
+          color: '#fbbf24',
+          url: 'https://drive.google.com/file/d/1tJ7_cpjikqAceJup9-CnRutVDY1dotDr/view?usp=sharing',
+        },
+        {
+          title: 'General Knowledge Contest',
+          description: 'Third place in a General Knowledge Contest at Al-Iman schools - 2019',
+          icon: '🥉',
+          highlight: 'Curious Mind',
+          color: '#8b5cf6',
+          url: 'https://drive.google.com/file/d/1RXnnp5E3KqYnkpM0La6wt2cFmM49uJUE/view?usp=sharing',
+        },
+        {
           title: 'School Valedictorian',
-          description: 'Highest grade in the entire school',
+          description: 'Highest grade in the entire school - Tawjihi Scientific Stream',
           icon: '🥇',
           highlight: '1st Place',
+          url: 'https://drive.google.com/file/d/1odS4x_k6on6QQpXbSxFgBK0SQylgK3Rp/view?usp=sharing',
           color: '#fbbf24'
         },
         {
           title: 'District Excellence',
-          description: 'Second highest grade in Jerusalem District',
+          description: 'Second highest grade in Jerusalem District - Tawjihi Scientific Stream',
           icon: '🥈',
           highlight: '2nd District',
           color: '#6b7280'
         },
         {
-          title: 'National Recognition',
-          description: 'Third highest grade across Palestine',
+          title: 'National & International Standing',
+          description: 'Third highest grade across the countrey and worldwide - Tawjihi Scientific Stream',
           icon: '🥉',
-          highlight: '3rd National',
+          highlight: '3rd Global',
           color: '#cd7c2f'
         },
         {
-          title: 'International Standing',
-          description: 'Third highest grade worldwide',
-          icon: '🌍',
-          highlight: '3rd Global',
-          color: '#8b5cf6'
-        }
+          title: 'Model United Nations Participant',
+          description: 'Participated in two MUN conferences during high school, engaging in debate, diplomacy, and public speaking.',
+          icon: '🕊️',
+          highlight: 'Active Debater',
+          url: 'https://drive.google.com/file/d/1w3useTWBZd7p5lz6ZCLT0cKQnAxuhcu9/view?usp=sharing',
+          url2: 'https://drive.google.com/file/d/1JiJROeOyK6SF_Uefh8Nw47fCEZWxBUUm/view?usp=sharing',
+          color: '#3b82f6'
+        },
       ],
-      description: 'Outstanding academic performance in the Palestinian Tawjihi examination, achieving top rankings both nationally and internationally.',
-      logo: '🏫'
+      description: "Completed the Tawjihi Scientific Stream at Rosary Sister's High School with outstanding academic performance, achieving top rankings locally, nationally, and internationally. Recognized for excellence in mathematics, general knowledge, and overall academic performance, including serving as valedictorian. Actively participated in extracurricular activities such as Model United Nations, developing skills in debate, diplomacy, and public speaking. Demonstrated a strong combination of curiosity, leadership, and dedication throughout my high school years.",
+      logo: 'https://th.bing.com/th/id/R.e92f340f2dbe7e5c3e4d0ea06cfc4136?rik=zOlCyuZiOM1Bww&riu=http%3a%2f%2fwww.rosaryshs-j.com%2fwp-content%2fuploads%2f2017%2f10%2fLogo-v2.png&ehk=7WG1CnsLq7E1IXnB4YQkUtwgXd55ZMtQZtb5DSIejps%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1'
     }
   ]
 
@@ -97,7 +152,7 @@ const Education = () => {
 
   return (
     <div className="container">
-      <motion.section 
+      <motion.section
         className="section"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -124,7 +179,16 @@ const Education = () => {
               {/* Education Header */}
               <div className="education-header">
                 <div className="education-logo">
-                  <span style={{ fontSize: '3rem' }}>{education.logo}</span>
+                  {typeof education.logo === 'string' && (education.logo.startsWith('http://') || education.logo.startsWith('https://')) ? (
+                    <img
+                      src={education.logo}
+                      alt={`${education.institution} logo`}
+                      style={{ width: '52px', height: '52px', objectFit: 'contain' }}
+                    />
+                  ) : (
+                    <span>{education.logo}</span>
+                  )}
+                  {/* <span style={{ fontSize: '3rem' }}>{education.logo}</span> */}
                 </div>
                 <div className="education-info">
                   <div className="education-level">{education.level}</div>
@@ -144,7 +208,7 @@ const Education = () => {
                       <span>GPA: {education.gpa}</span>
                     </div>
                     <div className="meta-item">
-                      <div 
+                      <div
                         className="status-badge"
                         style={{ backgroundColor: getStatusColor(education.status) }}
                       >
@@ -171,9 +235,9 @@ const Education = () => {
                       className="achievement-card"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      transition={{ 
-                        delay: index * 0.2 + achievementIndex * 0.1 + 0.3, 
-                        duration: 0.4 
+                      transition={{
+                        delay: index * 0.2 + achievementIndex * 0.1 + 0.3,
+                        duration: 0.4
                       }}
                       whileHover={{ scale: 1.05 }}
                     >
@@ -183,13 +247,36 @@ const Education = () => {
                       <div className="achievement-content">
                         <h5 className="achievement-title">{achievement.title}</h5>
                         <p className="achievement-description">{achievement.description}</p>
-                        <div 
+                        <div
                           className="achievement-highlight"
                           style={{ backgroundColor: achievement.color }}
                         >
                           {achievement.highlight}
                         </div>
                       </div>
+                      <div className="achievement-urls">
+                        {achievement.url && (
+                          <a
+                            href={achievement.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="post-link-small"
+                          >
+                            <ExternalLink size={16} />
+                          </a>
+                        )}
+                        {achievement.url2 && (
+                          <a
+                            href={achievement.url2}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="post-link-small"
+                          >
+                            <ExternalLink size={16} />
+                          </a>
+                        )}
+                      </div>
+
                     </motion.div>
                   ))}
                 </div>
@@ -198,8 +285,7 @@ const Education = () => {
           ))}
         </div>
 
-        {/* Academic Summary */}
-        <motion.div 
+        {/* <motion.div
           className="academic-summary"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -236,7 +322,7 @@ const Education = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div>*/}
       </motion.section>
     </div>
   )

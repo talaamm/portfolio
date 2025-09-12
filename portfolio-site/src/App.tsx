@@ -5,7 +5,7 @@ import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 import Certifications from './pages/Certifications'
 import Experience from './pages/Experience'
-import Volunteering from './pages/Volunteering'
+// import Volunteering from './pages/Volunteering'
 import Recommendations from './pages/Recommendations'
 import Blog from './pages/Blog'
 import LanguageSkills from './pages/LanguageSkills'
@@ -24,7 +24,7 @@ function App() {
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/volunteering" element={<Volunteering />} />
+          {/* <Route path="/volunteering" element={<Volunteering />} /> */}
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/languages" element={<LanguageSkills />} />

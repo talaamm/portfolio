@@ -98,7 +98,7 @@ const Certifications = () => {
         <div className="certifications-grid">
           {certifications.map((cert, index) => (
             <motion.div
-              key={cert.credentialId}
+              // key={cert.credentialId}
               className="certification-card"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ const Certifications = () => {
                 </div>
                 <div className="cert-id">
                   <Award size={16} />
-                  <span>{cert.credentialId}</span>
+                  {/* <span>{cert.credentialId}</span> */}
                 </div>
               </div>
               

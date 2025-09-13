@@ -4,7 +4,7 @@ import { ExternalLink, Award, Calendar } from 'lucide-react'
 const Certifications = () => {
   const certifications = [
     {
-      title: 'Element of AI for Business',
+      title: 'Elements of AI for Business',
       issuer: 'Minna Learn',
       date: 'August 2025',
       // credentialId: 'MINNA-AI-2025-001',
@@ -67,7 +67,7 @@ const Certifications = () => {
       credentialId: '972008000714',
       verifyUrl: 'https://drive.google.com/file/d/1fmaaieahB_lT6ZXUzqN0E4iHCAA1XF0e/view',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1tgLXMk1HDL4B8y0BJtUFRN6D8NrVs7W2ZmAMDU5b_rgSpPCr5ResKgaRaBTm7FB-hRc&usqp=CAU',
-      description: 'Completed the Delf Dalf ench exam level B1'
+      description: 'Completed the Delf Dalf French exam level B1'
     },
     {
       title: 'ToBe Program',
@@ -130,10 +130,10 @@ const Certifications = () => {
                   <Calendar size={16} />
                   <span>{cert.date}</span>
                 </div>
-                <div className="cert-id">
+                {/* <div className="cert-id">
                   <Award size={16} />
-                  {/* <span>{cert.credentialId}</span> */}
-                </div>
+                  {/* <span>{cert.credentialId}</span> 
+                </div> */}
               </div>
               
               <a 
@@ -198,10 +198,10 @@ const Certifications = () => {
                     <Calendar size={16} />
                     <span>{cert.date}</span>
                   </div>
-                  <div className="cert-id">
+                  {cert.credentialId && <div className="cert-id">
                     <Award size={16} />
                     <span>{cert.credentialId}</span>
-                  </div>
+                  </div>}
                 </div>
                 
                 <a 

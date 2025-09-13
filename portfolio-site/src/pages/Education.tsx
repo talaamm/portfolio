@@ -58,10 +58,10 @@ const Education = () => {
           color: '#fbbf24'
         },
         {
-          title: 'Networking Hero',
+          title: 'Networking Pro',
           description: 'Built strong professional connections with IT mentors and industry professionals while still a student, expanding my network and gaining early exposure to practical work experience.',
           icon: '👥',
-          highlight: 'STRONG CONNECTIONS',
+          highlight: 'Bridges builder',
           color: '#fbbf24'
         },
         {

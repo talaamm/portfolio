@@ -9,7 +9,7 @@ const Projects = () => {
       description: 'A full-stack Facebook-like social networking application. Developed a feature-rich social network supporting authentication, profiles, followers, posts, groups, real-time chat (WebSockets), and notifications. The system was fully containerized with Docker for smooth deployment of frontend and backend services.',
       techStack: ['Go', 'Vue.js', 'JavaScript', 'HTML', 'CSS', 'Docker', 'SQLite'],
       role_label: ['Team Leader', 'Integration Engineer'],
-      role_description: ['Led a 6-person team, bridging frontend and backend workflows.', 'Bridged Go backend and Vue.js frontend communication'],
+      role_description: ['Led a 6-person team to deliver a production-ready social platform', 'Integrated Go REST APIs with Vue.js frontend for seamless communication.'],
       features: [
         'Implemented session & cookie-based authentication with bcrypt encryption.',
         'Integrated real-time chat and group messaging using Gorilla WebSocket.',
@@ -17,7 +17,7 @@ const Projects = () => {
         'Containerized services into separate Docker images for frontend & backend.',
       ],
       githubUrl: 'https://github.com/talaamm/Social-Network-March2025/',
-      demoUrl: 'https://socialnetwork-demo.vercel.app',
+      // demoUrl: 'https://socialnetwork-demo.vercel.app',
       // image: '/project-socialnetwork.jpg',
       date: 'February 2025'
     },
@@ -38,7 +38,7 @@ const Projects = () => {
         'Created a fully functional TodoMVC demo powered by the framework.',
       ],
       githubUrl: 'https://github.com/talaamm/mini-js-framework',
-      demoUrl: 'https://talaamm.github.io/mini-js-framework/p',
+      demoUrl: 'https://talaamm.github.io/mini-js-framework/',
       // image: '/project-miniframework.jpg',
       date: 'March 2025'
     },
@@ -60,7 +60,6 @@ const Projects = () => {
         'Supported ls flags (-l, -a, -F) and rm recursive deletion.',
         'Handled Ctrl+D gracefully for shell exit.',
         'Implemented proper prompt behavior and input parsing.',
-        'Bonus: added usability features like custom error messages and directory-aware prompts.',
       ],
       githubUrl: 'https://github.com/talaamm/zero-shell',
       // image: '/project-0shell.jpg',
@@ -131,6 +130,12 @@ const Projects = () => {
       title: 'Investigate a Data Set',
       techstack:['Python'],
       githubUrl: 'https://github.com/talaamm/Investigate-a-Data-Set_Udacity_Nov2024'
+    },
+    {
+      id: 'inv',
+      title: 'Go Reloaded',
+      techstack:['Python'],
+      githubUrl: 'https://github.com/talaamm/go-reloaded_Oct2023'
     },
     
     {

@@ -89,12 +89,12 @@ const Projects = () => {
   ]
 
   const otherProjects = [
-    {
-      id: 'fps-game',
-      title: 'Multiplayer FPS Game ',
-      techstack:['Rust'],
-      githubUrl: 'https://github.com/talaamm/multiplayer-fps'
-    },
+    // {
+    //   id: 'fps-game',
+    //   title: 'Multiplayer FPS Game ',
+    //   techstack:['Rust'],
+    //   githubUrl: 'https://github.com/talaamm/multiplayer-fps'
+    // },
     {
       id: 'gitea to github',
       title: 'Gitea To GitHub Script',
@@ -105,7 +105,8 @@ const Projects = () => {
       id: 'ascii-art',
       title: 'Ascii Art Web',
       techstack:['Go' , 'Docker' , 'HTML' , 'CSS'],
-      githubUrl: 'https://github.com/talaamm/Web-Docker-AsciiArt_March2024'
+      githubUrl: 'https://github.com/talaamm/Web-Docker-AsciiArt_March2024',
+      demourl: 'https://web-docker-asciiart-march2024.onrender.com'
     },
     {
       id: 'math-skills',
@@ -113,17 +114,18 @@ const Projects = () => {
       techstack:['Go'],
       githubUrl: 'https://github.com/talaamm/math-skills_April2024'
     },
-    {
-      id: 'localhost',
-      title: 'LocalHost - Rust Server',
-      techstack:['Rust'],
-      githubUrl: 'https://github.com/talaamm/localhost'
-    },
+    // {
+    //   id: 'localhost',
+    //   title: 'LocalHost - Rust Server',
+    //   techstack:['Rust'],
+    //   githubUrl: 'https://github.com/talaamm/localhost'
+    // },
     {
       id: 'library',
       title: 'Online Library Website',
       techstack:['HTML' , 'CSS' , 'JavaScript'],
-      githubUrl: 'https://github.com/talaamm/Library-Website-2020'
+      githubUrl: 'https://github.com/talaamm/Library-Website-2020',
+      demourl: 'https://talaamm.github.io/Library-Website-2020/home%20page.html'
     },
     {
       id: 'inv',
@@ -132,9 +134,9 @@ const Projects = () => {
       githubUrl: 'https://github.com/talaamm/Investigate-a-Data-Set_Udacity_Nov2024'
     },
     {
-      id: 'inv',
+      id: 'go-rel',
       title: 'Go Reloaded',
-      techstack:['Python'],
+      techstack:['Go'],
       githubUrl: 'https://github.com/talaamm/go-reloaded_Oct2023'
     },
     
@@ -142,13 +144,21 @@ const Projects = () => {
       id: 'gt',
       title: 'Groupie Tracker',
       techstack:['Go' , 'HTML' , 'CSS' , 'Docker'],
-      githubUrl: 'https://github.com/talaamm/groupie-tracker_April2024'
+      githubUrl: 'https://github.com/talaamm/groupie-tracker_April2024',
+      demourl:'https://groupie-tracker-x4fz.onrender.com/'
+    },
+    {
+      id: 'fg',
+      title: 'Lem-in',
+      techstack:['Go'],
+      githubUrl: 'https://github.com/talaamm/lem-in_June2024'
     },
     {
       id: 'fg',
       title: 'Filler Game',
       techstack:['Rust'],
-      githubUrl: 'https://github.com/talaamm/Filler-Game-May2025'
+      githubUrl: 'https://github.com/talaamm/Filler-Game-May2025',
+      demourl: 'https://cosmic-grid-filler.lovable.app/'
     },
     {
       id: 'fg',
@@ -172,13 +182,15 @@ const Projects = () => {
       id: 'fg',
       title: 'Duck Hunt Game',
       techstack:['JavaScript' , 'HTML' , 'CSS'],
-      githubUrl: 'https://github.com/talaamm/make-your-game'
+      githubUrl: 'https://github.com/talaamm/make-your-game',
+      demourl: 'https://talaamm.github.io/make-your-game_Nov2024/'
     },
     {
       id: 'fg',
       title: 'Graphql-01',
       techstack:['JavaScript' , 'HTML' , 'CSS'],
-      githubUrl: 'https://github.com/talaamm/graphql-01'
+      githubUrl: 'https://github.com/talaamm/graphql-01',
+      demourl: 'https://noorhalabi911.github.io/graphql-01/'
     },
 
   ]
@@ -332,7 +344,26 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-                <a
+              
+                  {project.demourl ? (
+                      <div className="project-links">
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-secondary"
+                      >
+                        <Github size={16} />
+                      </a>
+                    <a
+                      href={project.demourl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary"
+                    >
+                      <ExternalLink size={16} />
+                    </a> 
+                  </div>): (   <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -340,7 +371,7 @@ const Projects = () => {
                 >
                   <Github size={16} />
                   View on GitHub
-                </a>
+                </a>)}
               </motion.div>
             ))}
           </div>

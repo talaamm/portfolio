@@ -14,6 +14,17 @@ const Recommendations = () => {
       // date: '2024-01-15'
     },
     {
+      name: 'Mohammad Salah',
+      title: 'TechnoGeeks under & CEO',
+      company: 'TechnoGeeks',
+      relationship: 'Former Employer & Manager',
+      text: 'I had the pleasure of managing and working directly with Tala Amm, and I can confidently say that she is one of the most talented and dedicated young professionals I have met. Beyond her technical expertise, Tala stands out for her professionalism, commitment, and teamwork. She consistently showed initiative, took ownership of her tasks, and was always eager to go the extra mile to ensure high-quality outcomes. What impressed me the most is her ability to combine technical depth with clear communication, making her an asset in both individual and collaborative environments. I strongly recommend Tala for any part-time junior roles, internships, or remote opportunities. She has the potential to grow into an outstanding engineer and will bring value, energy, and innovation to any team she joins.',
+      linkedinUrl: 'https://www.linkedin.com/in/mohammadsalahtech',
+      rating: 5,
+      // date: '2024-01-15'
+    },
+
+    {
       name: 'Amro Mahmoud Khweis',
       title: 'Full-Stack Developer',
       // company: 'StartupXYZ',

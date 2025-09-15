@@ -113,7 +113,7 @@ const Contact = () => {
         <div className="text-center mb-8">
           <h1>Get In Touch</h1>
           <p className="section-subtitle">
-            I'm always interested in new opportunities, collaborations, and meaningful conversations about technology.
+          I’m always open to new connections, collaborations, and meaningful conversations about technology. Whether it’s a potential internship, project, or just sharing ideas, I’d be happy to hear from you and get to know you!
           </p>
         </div>
 

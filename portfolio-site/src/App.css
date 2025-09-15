@@ -44,6 +44,13 @@ main {
   gap: 2rem;
 }
 
+/* Hide desktop nav visually when forcing mobile, but keep it measurable */
+.navbar-content.force-mobile .navbar-nav {
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+}
+
 .navbar-nav a {
   color: var(--secondary);
   text-decoration: none;
@@ -58,7 +65,7 @@ main {
 }
 
 .navbar-nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -77,6 +84,11 @@ main {
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+
+/* When Navbar forces mobile due to overflow */
+.navbar-content.force-mobile .mobile-menu-toggle {
+  display: block;
 }
 
 .navbar-links a {
@@ -182,23 +194,23 @@ main {
   .navbar-nav {
     display: none;
   }
-  
+
   .navbar-links {
     display: none;
   }
-  
+
   .mobile-menu-toggle {
     display: block;
   }
-  
+
   .mobile-menu {
     display: block;
   }
-  
+
   .hidden-mobile {
     display: none;
   }
-  
+
   main {
     padding-top: 70px;
   }
@@ -242,7 +254,8 @@ main {
   flex-wrap: wrap;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -265,6 +278,11 @@ main {
   box-shadow: 0 8px 25px rgba(139, 92, 246, 0.25);
 }
 
+.btn-primary:hover,
+.btn-primary svg {
+  color: white;
+}
+
 .btn-secondary {
   background: white;
   color: var(--primary);
@@ -277,6 +295,7 @@ main {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Ensure icons inside secondary buttons also turn white on hover */
 /* Tech Stack */
 .tech-grid {
   display: grid;
@@ -308,7 +327,12 @@ main {
 .tech-logo {
   font-size: 2.5rem;
 }
-
+.card.text-center{
+  max-width: 900px;
+  width: 100%;
+  justify-items: center;
+  margin: 0 auto;
+}
 .tech-name {
   font-weight: 600;
   color: var(--primary);
@@ -383,21 +407,21 @@ main {
     align-items: center;
     gap: 1rem;
   }
-  
+
   .hero-links {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .tech-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
   }
-  
+
   .social-links {
     gap: 1rem;
   }
-  
+
   .social-links a {
     padding: 0.75rem 1rem;
   }
@@ -407,7 +431,7 @@ main {
 .section-subtitle {
   font-size: 1.125rem;
   color: var(--text-light);
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -636,6 +660,19 @@ main {
   padding: 0.85rem 1.5rem;
   font-size: 0.875rem;
 }
+.project-link {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.1rem;
+  /* justify-content: center; */
+}
+
+.project-link .btn-primary,
+.project-link .btn-secondary {
+  padding: 0.84rem 1.5rem;
+  font-size: 1rem;
+}
 
 /* Project Detail styles */
 .project-detail-header {
@@ -719,7 +756,7 @@ main {
 }
 
 .features-list li:before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: var(--primary);
@@ -743,41 +780,41 @@ main {
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .project-hero {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .project-detail-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .project-meta {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .project-links {
     flex-direction: column;
   }
-  
+
   .project-section {
     padding: 0.75rem;
   }
-  
+
   .role-split {
     gap: 0.75rem;
   }
-  
+
   .section-header {
     gap: 0.25rem;
   }
-  
+
   .section-icon {
     font-size: 1rem;
   }
-  
+
   .section-header h4 {
     font-size: 0.875rem;
   }
@@ -984,7 +1021,7 @@ main {
 }
 
 .experience-achievements li:before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: var(--primary);
@@ -1122,8 +1159,10 @@ main {
 /* Recommendations page styles */
 .recommendations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  justify-content: center;
+  justify-items: center;
 }
 
 .recommendation-card {
@@ -1133,6 +1172,16 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--border);
   transition: all 0.3s ease;
+  max-width: 900px;
+}
+
+/* Small avatar next to name/title/relationship */
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
 }
 
 .recommendation-card:hover {
@@ -1607,39 +1656,39 @@ main {
   .featured-posts {
     grid-template-columns: 1fr;
   }
-  
+
   .impact-stats,
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .regular-posts {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .experience-header,
   .volunteer-details {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .recommendation-author {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .regular-post-card {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .post-link-small {
     align-self: flex-end;
   }
@@ -1688,7 +1737,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
   }
-  
+
   .other-project-card {
     padding: 1.25rem;
   }
@@ -1888,22 +1937,22 @@ main {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .languages-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .language-card {
     padding: 1.5rem;
   }
-  
+
   .language-header {
     flex-direction: column;
     text-align: center;
     gap: 0.75rem;
   }
-  
+
   .language-flag {
     font-size: 2rem;
     width: 50px;
@@ -1932,7 +1981,7 @@ main {
 }
 
 .education-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -2181,47 +2230,47 @@ main {
   .education-timeline {
     gap: 2rem;
   }
-  
+
   .education-card {
     padding: 1.5rem;
   }
-  
+
   .education-header {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-  
+
   .education-logo {
     width: 60px;
     height: 60px;
     align-self: center;
   }
-  
+
   .education-institution {
     font-size: 1.5rem;
   }
-  
+
   .education-meta {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
   }
-  
+
   .achievements-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .achievement-card {
     padding: 1rem;
   }
-  
+
   .summary-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  
+
   .summary-stat {
     padding: 1rem;
     flex-direction: column;

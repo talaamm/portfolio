@@ -206,7 +206,7 @@ const Projects = () => {
         <div className="text-center mb-8">
           <h1>Featured Projects</h1>
           <p className="section-subtitle">
-            A showcase of my best work, highlighting technical challenges solved and impact created.
+          Hands-on work in systems programming, full-stack development, and real-time applications.
           </p>
         </div>
 
@@ -285,7 +285,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="project-links">
+                <div className="project-link">
                   <a
                     href={project.githubUrl}
                     target="_blank"
@@ -293,7 +293,7 @@ const Projects = () => {
                     className="btn-primary"
                   >
                     <Github size={16} />
-                    Code
+                    View On GitHub
                   </a>
                   {project.demoUrl && (
                     <a

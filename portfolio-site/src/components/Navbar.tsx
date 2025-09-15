@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { NAME } from '../config/constants'
@@ -11,6 +11,11 @@ import { NAME } from '../config/constants'
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [forceMobile, setForceMobile] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const navRef = useRef<HTMLUListElement>(null)
+  const brandRef = useRef<HTMLAnchorElement>(null)
+  const navWidthRef = useRef<number>(0)
   const location = useLocation()
 
   const navItems = [
@@ -35,14 +40,45 @@ const Navbar = () => {
 
   // const showQuickLinks = import.meta.env.DEV;
 
+  useEffect(() => {
+    const measureAndToggle = () => {
+      const containerWidth = containerRef.current?.clientWidth ?? 0
+      const brandWidth = brandRef.current?.offsetWidth ?? 0
+      const measuredNavWidth = navRef.current?.scrollWidth ?? navRef.current?.getBoundingClientRect().width ?? 0
+      if (measuredNavWidth > 0) {
+        navWidthRef.current = measuredNavWidth
+      }
+      const navWidth = measuredNavWidth || navWidthRef.current
+      const horizontalPaddingAndGaps = 48 // small buffer for paddings/gaps
+      const needed = brandWidth + navWidth + horizontalPaddingAndGaps
+      setForceMobile(needed > containerWidth)
+    }
+
+    measureAndToggle()
+
+    const handleResize = () => measureAndToggle()
+    window.addEventListener('resize', handleResize)
+
+    let ro: ResizeObserver | null = null
+    if ('ResizeObserver' in window && containerRef.current) {
+      ro = new ResizeObserver(measureAndToggle)
+      ro.observe(containerRef.current)
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      if (ro && containerRef.current) ro.disconnect()
+    }
+  }, [location.pathname])
+
   return (
     <nav className="navbar">
-      <div className="navbar-content">
-        <Link to="/" className="navbar-brand">
+      <div className={`navbar-content ${forceMobile ? 'force-mobile' : ''}`} ref={containerRef}>
+        <Link to="/" className="navbar-brand" ref={brandRef}>
           {NAME}
         </Link>
 
-        <ul className="navbar-nav">
+        <ul className="navbar-nav" ref={navRef}>
           {navItems.map((item) => (
             <li key={item.path}>
               <Link
@@ -82,7 +118,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="mobile-menu">
+        <div className="mobile-menu" style={forceMobile ? { display: 'block' } : undefined}>
           <ul className="mobile-nav">
             {navItems.map((item) => (
               <li key={item.path}>

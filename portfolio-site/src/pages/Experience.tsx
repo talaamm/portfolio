@@ -103,7 +103,7 @@ const Experience = () => {
         <div className="text-center mb-8">
           <h1>Experience</h1>
           <p className="section-subtitle">
-            A diverse range of experiences in teaching, development, and innovation.
+          Shaping my journey from tech education to software engineering. Eager to take on new roles and internships that expand my knowledge, challenge my skills, and contribute to impactful projects..
           </p>
         </div>
 
@@ -171,7 +171,7 @@ const Experience = () => {
         <div className="text-center mb-8">
           <h1>Volunteering & Community Impact</h1>
           <p className="section-subtitle">
-            Giving back to the community through technology education and open source contributions.
+          Passionate about giving back to the tech community, through mentoring, teaching, and contributing to impactful tech projects.
           </p>
         </div>
         {/* 

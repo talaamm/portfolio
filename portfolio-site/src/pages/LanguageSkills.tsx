@@ -80,7 +80,7 @@ const LanguageSkills = () => {
         <div className="text-center mb-8">
           <h1>Language Skills</h1>
           <p className="section-subtitle">
-            My multilingual journey and proficiency levels across different languages.
+          My multilingual journey: Connecting cultures, ideas, and opportunities through language.
           </p>
         </div>
 
@@ -182,11 +182,9 @@ const LanguageSkills = () => {
         >
           <h2>My Language Learning Journey</h2>
           <p className="journey-description">
-            I believe that learning languages opens doors to new cultures, perspectives, and opportunities. 
-            Each language I learn helps me connect with people from different backgrounds and understand 
-            the world from diverse viewpoints. Currently, I'm focusing on improving my Japanese and 
-            Mandarin skills while maintaining my fluency in other languages.
-          </p>
+          I believe mastering languages opens doors to new perspectives, cultures, and professional opportunities. 
+          Each language I learn helps me communicate, collaborate, and understand the world from diverse viewpoints.
+          Currently, I’m focusing on improving my Hebrew skills while maintaining fluency in other languages. </p>
         </motion.div>
       </motion.section>
     </div>

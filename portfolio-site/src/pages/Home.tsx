@@ -91,7 +91,7 @@ const Home = () => {
 
           <h1>Hi, I'm {NAME}</h1>
           <p className="hero-subtitle">
-          Computer Engineering student, Full-Stack Developer & Tech Writer passionate about building scalable applications and sharing knowledge with the developer community </p>
+          Computer Engineering student, Full-Stack Developer & Tech Writer passionate about building scalable applications and sharing knowledge with the developer community. </p>
 
           <div className="hero-stats mb-8">
             <div className="stat-item">

@@ -47,7 +47,7 @@ const Certifications = () => {
       issuer: 'Mati Jerusalem - Business Development Center',
       date: 'January 2023',
       // credentialId: 'ARC-FA-2024-001',
-      verifyUrl: 'https://drive.google.com/file/d/1rrgBt8f108KGS1TbJZoBc4RyMmG_pF5D/view',
+      verifyUrl: 'https://drive.google.com/file/d/1nC-_SsawJ9bPQ0V9aZpPgPYjoa62UVyn/view?usp=sharing',
       logo: 'https://www.nbn.org.il/jobboard/wp-content/uploads/2022/09/mati-jerusalem.jpg',
       description: 'Completed 12 hours course in budget management'
     },
@@ -56,7 +56,7 @@ const Certifications = () => {
       issuer: 'Mati Jerusalem - Business Development Center',
       date: 'October 2021',
       // credentialId: 'ARC-FA-2024-001',
-      verifyUrl: 'https://drive.google.com/file/d/1mEVq9d9URLlchj9WWT-VQD-EIbJup7n7/view',
+      verifyUrl: 'https://drive.google.com/file/d/1qljg_DoKbGHPi-3YFXFwtbCem1HjhrUw/view?usp=sharing',
       logo: 'https://www.nbn.org.il/jobboard/wp-content/uploads/2022/09/mati-jerusalem.jpg',
       description: 'Completed 12 hours course in learning the correct financial behaviour  as a student'
    },
@@ -65,7 +65,7 @@ const Certifications = () => {
       issuer: 'Ministère de l\'Éducation nationale',
       date: 'August 2021',
       credentialId: '972008000714',
-      verifyUrl: 'https://drive.google.com/file/d/1fmaaieahB_lT6ZXUzqN0E4iHCAA1XF0e/view',
+      verifyUrl: 'https://drive.google.com/file/d/1w9HQYYUD4GwYBwkKcTKCEdXyY2Eqjexg/view?usp=sharing',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1tgLXMk1HDL4B8y0BJtUFRN6D8NrVs7W2ZmAMDU5b_rgSpPCr5ResKgaRaBTm7FB-hRc&usqp=CAU',
       description: 'Completed the Delf Dalf French exam level B1'
     },
@@ -74,7 +74,7 @@ const Certifications = () => {
       issuer: 'An Najah National University',
       date: 'August 2021',
       // credentialId: '972008000714',
-      verifyUrl: 'https://drive.google.com/file/d/11Ko8Py5b3xSZ3UbQJ8GTKPS1wQBwPO0z/view',
+      verifyUrl: 'https://drive.google.com/file/d/1APIxwFRIQhOjkfH8sH7bTXCAVFZRucmv/view?usp=sharing',
       logo: 'https://www-cdn.najah.edu/static/img/logo2021_en.png',
       description: 'Learned the fundementals of Research Skills, and web development. Completed a project to apply gained skills.'
     },

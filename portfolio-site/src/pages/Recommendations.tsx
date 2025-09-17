@@ -6,6 +6,17 @@ const Recommendations = () => {
   //   `https://media.ilicdn.com/dms/image/${encodeURIComponent(linkedinUrl)}`
   const recommendations = [
     {
+      name: 'Victor Nammour',
+      title: 'Senior Computer Programmer',
+      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D4D03AQGkYDZBv9R5jw/profile-displayphoto-shrink_800_800/B4DZR7Z.kPGUAc-/0/1737237196485?e=1761177600&v=beta&t=q0MZCaM5Q4ywpNp_yLT0K69BfItyLMeZvR8LBQeRGrU',
+      // company: 'TechCorp',
+      relationship: 'Taught me at Notre Dame University',
+      text: 'To whom it may concern,\nAs a mentor developer at Tantur, the Jerusalem campus of Notre Dame University, I educate our students in programming languages such as Golang and Rust, in data structures and algorithms, and in solving coding problems.\nIn the scope of my work, I have worked with Tala for about a year. Throughout that period, she has consistently demonstrated excellent qualities as both a learner and a programmer. She performs exceptionally well in our monthly coding challenge exams and consistently goes above and beyond in applying the best design and coding strategies in the usually difficult projects she is assigned.\nDespite the extremely demanding nature of the program on our campus, as well as the challenges of commuting between Jerusalem and its environs, Tala is also pursuing her bachelor\'s degree in Computer Engineering at Birzeit University. This demonstrates her high level of dedication, perseverance, and responsibility.\nShe is a hardworking, disciplined, and eager learner - an extremely smart individual who does not shy away from challenges. As a computer scientist, she will undoubtedly be an invaluable asset to any company that hires her.\nBest regards,\nVictor Nammour\nMentor Developer\nNotre Dame University - Tantur Campus\nJerusalem',
+      linkedinUrl: 'https://www.linkedin.com/in/vnammour',
+      rating: 5,
+      // date: '2024-01-15'
+    },
+    {
       name: 'Noor Halabi',
       title: 'Full-Stack Developer',
       getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D5603AQE_b_rYS2C0Zg/profile-displayphoto-crop_800_800/B56Ziyr6UfHcAQ-/0/1755344512950?e=1760572800&v=beta&t=wbWgeezRG-QpA4KNHckEwlPBNDNRUB-CtaMLv7FtBeQ',
@@ -99,7 +110,7 @@ const Recommendations = () => {
                 </div>
               </div>
               
-              <blockquote className="recommendation-text">
+              <blockquote className="recommendation-text whitespace-pre-line">
                 "{rec.text}"
               </blockquote>
               

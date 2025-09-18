@@ -91,7 +91,7 @@ const Certifications = () => {
         <div className="text-center mb-8">
           <h1>Certifications</h1>
           <p className="section-subtitle">
-            Professional certifications that validate my expertise in modern technologies and cloud platforms.
+            Professional certifications that validate my expertise in modern technologies.
           </p>
         </div>
 

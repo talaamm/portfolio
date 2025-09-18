@@ -1211,6 +1211,7 @@ main {
   margin-bottom: 1.5rem;
   line-height: 1.6;
   font-size: 1.125rem;
+  white-space: pre-line;
 }
 
 .recommendation-author {

@@ -47,7 +47,7 @@ const Experience = () => {
       title: 'Coding Summer Camp - Tech Mentor and Team Leader',
       organization: 'Coding Academy of Jerusalem',
       period: 'June 2022 - July 2022',
-      description: 'Led and mentored groups of students in an intensive summer camp focused on coding, robotics, and problem-solving. Designed and delivered interactive workshops on:Robotics, Coding fundamentals and hands-on programming, 3D Design with SketchUp, Problem-solving & logic including teaching students how to solve the Rubik\’s Cube, How to play Chess and other games that depend on logic.',
+      description: 'Led and mentored groups of students in an intensive summer camp focused on coding, robotics, and problem-solving. Designed and delivered interactive workshops on: Robotics, Coding fundamentals and hands-on programming, 3D Design with SketchUp, Problem-solving & logic, including teaching students how to solve a 3*3*3 Rubik\’s Cube, how to play Chess, and other games that develops their logic.',
       // impact: 'Helped 50+ students from underserved communities learn programming and secure tech internships.',
       skills: ['Mentoring', 'Public Speaking', 'Community Building', 'Team Leading', 'Java'],
       hours: '80+ hours',
@@ -103,7 +103,7 @@ const Experience = () => {
         <div className="text-center mb-8">
           <h1>Experience</h1>
           <p className="section-subtitle">
-          Shaping my journey from tech education to software engineering. Eager to take on new roles and internships that expand my knowledge, challenge my skills, and contribute to impactful projects..
+          Shaping my journey from tech education to software engineering. Eager to take on new roles and internships that expand my knowledge, challenge my skills, and contribute to impactful projects.
           </p>
         </div>
 
@@ -149,7 +149,7 @@ const Experience = () => {
                 </div>
 
                 <div className="experience-skills">
-                  <h4>Technologies Used:</h4>
+                  <h4>Gained Skills:</h4>
                   <div className="skills-tags">
                     {exp.skills.map((skill) => (
                       <span key={skill} className="skill-tag">{skill}</span>

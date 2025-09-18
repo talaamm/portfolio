@@ -11,28 +11,8 @@ const Recommendations = () => {
       getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D4D03AQGkYDZBv9R5jw/profile-displayphoto-shrink_800_800/B4DZR7Z.kPGUAc-/0/1737237196485?e=1761177600&v=beta&t=q0MZCaM5Q4ywpNp_yLT0K69BfItyLMeZvR8LBQeRGrU',
       // company: 'TechCorp',
       relationship: 'Taught me at Notre Dame University',
-      text: `To whom it may concern,
-      As a mentor developer at Tantur, the Jerusalem campus of Notre Dame University, I educate our students in programming languages such as Golang and Rust, in data structures and algorithms, and in solving coding problems.
-      In the scope of my work, I have worked with Tala for about a year. Throughout that period, she has consistently demonstrated excellent qualities as both a learner and a programmer. She performs exceptionally well in our monthly coding challenge exams and consistently goes above and beyond in applying the best design and coding strategies in the usually difficult projects she is assigned.
-      Despite the extremely demanding nature of the program on our campus, as well as the challenges of commuting between Jerusalem and its environs, Tala is also pursuing her bachelor\'s degree in Computer Engineering at Birzeit University. This demonstrates her high level of dedication, perseverance, and responsibility.
-      She is a hardworking, disciplined, and eager learner - an extremely smart individual who does not shy away from challenges. As a computer scientist, she will undoubtedly be an invaluable asset to any company that hires her.
-      Best regards,
-      Victor Nammour
-      Mentor Developer
-      Notre Dame University - Tantur Campus
-      Jerusalem`,
+      text: `To whom it may concern,\n\nAs a mentor developer at Tantur, the Jerusalem campus of Notre Dame University, I educate our students in programming languages such as Golang and Rust, in data structures and algorithms, and in solving coding problems.\nIn the scope of my work, I have worked with Tala for about a year. Throughout that period, she has consistently demonstrated excellent qualities as both a learner and a programmer. She performs exceptionally well in our monthly coding challenge exams and consistently goes above and beyond in applying the best design and coding strategies in the usually difficult projects she is assigned.\nDespite the extremely demanding nature of the program on our campus, as well as the challenges of commuting between Jerusalem and its environs, Tala is also pursuing her bachelor's degree in Computer Engineering at Birzeit University. This demonstrates her high level of dedication, perseverance, and responsibility.\nShe is a hardworking, disciplined, and eager learner - an extremely smart individual who does not shy away from challenges. As a computer scientist, she will undoubtedly be an invaluable asset to any company that hires her.\n\nBest regards,\nVictor Nammour\nMentor Developer\nNotre Dame University - Tantur Campus\nJerusalem`,
       linkedinUrl: 'https://www.linkedin.com/in/vnammour',
-      rating: 5,
-      // date: '2024-01-15'
-    },
-    {
-      name: 'Noor Halabi',
-      title: 'Full-Stack Developer',
-      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D5603AQE_b_rYS2C0Zg/profile-displayphoto-crop_800_800/B56Ziyr6UfHcAQ-/0/1755344512950?e=1760572800&v=beta&t=wbWgeezRG-QpA4KNHckEwlPBNDNRUB-CtaMLv7FtBeQ',
-      // company: 'TechCorp',
-      relationship: 'Colleague at Notre Dame University',
-      text: 'I had the pleasure of working alongside Tala during our Full Stack Development program at the University of Notre Dame. From the very first project, it was clear that Tala brings an exceptional combination of technical skill, creativity, and leadership to every task. We collaborated closely on nearly every project, and I was consistently impressed by her ability to bridge the gap between frontend and backend development seamlessly. Beyond her technical expertise, Tala is a natural team leader. She communicates clearly, coordinates effectively, and always ensures that the team works cohesively toward shared goals. Her positive attitude, problem-solving mindset, and willingness to help others make it an absolute joy to work with her. I have no doubt that Tala will excel in any professional setting.',
-      linkedinUrl: 'https://www.linkedin.com/in/noor-halabi/',
       rating: 5,
       // date: '2024-01-15'
     },
@@ -42,11 +22,23 @@ const Recommendations = () => {
       getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/C4D03AQHWj1PAJHn-1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1595193526898?e=1760572800&v=beta&t=Dk8QQdbQMqhYBEY1Zkia5a_PTx5ae-zOY7d4ZWQU09M',
       company: 'TechnoGeeks',
       relationship: 'Former Employer & Manager',
-      text: 'I had the pleasure of managing and working directly with Tala Amm, and I can confidently say that she is one of the most talented and dedicated young professionals I have met. Beyond her technical expertise, Tala stands out for her professionalism, commitment, and teamwork. She consistently showed initiative, took ownership of her tasks, and was always eager to go the extra mile to ensure high-quality outcomes. What impressed me the most is her ability to combine technical depth with clear communication, making her an asset in both individual and collaborative environments. I strongly recommend Tala for any part-time junior roles, internships, or remote opportunities. She has the potential to grow into an outstanding engineer and will bring value, energy, and innovation to any team she joins.',
+      text: 'I had the pleasure of managing and working directly with Tala Amm, and I can confidently say that she is one of the most talented and dedicated young professionals I have met.\nBeyond her technical expertise, Tala stands out for her professionalism, commitment, and teamwork. She consistently showed initiative, took ownership of her tasks, and was always eager to go the extra mile to ensure high-quality outcomes. What impressed me the most is her ability to combine technical depth with clear communication, making her an asset in both individual and collaborative environments.\nI strongly recommend Tala for any part-time junior roles, internships, or remote opportunities. She has the potential to grow into an outstanding engineer and will bring value, energy, and innovation to any team she joins.',
       linkedinUrl: 'https://www.linkedin.com/in/mohammadsalahtech',
       rating: 5,
       // date: '2024-01-15'
     },
+    {
+      name: 'Noor Halabi',
+      title: 'Full-Stack Developer',
+      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D5603AQEYKT-H_rKXuQ/profile-displayphoto-crop_800_800/B56ZlZASZeKEAI-/0/1758134872200?e=1761177600&v=beta&t=tTCha67YHtLE1EmgFgoqamgapmF0YO6SH0fhtuadfcU',
+      // company: 'TechCorp',
+      relationship: 'Colleague at Notre Dame University',
+      text: 'I had the pleasure of working alongside Tala during our Full Stack Development program at the University of Notre Dame. From the very first project, it was clear that Tala brings an exceptional combination of technical skill, creativity, and leadership to every task. We collaborated closely on nearly every project, and I was consistently impressed by her ability to bridge the gap between frontend and backend development seamlessly. Beyond her technical expertise, Tala is a natural team leader. She communicates clearly, coordinates effectively, and always ensures that the team works cohesively toward shared goals. Her positive attitude, problem-solving mindset, and willingness to help others make it an absolute joy to work with her.\nI have no doubt that Tala will excel in any professional setting.',
+      linkedinUrl: 'https://www.linkedin.com/in/noor-halabi/',
+      rating: 5,
+      // date: '2024-01-15'
+    },
+  
     
     {
       name: 'Amro Mahmoud Khweis',
@@ -157,7 +149,7 @@ const Recommendations = () => {
         >
           <div className="card text-center">
             <h3>Want to see more recommendations?</h3>
-            <p>Connect with me on LinkedIn to view additional testimonials and endorsements.</p>
+            <p>See what others say about my work on LinkedIn!</p>
             <a 
               href={LINKEDIN_URL} 
               target="_blank" 

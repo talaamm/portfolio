@@ -30,7 +30,7 @@ const Recommendations = () => {
     {
       name: 'Noor Halabi',
       title: 'Full-Stack Developer',
-      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D5603AQEYKT-H_rKXuQ/profile-displayphoto-crop_800_800/B56ZlZASZeKEAI-/0/1758134872200?e=1761177600&v=beta&t=tTCha67YHtLE1EmgFgoqamgapmF0YO6SH0fhtuadfcU',
+      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D5603AQFNtlL35giBLg/profile-displayphoto-crop_800_800/B56ZlnOGA7IAAI-/0/1758373389148?e=1761177600&v=beta&t=gRmzBn4lJmlAl0iL5L1TRHIQV2Nd8whrzj-qIukkDHg',
       // company: 'TechCorp',
       relationship: 'Colleague at Notre Dame University',
       text: 'I had the pleasure of working alongside Tala during our Full Stack Development program at the University of Notre Dame. From the very first project, it was clear that Tala brings an exceptional combination of technical skill, creativity, and leadership to every task. We collaborated closely on nearly every project, and I was consistently impressed by her ability to bridge the gap between frontend and backend development seamlessly. Beyond her technical expertise, Tala is a natural team leader. She communicates clearly, coordinates effectively, and always ensures that the team works cohesively toward shared goals. Her positive attitude, problem-solving mindset, and willingness to help others make it an absolute joy to work with her.\nI have no doubt that Tala will excel in any professional setting.',

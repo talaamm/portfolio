@@ -89,7 +89,7 @@ const Blog = () => {
   const featuredPosts = sortedPosts.slice(0, 3);
   const regularPosts = sortedPosts.slice(3);
 
-  const totalViewsComputed = backendTotalViews ?? followersApprox+328;
+  const totalViewsComputed = backendTotalViews ?? followersApprox+ (blogPosts.length * 39) ;
 
   const stats = {
     totalPosts: blogPosts.length,

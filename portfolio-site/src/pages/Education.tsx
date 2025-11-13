@@ -29,6 +29,20 @@ const Education = () => {
           color: '#10b981'
         },
         {
+          title: 'C Programming',
+          description: 'Achieved 96% in the C Programming language Course',
+          icon: '📊',
+          highlight: '96% Grade',
+          color: '#10b981'
+        },
+        {
+          title: 'English level B2',
+          description: 'Achieved 90% in the English level B2 Course',
+          icon: '📊',
+          highlight: '90% Grade',
+          color: '#10b981'
+        },
+        {
           title: 'Academic Excellence',
           description: 'Consistently high performance across all subjects',
           icon: '⭐',

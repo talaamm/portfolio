@@ -8,7 +8,7 @@ const Recommendations = () => {
     {
       name: 'Victor Nammour',
       title: 'Senior Computer Programmer',
-      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D4D03AQGkYDZBv9R5jw/profile-displayphoto-shrink_800_800/B4DZR7Z.kPGUAc-/0/1737237196485?e=1761177600&v=beta&t=q0MZCaM5Q4ywpNp_yLT0K69BfItyLMeZvR8LBQeRGrU',
+      getAvatarFromLinkedIn: "../../public/recomms_img/victor.jpeg",
       // company: 'TechCorp',
       relationship: 'Taught me at Notre Dame University',
       text: `To whom it may concern,\n\nAs a mentor developer at Tantur, the Jerusalem campus of Notre Dame University, I educate our students in programming languages such as Golang and Rust, in data structures and algorithms, and in solving coding problems.\nIn the scope of my work, I have worked with Tala for about a year. Throughout that period, she has consistently demonstrated excellent qualities as both a learner and a programmer. She performs exceptionally well in our monthly coding challenge exams and consistently goes above and beyond in applying the best design and coding strategies in the usually difficult projects she is assigned.\nDespite the extremely demanding nature of the program on our campus, as well as the challenges of commuting between Jerusalem and its environs, Tala is also pursuing her bachelor's degree in Computer Engineering at Birzeit University. This demonstrates her high level of dedication, perseverance, and responsibility.\nShe is a hardworking, disciplined, and eager learner - an extremely smart individual who does not shy away from challenges. As a computer scientist, she will undoubtedly be an invaluable asset to any company that hires her.\n\nBest regards,\nVictor Nammour\nMentor Developer\nNotre Dame University - Tantur Campus\nJerusalem`,
@@ -19,7 +19,7 @@ const Recommendations = () => {
     {
       name: 'Mohammad Salah',
       title: 'TechnoGeeks Founder & CEO',
-      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/C4D03AQHWj1PAJHn-1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1595193526898?e=1760572800&v=beta&t=Dk8QQdbQMqhYBEY1Zkia5a_PTx5ae-zOY7d4ZWQU09M',
+      getAvatarFromLinkedIn: "../../public/recomms_img/salah.jpeg",
       company: 'TechnoGeeks',
       relationship: 'Former Employer & Manager',
       text: 'I had the pleasure of managing and working directly with Tala Amm, and I can confidently say that she is one of the most talented and dedicated young professionals I have met.\nBeyond her technical expertise, Tala stands out for her professionalism, commitment, and teamwork. She consistently showed initiative, took ownership of her tasks, and was always eager to go the extra mile to ensure high-quality outcomes. What impressed me the most is her ability to combine technical depth with clear communication, making her an asset in both individual and collaborative environments.\nI strongly recommend Tala for any part-time junior roles, internships, or remote opportunities. She has the potential to grow into an outstanding engineer and will bring value, energy, and innovation to any team she joins.',
@@ -30,7 +30,7 @@ const Recommendations = () => {
     {
       name: 'Noor Halabi',
       title: 'Full-Stack Developer',
-      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D5603AQFNtlL35giBLg/profile-displayphoto-crop_800_800/B56ZlnOGA7IAAI-/0/1758373389148?e=1761177600&v=beta&t=gRmzBn4lJmlAl0iL5L1TRHIQV2Nd8whrzj-qIukkDHg',
+      getAvatarFromLinkedIn: "../../public/recomms_img/halabi.png",
       // company: 'TechCorp',
       relationship: 'Colleague at Notre Dame University',
       text: 'I had the pleasure of working alongside Tala during our Full Stack Development program at the University of Notre Dame. From the very first project, it was clear that Tala brings an exceptional combination of technical skill, creativity, and leadership to every task. We collaborated closely on nearly every project, and I was consistently impressed by her ability to bridge the gap between frontend and backend development seamlessly. Beyond her technical expertise, Tala is a natural team leader. She communicates clearly, coordinates effectively, and always ensures that the team works cohesively toward shared goals. Her positive attitude, problem-solving mindset, and willingness to help others make it an absolute joy to work with her.\nI have no doubt that Tala will excel in any professional setting.',
@@ -43,7 +43,7 @@ const Recommendations = () => {
     {
       name: 'Amro Mahmoud Khweis',
       title: 'Full-Stack Developer',
-      getAvatarFromLinkedIn:'https://media.licdn.com/dms/image/v2/D4E35AQFi7P4UCV9JIg/profile-framedphoto-shrink_800_800/B4EZdaIZVtHYAk-/0/1749563840162?e=1758549600&v=beta&t=LPDT54w20DkFnY1nTi_hm5b3vGeL2-u9zD1UfICzvXI',
+      getAvatarFromLinkedIn:"../../public/recomms_img/amro.jpeg",
       // company: 'StartupXYZ',
       relationship: 'Colleague at Notre Dame University',
       text: 'Over the past two years, I had the privilege of working closely with Tala, and I can confidently say she is one of the smartest and most supportive colleagues I’ve ever worked with. She approaches every challenge with curiosity and creativity, and she never hesitates to help her teammates succeed. Beyond her professional strengths, Tala brings positivity and warmth that make working with her an absolute joy. I highly recommend her to anyone fortunate enough to collaborate with her',

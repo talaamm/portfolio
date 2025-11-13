@@ -4,6 +4,15 @@ import { ExternalLink, Award, Calendar } from 'lucide-react'
 const Certifications = () => {
   const certifications = [
     {
+      title: 'Software Engineer Intern',
+      issuer: 'HackerRank',
+      date: 'September 2025',
+      // credentialId: 'MINNA-AI-2025-001',
+      verifyUrl: 'https://www.hackerrank.com/certificates/64891632e58b',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png',
+      description: 'Passed the HackerRank skills test for a Software Engineer Intern'
+    },
+    {
       title: 'Elements of AI for Business',
       issuer: 'Minna Learn',
       date: 'August 2025',

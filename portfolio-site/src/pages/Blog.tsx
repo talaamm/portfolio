@@ -89,7 +89,7 @@ const Blog = () => {
   const featuredPosts = sortedPosts.slice(0, 3);
   const regularPosts = sortedPosts.slice(3);
 
-  const totalViewsComputed = backendTotalViews ?? followersApprox+ (blogPosts.length * 74.5) ;
+  const totalViewsComputed = backendTotalViews ?? followersApprox+ (blogPosts.length * 120) ;
 
   const stats = {
     totalPosts: blogPosts.length,
@@ -97,7 +97,7 @@ const Blog = () => {
     followers: '1,400+', // This would require another API call or manual update
     avgRating: '4.8' // This is not directly available from the API
   }
-
+// mafna 
   if (loading) {
     return <div className="container section text-center">Loading blog posts...</div>;
   }

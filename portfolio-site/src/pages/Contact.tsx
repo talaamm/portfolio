@@ -67,12 +67,12 @@ const Contact = () => {
       value: 'tala.aunv@gmail.com',
       link: 'mailto:tala.aunv@gmail.com'
     },
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+972 522335226',
-      link: 'tel:+972522335226'
-    },
+    // {
+    //   icon: Phone,
+    //   title: 'Phone',
+    //   value: '+972 522335226',
+    //   link: 'tel:+972522335226'
+    // },
     {
       icon: MapPin,
       title: 'Location',
@@ -200,7 +200,7 @@ const Contact = () => {
 
                 {submitStatus === 'success' && (
                   <div className="success-message">
-                    ✅ Message sent successfully! I'll get back to you soon.
+                    Message sent successfully! I'll get back to you soon.
                   </div>
                 )}
 
@@ -272,9 +272,9 @@ const Contact = () => {
                 <div className="time-item">
                   <strong>LinkedIn:</strong> Within 12 hours
                 </div>
-                <div className="time-item">
+                {/* <div className="time-item">
                   <strong>Phone:</strong> Same day
-                </div>
+                </div> */}
               </div>
             </div>
           </motion.div>

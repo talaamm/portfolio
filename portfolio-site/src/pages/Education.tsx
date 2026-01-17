@@ -61,7 +61,7 @@ const Education = () => {
       location: 'Jerusalem',
       startDate: 'January 2024',
       endDate: 'December 2025',
-      status: 'In Progress',
+      status: 'Completed',
       gpa: 'A+',
       achievements: [
         {

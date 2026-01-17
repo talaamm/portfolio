@@ -38,10 +38,19 @@ jobs:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
         run: node scripts/fetchDevto.cjs
 
+      - name: Determine base path
+        id: base_path
+        run: |
+          if [[ "${{ github.event.repository.name }}" == *".github.io" ]]; then
+            echo "base=/" >> $GITHUB_OUTPUT
+          else
+            echo "base=/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Build
         working-directory: portfolio-site
         env:
-          GH_PAGES_BASE: /${{ github.event.repository.name }}/
+          GH_PAGES_BASE: ${{ steps.base_path.outputs.base }}
         run: npm run build
 
       - name: Upload artifact

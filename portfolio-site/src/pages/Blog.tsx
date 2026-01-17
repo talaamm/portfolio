@@ -20,8 +20,6 @@ const Blog = () => {
   const [error, setError] = useState<string | null>(null);
   const [backendTotalViews, setBackendTotalViews] = useState<number | null>(null);
 
-  const followersApprox = 1400; // keep in sync with displayed followers for now
-
   useEffect(() => {
     // Try baked JSON first (works on static hosting)
     const tryBaked = async () => {

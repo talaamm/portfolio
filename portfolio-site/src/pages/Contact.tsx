@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react'
+import { Mail, /*Phone,*/ MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react'
 import { GITHUB_URL, LINKEDIN_URL, DEVTO_URL } from '../config/constants'
 import emailjs from 'emailjs-com'
 

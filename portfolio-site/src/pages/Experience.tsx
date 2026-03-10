@@ -6,6 +6,20 @@ import { Calendar, MapPin, Code, GraduationCap } from 'lucide-react'
 const Experience = () => {
   const experiences = [
     {
+      type: 'freelance',
+      title: 'Technical Writer',
+      company: 'Independent / DEV Community',
+      location: 'Remote',
+      period: 'July 2025 - Present',
+      description: 'Publish technical articles on software engineering, system design, programming concepts, and developer workflows. Break down complex topics into structured, beginner-friendly explanations and share insights from projects, competitions, and interviews.',
+      achievements: [
+        'Published multiple in-depth technical articles for a global developer audience',
+        'Explained complex concepts in accessible and structured ways',
+        'Engaged with readers through comments, feedback, and discussions'
+      ],
+      skills: ['Technical Writing', 'Software Engineering', 'System Design', 'Developer Education', 'Communication']
+    },
+    {
       type: 'teaching',
       title: 'Coding & Robotics Instructor',
       company: 'TechnoGeeks',
@@ -44,14 +58,14 @@ const Experience = () => {
 
   const volunteering = [
     {
-      title: 'Coding Summer Camp - Tech Mentor and Team Leader',
-      organization: 'Coding Academy of Jerusalem',
-      period: 'June 2022 - July 2022',
-      description: 'Led and mentored groups of students in an intensive summer camp focused on coding, robotics, and problem-solving. Designed and delivered interactive workshops on: Robotics, Coding fundamentals and hands-on programming, 3D Design with SketchUp, Problem-solving & logic, including teaching students how to solve a 3*3*3 Rubik\’s Cube, how to play Chess, and other games that develops their logic.',
-      // impact: 'Helped 50+ students from underserved communities learn programming and secure tech internships.',
-      skills: ['Mentoring', 'Public Speaking', 'Community Building', 'Team Leading', 'Java'],
-      hours: '80+ hours',
-      location: 'On-site / Jerusalem'
+      title: 'DEV Challenge Judge',
+      organization: 'Forem / DEV Community',
+      period: 'Feb 2026 - Present',
+      description: 'Review and evaluate coding challenge submissions from developers worldwide, focusing on code quality, creativity, technical implementation, and problem-solving approaches.',
+      impact: 'Provided constructive feedback and guidance to developers, helping improve the quality of projects and supporting community learning.',
+      skills: ['Code Review', 'Technical Evaluation', 'Mentoring'],
+      hours: 'Ongoing',
+      location: 'Remote'
     },
     {
       title: 'Data Collection Volunteer',
@@ -64,7 +78,18 @@ const Experience = () => {
       location: 'Remote'
     },
     {
-      title: 'Volunteer Hardware & Software Developer',
+      title: 'Coding Summer Camp - Tech Mentor and Team Leader',
+      organization: 'Coding Academy of Jerusalem',
+      period: 'June 2022 - July 2022',
+      description: 'Led and mentored groups of students in an intensive summer camp focused on coding, robotics, and problem-solving. Designed and delivered interactive workshops on: Robotics, Coding fundamentals and hands-on programming, 3D Design with SketchUp, Problem-solving & logic, including teaching students how to solve a 3*3*3 Rubik\’s Cube, how to play Chess, and other games that develops their logic.',
+      // impact: 'Helped 50+ students from underserved communities learn programming and secure tech internships.',
+      skills: ['Mentoring', 'Public Speaking', 'Community Building', 'Team Leading', 'Java'],
+      hours: '80+ hours',
+      location: 'On-site / Jerusalem'
+    },
+ 
+    {
+      title: 'Hardware & Software Developer Volunteer',
       organization: 'Rosary Sister\'s High School - NASA Competition Team',
       period: 'January 2022 - March 2022',
       description: 'Volunteered to design and build a demo tool for a student team competing in a NASA challenge. Developed an Arduino-based device with a light sensor to analyze leaf color and determine nutritional needs, displaying results on a screen.',
@@ -76,7 +101,7 @@ const Experience = () => {
     {
       title: 'Mentor - Hour of Code Events',
       organization: "Rosary Sister's High School",
-      period: 'Multiple Sessions',
+      period: 'Multiple Sessions during 2021',
       description: 'Mentored students in coding and computational thinking during Hour of Code events at school, guiding beginners through interactive programming exercises and fostering interest in technology.',
       impact: 'Helped over a lot of students gain hands-on experience with coding, inspiring interest in computer science and developing foundational programming skills.',
       skills: ['Mentoring', 'Teaching', 'Java', 'Problem Solving', 'Patience'],
@@ -103,8 +128,7 @@ const Experience = () => {
         <div className="text-center mb-8">
           <h1>Experience</h1>
           <p className="section-subtitle">
-          Shaping my journey from tech education to software engineering. Eager to take on new roles and internships that expand my knowledge, challenge my skills, and contribute to impactful projects.
-          </p>
+          Shaping my journey through teaching, community contributions, and hands-on software engineering experience.          </p>
         </div>
 
         <div className="experience-timeline">
@@ -169,7 +193,7 @@ const Experience = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="text-center mb-8">
-          <h1>Volunteering & Community Impact</h1>
+          <h1>Volunteering & Community Contributions</h1>
           <p className="section-subtitle">
           Passionate about giving back to the tech community, through mentoring, teaching, and contributing to impactful tech projects.
           </p>

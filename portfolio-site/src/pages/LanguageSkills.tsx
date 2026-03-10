@@ -4,6 +4,14 @@ import { Star } from 'lucide-react'
 const LanguageSkills = () => {
   const languages = [
     {
+      id: 'arabic',
+      name: 'Arabic',
+      proficiency: 100,
+      level: 'Native',
+      flag: 'AR',
+      description: 'Native Speaker with excellent communication skills'
+    },
+    {
       id: 'english',
       name: 'English',
       proficiency: 90,
@@ -12,12 +20,12 @@ const LanguageSkills = () => {
       description: 'Fluent in both written and spoken Spanish, English is my second language'
     },
     {
-      id: 'spanish',
-      name: 'Arabic',
-      proficiency: 100,
-      level: 'Native',
-      flag: 'AR',
-      description: 'Native Speaker with excellent communication skills'
+      id: 'hebrew',
+      name: 'Hebrew',
+      proficiency: 80,
+      level: 'Advanced Intermediate',
+      flag: 'IL',
+      description: 'Good in reading, writing, and comprehension. Currently working on improving converstional skills '
     },
     {
       id: 'french',
@@ -28,20 +36,12 @@ const LanguageSkills = () => {
       description: 'Advanced French skills with a level B1 certification'
     },
     {
-      id: 'german',
+      id: 'turkish',
       name: 'Turkish',
       proficiency: 45,
       level: 'Beginner',
       flag: 'TR',
       description: 'Beginner with basic converstional skills'
-    },
-    {
-      id: 'japanese',
-      name: 'Hebrew',
-      proficiency: 80,
-      level: 'Advanced Intermediate',
-      flag: 'IL',
-      description: 'Good in reading, writing, and comprehension. Currently working on improving converstional skills '
     },
   ]
 

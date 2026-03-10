@@ -8,10 +8,23 @@
   <body>
     <p>Redirecting...</p>
     <script>
-      (function() {
+      (function () {
         var l = window.location;
-        var base = l.pathname.split('/').slice(0, -1).join('/') + '/';
-        var redirect = base + 'index.html' + l.search + l.hash;
+        var segments = l.pathname.split('/').filter(Boolean);
+
+        // Expecting path like /<repo>/<path...>
+        var repo = segments[0] || '';
+        var pathAfterRepo = segments.slice(1).join('/');
+
+        var base = repo ? '/' + repo + '/' : '/';
+        var redirect = base + 'index.html';
+
+        // Pass path as query so the SPA can show the right tab and clean URL
+        if (pathAfterRepo) {
+          redirect += '?redirect=' + encodeURIComponent('/' + pathAfterRepo);
+        }
+
+        redirect += (pathAfterRepo ? '' : l.search) + l.hash;
         l.replace(redirect);
       })();
     </script>

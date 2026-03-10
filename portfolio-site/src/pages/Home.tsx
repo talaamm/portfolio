@@ -9,18 +9,18 @@ const Home = () => {
     { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
     {name: 'Rust', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png'},
     // { name: 'TypeScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
-    { name: 'React Native', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
+    // { name: 'React Native', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
     { name: 'Node.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
     {name: 'Java', logo: 'https://img.icons8.com/color/512/java-coffee-cup-logo--v2.png'},
     { name: 'SQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png' },
     { name: 'Python', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
     { name: 'Docker', logo: 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png' },
-    // { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+    { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
     { name: 'Git', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg' },
     {name: 'Vue.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg'},
     // {name: 'Tailwind CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg'},
     {name: 'HTML', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg'},
-    {name: 'CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png'},
+    {name: 'CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/250px-CSS3_logo_and_wordmark.svg.png'},
     // {name: 'Sass', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg'},
     // {name: 'Bootstrap', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_Bootstrap.svg'},
     // {name: 'Material UI', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Material-UI.svg'},
@@ -29,10 +29,17 @@ const Home = () => {
     {name: 'Supabase', logo: 'https://img.icons8.com/fluent/512/supabase.png'},
  {name: 'Slack', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png'},
  {name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
- {name: 'Jira', logo: 'https://cdn.worldvectorlogo.com/logos/jira-1.svg'},
+//  {name: 'Jira', logo: 'https://cdn.worldvectorlogo.com/logos/jira-1.svg'},
  {name: 'Cursor' , logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/cursor.png'},
- {name:'GitHub' , logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png'}
-//  {name: 'Confluence', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+ {name:'GitHub' , logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png'},
+ {name:'Kubernetes' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/3840px-Kubernetes_logo_without_workmark.svg.png'},
+ {name:'REST API' , logo: 'https://dfdmyvckxgqn5.cloudfront.net/_app/immutable/assets/building-elegant-rest-apis.d8f4cbc6.jpg'},
+ {name:'GraphQL' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/960px-GraphQL_Logo.svg.png'},
+ {name:'Postman' , logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png'},
+ {name:'Websockets' , logo: 'https://cdn.freebiesupply.com/logos/large/2x/websocket-logo-png-transparent.png'},
+ {name:'Linux' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1280px-Tux.svg.png'},
+
+ //  {name: 'Confluence', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
 //  {name: 'Notion', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
 //  {name: 'Trello', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
  
@@ -91,7 +98,7 @@ const Home = () => {
 
           <h1>Hi, I'm {NAME}</h1>
           <p className="hero-subtitle">
-          Computer Engineering student, Full-Stack Developer & Tech Writer passionate about building scalable applications and sharing knowledge with the developer community. </p>
+          Computer Engineering student, Full-Stack Developer & Technical Writer. Building systems, real-time applications and sharing knowledge with the developer community. </p>
 
           <div className="hero-stats mb-8">
             <div className="stat-item">
@@ -219,6 +226,9 @@ const Home = () => {
             Email
           </a>
         </div>
+        <p className="hero-subtitle">
+          You can also find me by Googling my name.
+        </p>
       </motion.section>
     </div>
   )

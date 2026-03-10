@@ -115,7 +115,7 @@ const Blog = () => {
         <div className="text-center mb-8">
           <h1>Blog & Writing</h1>
           <p className="section-subtitle">
-          Sharing passion about learning and sharing knowledge in software development and tech.
+          Breaking down complex technical topics into practical insights for developers and learners worldwide.
           </p>
         </div>
 

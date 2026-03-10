@@ -113,7 +113,7 @@ const Contact = () => {
         <div className="text-center mb-8">
           <h1>Get In Touch</h1>
           <p className="section-subtitle">
-          I’m always open to new connections, collaborations, and meaningful conversations about technology. Whether it’s a potential internship, project, or just sharing ideas, I’d be happy to hear from you and get to know you!
+          I’m open to new connections, collaborations, and discussions about technology. Whether it’s an internship, project, or sharing ideas, I’d love to hear from you!
           </p>
         </div>
 
@@ -264,7 +264,7 @@ const Contact = () => {
 
             <div className="card">
               <h2>Response Time</h2>
-              <p>I typically respond to messages within 24 hours. For urgent matters, feel free to call or text.</p>
+              <p>I typically respond to messages within 24 hours.</p>
               <div className="response-time">
                 <div className="time-item">
                   <strong>Email:</strong> Within 24 hours

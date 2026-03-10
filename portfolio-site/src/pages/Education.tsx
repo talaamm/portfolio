@@ -9,7 +9,7 @@ const Education = () => {
       institution: 'Birzeit University',
       degree: 'Bachelor of Engineering in Computer Engineering',
       location: 'Birzeit City',
-      startDate: '2024',
+      startDate: '2023',
       endDate: '2028',
       status: 'In Progress',
       gpa: '89/100',
@@ -21,25 +21,32 @@ const Education = () => {
           highlight: '2x Consecutive',
           color: '#fbbf24'
         },
+        // {
+        //   title: 'Calculus Excellence',
+        //   description: 'Achieved 99% in the Calculus Course',
+        //   icon: '📊',
+        //   highlight: '99% Grade',
+        //   color: '#10b981'
+        // },
+        // {
+        //   title: 'C Programming',
+        //   description: 'Achieved 96% in the C Programming language Course',
+        //   icon: '📊',
+        //   highlight: '96% Grade',
+        //   color: '#10b981'
+        // },
+        // {
+        //   title: 'English level B2',
+        //   description: 'Achieved 90% in the English level B2 Course',
+        //   icon: '📊',
+        //   highlight: '90% Grade',
+        //   color: '#10b981'
+        // },
         {
-          title: 'Calculus Excellence',
-          description: 'Achieved 99% in the Calculus Course',
+          title: 'Relevant Course Work',
+          description: 'Object Oriented Programming, Data Structures, Algorithms, Linux Laboratory, Computer Organization, Micro-Processors, and more.',
           icon: '📊',
-          highlight: '99% Grade',
-          color: '#10b981'
-        },
-        {
-          title: 'C Programming',
-          description: 'Achieved 96% in the C Programming language Course',
-          icon: '📊',
-          highlight: '96% Grade',
-          color: '#10b981'
-        },
-        {
-          title: 'English level B2',
-          description: 'Achieved 90% in the English level B2 Course',
-          icon: '📊',
-          highlight: '90% Grade',
+          highlight: 'Software & Hardware',
           color: '#10b981'
         },
         {
@@ -56,7 +63,7 @@ const Education = () => {
     {
       id: 'certificate',
       level: 'Certificate',
-      institution: 'Notre Dame University x 01-Talent',
+      institution: 'Notre Dame University x 01-Edu',
       degree: 'Adam Coding & Beyond Program: Full-stack Development',
       location: 'Jerusalem',
       startDate: 'January 2024',
@@ -66,9 +73,10 @@ const Education = () => {
       achievements: [
         {
           title: 'Honor\'s List',
-          description: 'Academic Excellence scholarship for 3 consecutive semesters',
+          description: 'Academic Excellence scholarship for 4 consecutive semesters',
           icon: '🏆',
-          highlight: '3x Consecutive',
+          highlight: '4x Consecutive',
+          url: 'https://drive.google.com/file/d/16USNYVwTiqND-UAsBzfZSxKRAt8C1oyw/view?usp=sharing',
           color: '#fbbf24'
         },
         {

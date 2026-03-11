@@ -141,7 +141,7 @@ const Education = () => {
         },
         {
           title: 'National & International Standing',
-          description: 'Third highest grade across the countrey and worldwide - Tawjihi Scientific Stream',
+          description: 'Third highest grade across the country and worldwide - Tawjihi Scientific Stream',
           icon: '🥉',
           highlight: '3rd Global',
           color: '#cd7c2f'

@@ -111,7 +111,7 @@ const Home = () => {
             </div>
             <div className="stat-item">
               <Eye size={24} />
-              <span><Counter target={3500} suffix="+ Blog Readers" /></span>
+              <span><Counter target={4700} suffix="+ Blog Readers" /></span>
             </div>
           </div>
 

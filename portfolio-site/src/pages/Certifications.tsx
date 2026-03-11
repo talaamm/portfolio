@@ -4,13 +4,22 @@ import { ExternalLink, Award, Calendar } from 'lucide-react'
 const Certifications = () => {
   const certifications = [
     {
+      title: 'Data Analyst Essentials',
+      issuer: 'Udacity',
+      date: 'January 2026',
+      // credentialId: 'MINNA-AI-2025-001',
+      verifyUrl: 'https://www.udacity.com/certificate/e/7a3137bc-afd2-11f0-97f5-cf5f90eb0482',
+      logo: 'https://upload.wikimedia.org/wikipedia/en/3/3b/Udacity_logo.png',
+      description: 'Covered core data analysis concepts including data cleaning, exploratory analysis, and interpreting datasets to extract meaningful insights.'
+    },
+    {
       title: 'Software Engineer Intern',
       issuer: 'HackerRank',
       date: 'September 2025',
       // credentialId: 'MINNA-AI-2025-001',
       verifyUrl: 'https://www.hackerrank.com/certificates/64891632e58b',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png',
-      description: 'Passed the HackerRank skills test for a Software Engineer Intern'
+description: 'Successfully passed the HackerRank Software Engineer Intern certification test, demonstrating proficiency in problem solving, algorithms, and core programming concepts.'
     },
     {
       title: 'Elements of AI for Business',
@@ -19,16 +28,16 @@ const Certifications = () => {
       // credentialId: 'MINNA-AI-2025-001',
       verifyUrl: 'https://courses.minnalearn.com/certificate/ar/elements-of-ai-for-business/c16b935b-cc79-4631-8a74-e811a5e816bf',
       logo: 'https://www.vaia.be/files/partners-organisers/_1200x590_crop_center-center_none/Logo-MinnaLearn.svg',
-      description: 'Learned Fundemnetals and Concepts in AI'
+      description: 'Learned foundational concepts of artificial intelligence and how AI technologies are applied in real-world contexts.'
     },
     {
-      title: 'Certificate of Completion',
+      title: 'Go Certification',
       issuer: 'HackerRank',
       date: 'May 2025',
       // credentialId: 'HR-GOLANG-2025-002',
       verifyUrl: 'https://www.hackerrank.com/certificates/8f3224ab3c0f',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png',
-      description: 'Passed the HackerRank skill certification test for Golang'
+     description: 'Passed the HackerRank Golang skill certification test, validating proficiency in Go programming, problem solving, and backend development fundamentals.'
     },
     {
       title: 'Git & GitHub Workshop',
@@ -37,7 +46,7 @@ const Certifications = () => {
       // credentialId: 'MS-GIT-2024-003',
       verifyUrl: 'https://drive.google.com/file/d/1psfZL1huy_dywDbY5nrlM8Ks0f3TI1ik/view',
       logo: 'https://tse4.mm.bing.net/th/id/OIP.yppTZbvHfMMjnURDgsRB8gHaGn?rs=1&pid=ImgDetMain&o=7&rm=3',
-      description: 'Have done a workshop where we learned and discovered Git and GitHub, with Microsoft learn Ambassadors at Birzeit University'
+description: 'Hands-on workshop covering version control fundamentals, Git workflows, and collaborative development using GitHub.'
     },
     {
       title: 'Java Programming Course',
@@ -46,7 +55,7 @@ const Certifications = () => {
       // credentialId: 'OUI-JAVA-2021-004',
       verifyUrl: 'https://drive.google.com/file/d/1_2rJO6Egg5m8Vy557xvW4QI0oJaIir9a/view',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Open_university_israel_logo.svg',
-      description: 'Learned Java programming language and its concepts, solved some problems using it. Finished the course with a grade of 98%'
+description: 'Studied Java programming and object-oriented design principles, completing the course with a final grade of 98%.'
     },
   ]
 
@@ -58,7 +67,7 @@ const Certifications = () => {
       // credentialId: 'ARC-FA-2024-001',
       verifyUrl: 'https://drive.google.com/file/d/1nC-_SsawJ9bPQ0V9aZpPgPYjoa62UVyn/view?usp=sharing',
       logo: 'https://www.nbn.org.il/jobboard/wp-content/uploads/2022/09/mati-jerusalem.jpg',
-      description: 'Completed 12 hours course in budget management'
+      description: 'Completed a 12-hour course on personal and project budget management and financial planning.'
     },
     {
       title: 'Correct Financial Behaviour Certificate',
@@ -67,7 +76,7 @@ const Certifications = () => {
       // credentialId: 'ARC-FA-2024-001',
       verifyUrl: 'https://drive.google.com/file/d/1qljg_DoKbGHPi-3YFXFwtbCem1HjhrUw/view?usp=sharing',
       logo: 'https://www.nbn.org.il/jobboard/wp-content/uploads/2022/09/mati-jerusalem.jpg',
-      description: 'Completed 12 hours course in learning the correct financial behaviour  as a student'
+description: 'Completed a 12-hour course on financial responsibility, budgeting, and effective money management for students and young professionals.'
    },
     {
       title: 'Diplôme d\'Études en Langue Française (DELF B1)',
@@ -76,7 +85,7 @@ const Certifications = () => {
       credentialId: '972008000714',
       verifyUrl: 'https://drive.google.com/file/d/1w9HQYYUD4GwYBwkKcTKCEdXyY2Eqjexg/view?usp=sharing',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1tgLXMk1HDL4B8y0BJtUFRN6D8NrVs7W2ZmAMDU5b_rgSpPCr5ResKgaRaBTm7FB-hRc&usqp=CAU',
-      description: 'Completed the Delf Dalf French exam level B1'
+description: 'Earned the DELF B1 certification demonstrating intermediate proficiency in French across reading, writing, listening, and speaking.'
     },
     {
       title: 'ToBe Program',
@@ -85,7 +94,7 @@ const Certifications = () => {
       // credentialId: '972008000714',
       verifyUrl: 'https://drive.google.com/file/d/1APIxwFRIQhOjkfH8sH7bTXCAVFZRucmv/view?usp=sharing',
       logo: 'https://www-cdn.najah.edu/static/img/logo2021_en.png',
-      description: 'Learned the fundementals of Research Skills, and web development. Completed a project to apply gained skills.'
+description: 'Studied research skills and web development fundamentals. Completed a final project applying these concepts.'
     },
   ]
 

@@ -226,7 +226,7 @@ const Home = () => {
             Email
           </a>
         </div>
-        <p className="hero-subtitle" style="font-size: 1.0rem;">
+        <p className="hero-subtitle" style={{ fontSize: '1.0rem' }}>
           You can also find me by Googling my name.
         </p>
       </motion.section>

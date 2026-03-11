@@ -9,7 +9,7 @@ const LanguageSkills = () => {
       proficiency: 100,
       level: 'Native',
       flag: 'AR',
-      description: 'Native Speaker with excellent communication skills'
+      description: 'Native speaker with excellent written and verbal communication skills.'
     },
     {
       id: 'english',
@@ -17,7 +17,7 @@ const LanguageSkills = () => {
       proficiency: 90,
       level: 'Fluent',
       flag: 'EN',
-      description: 'Fluent in both written and spoken English, English is my second language'
+      description: 'Fluent in both written and spoken English; used daily in academic and technical environments.'
     },
     {
       id: 'hebrew',
@@ -25,7 +25,7 @@ const LanguageSkills = () => {
       proficiency: 80,
       level: 'Advanced Intermediate',
       flag: 'IL',
-      description: 'Good in reading, writing, and comprehension. Currently working on improving converstional skills '
+description: 'Strong reading, writing, and comprehension skills; actively improving conversational fluency.'
     },
     {
       id: 'french',
@@ -33,15 +33,16 @@ const LanguageSkills = () => {
       proficiency: 60,
       level: 'Intermediate',
       flag: '🇫🇷',
-      description: 'Advanced French skills with a level B1 certification'
+      description: 'Certified B1 level (DELF). Comfortable with reading, writing, and basic conversations.'
     },
     {
       id: 'turkish',
       name: 'Turkish',
       proficiency: 45,
       level: 'Beginner',
-      flag: 'TR',
-      description: 'Beginner with basic converstional skills'
+      flag: '🇹🇷',
+      description: 'Basic conversational skills and foundational vocabulary.'
+
     },
   ]
 

@@ -17,7 +17,7 @@ const LanguageSkills = () => {
       proficiency: 90,
       level: 'Fluent',
       flag: 'EN',
-      description: 'Fluent in both written and spoken Spanish, English is my second language'
+      description: 'Fluent in both written and spoken English, English is my second language'
     },
     {
       id: 'hebrew',

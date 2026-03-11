@@ -138,7 +138,7 @@ const Blog = () => {
               <Eye size={24} />
               <div className="stat-content">
                 <span className="stat-number">{stats.totalViews}+</span>
-                <span className="stat-label">Total Views</span>
+                <span className="stat-label">Total Readers</span>
               </div>
             </div>
             <div className="stat-item">

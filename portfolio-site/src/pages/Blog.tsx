@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Eye, Calendar, Tag, TrendingUp } from 'lucide-react'
-import { DEVTO_USERNAME } from '../config/constants'
+import { DEVTO_USERNAME, DEVTO_STATS_JSON_URL } from '../config/constants'
 import { useState, useEffect } from 'react'
 
 interface BlogPost {
@@ -19,39 +19,31 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [backendTotalViews, setBackendTotalViews] = useState<number | null>(null);
+  const [articleViews, setArticleViews] = useState<Record<string, number>>({});
+  const [followers, setFollowers] = useState<string | number | null>(null);
+  const [avgRating, setAvgRating] = useState<string | number | null>(null);
 
   useEffect(() => {
-    // Try baked JSON first (works on static hosting)
-    const tryBaked = async () => {
+    // Fetch external stats JSON only (must be provided via DEVTO_STATS_JSON_URL)
+    const fetchStatsJson = async () => {
+      if (!DEVTO_STATS_JSON_URL) return
       try {
-        const r = await fetch('/devto.json', { cache: 'no-store' });
-        if (r.ok) {
-          const j = await r.json();
-          if (typeof j.totalViews === 'number') {
-            setBackendTotalViews(j.totalViews);
-            return true;
-          }
-        }
-      } catch {}
-      return false;
-    };
+        const res = await fetch(DEVTO_STATS_JSON_URL, { cache: 'no-store' })
+        if (!res.ok) {
+          console.error('Error fetching stats JSON:', res)
+          return}
+        const j = await res.json()
+        if (typeof j.totalViews === 'number') setBackendTotalViews(j.totalViews)
+        if (j.viewsPerArticle && typeof j.viewsPerArticle === 'object') setArticleViews(j.viewsPerArticle)
+        if (typeof j.followers !== 'undefined') setFollowers(j.followers)
+        if (typeof j.avgRating !== 'undefined') setAvgRating(j.avgRating)
+      } catch (e) {
+    console.error('error fetching json:' , e)
+        // fail silently; views will be empty
+      }
+    }
 
-    const tryApi = async () => {
-      try {
-        const res = await fetch('/api/devtoStats');
-        if (res.ok) {
-          const json = await res.json();
-          if (typeof json.totalViews === 'number') {
-            setBackendTotalViews(json.totalViews);
-          }
-        }
-      } catch {}
-    };
-
-    (async () => {
-      const ok = await tryBaked();
-      if (!ok) await tryApi();
-    })();
+    fetchStatsJson()
   }, []);
 
   useEffect(() => {
@@ -73,27 +65,30 @@ const Blog = () => {
     fetchBlogPosts();
   }, []);
 
-  // Sort posts by date (newest first) and then by reactions for featured
+  // Sort posts by views (from JSON). If equal views, sort by date (newest first).
+  const getViews = (post: BlogPost) => {
+    const v = articleViews[post.url]
+    return typeof v === 'number' ? v : 0
+  }
+
   const sortedPosts = [...blogPosts].sort((a, b) => {
-    const reactionsDiff = (b.public_reactions_count || 0) - (a.public_reactions_count || 0);
-    if (reactionsDiff !== 0) {
-      return reactionsDiff;
-    }
-    const dateA = new Date(a.published_at).getTime();
-    const dateB = new Date(b.published_at).getTime();
-    return dateB - dateA;
-  });
+    const viewDiff = getViews(b) - getViews(a)
+    if (viewDiff !== 0) return viewDiff
+    const dateA = new Date(a.published_at).getTime()
+    const dateB = new Date(b.published_at).getTime()
+    return dateB - dateA
+  })
 
   const featuredPosts = sortedPosts.slice(0, 3);
   const regularPosts = sortedPosts.slice(3);
 
-  const totalViewsComputed = backendTotalViews ?? 9200 ;
+  const totalViewsComputed = backendTotalViews ?? 0
 
   const stats = {
     totalPosts: blogPosts.length,
-    totalViews: totalViewsComputed.toLocaleString(),
-    followers: '1,400+', // This would require another API call or manual update
-    avgRating: '4.8' // This is not directly available from the API
+    totalViews: totalViewsComputed?.toLocaleString() ?? '-',
+    followers: followers ?? '-',
+    avgRating: avgRating ?? '-'
   }
 // mafna 
   if (loading) {
@@ -166,54 +161,61 @@ const Blog = () => {
         >
           <h2 className="text-center mb-6">Featured Articles</h2>
           <div className="featured-posts">
-            {featuredPosts.map((post) => (
-              <motion.div
-                key={post.url}
-                className="featured-post-card"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="post-header">
-                  <h3>{post.title}</h3>
-                  <div className="post-meta">
-                    <div className="post-views">
-                      <Eye size={16} />
-                      <span>{post.public_reactions_count} reactions</span>
+            {featuredPosts.map((post) => {
+              const viewsNum = articleViews[post.url] ?? post.public_reactions_count ?? 0;
+              return (
+                <motion.div
+                  key={post.url}
+                  className="featured-post-card"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.5 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="post-header">
+                    <h3>{post.title}</h3>
+                    <div className="post-meta">
+                      <div className="post-views">
+                        <Eye size={16} />
+                        <span>{viewsNum.toLocaleString()}</span>
+                      </div>
+                      <div className="post-reactions">
+                        <TrendingUp size={16} />
+                        <span> {post.public_reactions_count ?? 0}</span>
+                      </div>
+                      <div className="post-date">
+                        <Calendar size={16} />
+                        <span>{new Date(post.published_at).toLocaleDateString()}</span>
+                      </div>
+                      <div className="post-read-time">{post.reading_time_minutes} min read</div>
                     </div>
-                    <div className="post-date">
-                      <Calendar size={16} />
-                      <span>{new Date(post.published_at).toLocaleDateString()}</span>
-                    </div>
-                    <div className="post-read-time">{post.reading_time_minutes} min read</div>
                   </div>
-                </div>
-                
-                <p className="post-excerpt">{post.description}</p>
-                
-                {post.cover_image && (
-                  <div className="post-cover-image mb-4">
+                  
+                  <p className="post-excerpt">{post.description}</p>
+                  
+                  {post.cover_image && (
+                      <div className="post-cover-image mb-4">
                     <img src={post.cover_image} alt={post.title} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
                   </div>
-                )}
+                  )}
 
-                <div className="post-tags">
-                  {post.tag_list.map((tag) => (
-                    <span key={tag} className="post-tag">{tag}</span>
-                  ))}
-                </div>
-                
-                <a 
-                  href={post.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="post-link"
-                >
-                  Read on Dev.to <ExternalLink size={16} />
-                </a>
-              </motion.div>
-            ))}
+                  <div className="post-tags">
+                    {post.tag_list.map((tag) => (
+                      <span key={tag} className="post-tag">{tag}</span>
+                    ))}
+                  </div>
+                  
+                  <a 
+                    href={post.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="post-link"
+                  >
+                    Read on Dev.to <ExternalLink size={16} />
+                  </a>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -225,48 +227,55 @@ const Blog = () => {
         >
           <h2 className="text-center mb-6">More Articles</h2>
           <div className="regular-posts">
-            {regularPosts.map((post) => (
-              <motion.div
-                key={post.url}
-                className="regular-post-card"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.5 }}
-                whileHover={{ y: -3 }}
-              >
-                <div className="post-content">
-                  <h4>{post.title}</h4>
-                  <p className="post-excerpt-small">{post.description}</p>
-                  
-                  <div className="post-meta-small">
-                    <span className="post-views-small">
-                      <Eye size={14} />
-                      {post.public_reactions_count} reactions
-                    </span>
-                    <span className="post-date-small">
-                      <Calendar size={14} />
-                      {new Date(post.published_at).toLocaleDateString()}
-                    </span>
-                    <span className="post-read-time-small">{post.reading_time_minutes} min read</span>
-                  </div>
-                  
-                  <div className="post-tags-small">
-                    {post.tag_list.slice(0, 3).map((tag) => (
-                      <span key={tag} className="post-tag-small">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-                
-                <a 
-                  href={post.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="post-link-small"
+            {regularPosts.map((post) => {
+              const viewsNum = articleViews[post.url] ?? post.public_reactions_count ?? 0;
+              return (
+                <motion.div
+                  key={post.url}
+                  className="regular-post-card"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1, duration: 0.5 }}
+                  whileHover={{ y: -3 }}
                 >
-                  <ExternalLink size={16} />
-                </a>
-              </motion.div>
-            ))}
+                  <div className="post-content">
+                    <h4>{post.title}</h4>
+                    <p className="post-excerpt-small">{post.description}</p>
+                    
+                    <div className="post-meta-small">
+                      <span className="post-views-small">
+                        <Eye size={14} />
+                        {viewsNum.toLocaleString()}
+                      </span>
+                      <span className="post-reactions-small">
+                        <TrendingUp size={14} /> {post.public_reactions_count ?? 0}
+                      </span>
+                      <span className="post-date-small">
+                        <Calendar size={14} />
+                        {new Date(post.published_at).toLocaleDateString()}
+                      </span>
+                      <span className="post-read-time-small">{post.reading_time_minutes} min read</span>
+                    </div>
+                    
+                    <div className="post-tags-small">
+                      {post.tag_list.slice(0, 3).map((tag) => (
+                        <span key={tag} className="post-tag-small">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <a 
+                    href={post.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="post-link-small"
+                    aria-label={`Read ${post.title} on Dev.to`}
+                  >
+                    <ExternalLink size={16} />
+                  </a>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 

@@ -1,0 +1,22 @@
+{
+  "totalViews": 9243,
+    "followers": "1,388+",
+  "avgRating": "4.8",
+  "viewsPerArticle": {
+    "https://dev.to/talaamm/generate-a-random-string-for-a-jwt-secret-2g1e": 3219,
+    "https://dev.to/talaamm/what-is-a-env-file-and-why-should-you-use-it-599o": 2514,
+    "https://dev.to/talaamm/gpt-5-is-here-what-it-really-means-for-junior-developers-like-me-591k": 1052,
+    "https://dev.to/talaamm/10-skills-that-actually-make-junior-developers-valuable-in-2026-45i1": 878,
+    "https://dev.to/talaamm/big-o-notation-pt1-time-complexity-3676": 318,
+    "https://dev.to/talaamm/will-gpt-5-replace-junior-developers-or-just-redefine-them-588e": 293,
+    "https://dev.to/talaamm/jwt-json-tokens-in-5-minutes-2j54": 234,
+    "https://dev.to/talaamm/big-o-notation-examples-4ej": 193,
+    "https://dev.to/talaamm/how-i-built-a-resume-that-passed-high-tech-firms-google-amazon-and-microsoft-1ima": 190,
+    "https://dev.to/talaamm/why-i-started-blogging-g87": 107,
+    "https://dev.to/talaamm/regular-expressions-regex-a-quick-refresher-43lh": 88,
+    "https://dev.to/talaamm/behind-the-browser-a-beginners-journey-into-the-internets-secrets-3meo": 63,
+    "https://dev.to/talaamm/monolithic-vs-microservices-5di8": 45,
+    "https://dev.to/talaamm/my-linux-journey-from-intensive-bootcamp-to-bzus-linux-lab-6i0": 39,
+    "https://dev.to/talaamm/small-go-detail-that-changes-how-your-project-looks-o3h": 10,
+  }
+}

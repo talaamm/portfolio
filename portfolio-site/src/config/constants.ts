@@ -23,3 +23,5 @@ export const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}`
 export const LINKEDIN_URL = `https://linkedin.com/in/${LINKEDIN_USERNAME}`
 export const DEVTO_URL = `https://dev.to/${DEVTO_USERNAME}`
 export const RESUME_URL = RESUME_PATH 
+// Optional external URL to a hosted devto stats JSON. Set via environment variable VITE_DEVTO_STATS_JSON
+export const DEVTO_STATS_JSON_URL = (import.meta.env.VITE_DEVTO_STATS_JSON as string) || 'https://gist.githubusercontent.com/talaamm/2cfc5661ede72d248ff9192180f55580/raw/devto.json'

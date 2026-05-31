@@ -1,0 +1,10 @@
+{
+  "totalViews": 12345,
+  "followers": "1,400+",
+  "avgRating": "4.8",
+  "viewsPerArticle": {
+    "https://dev.to/yourusername/example-article-1": 3456,
+    "https://dev.to/yourusername/example-article-2": 2890,
+    "https://dev.to/yourusername/example-article-3": 5999
+  }
+}

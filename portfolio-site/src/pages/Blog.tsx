@@ -173,7 +173,17 @@ const Blog = () => {
                   whileHover={{ y: -5 }}
                 >
                   <div className="post-header">
-                    <h3>{post.title}</h3>
+                    <h3>
+                      <a
+                        href={post.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="post-title-link"
+                        aria-label={`Open ${post.title} on Dev.to`}
+                      >
+                        {post.title}
+                      </a>
+                    </h3>
                     <div className="post-meta">
                       <div className="post-views">
                         <Eye size={16} />
@@ -239,7 +249,17 @@ const Blog = () => {
                   whileHover={{ y: -3 }}
                 >
                   <div className="post-content">
-                    <h4>{post.title}</h4>
+                    <h4>
+                      <a
+                        href={post.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="post-title-link-small"
+                        aria-label={`Open ${post.title} on Dev.to`}
+                      >
+                        {post.title}
+                      </a>
+                    </h4>
                     <p className="post-excerpt-small">{post.description}</p>
                     
                     <div className="post-meta-small">
@@ -264,15 +284,7 @@ const Blog = () => {
                     </div>
                   </div>
                   
-                  <a 
-                    href={post.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="post-link-small"
-                    aria-label={`Read ${post.title} on Dev.to`}
-                  >
-                    <ExternalLink size={16} />
-                  </a>
+                  {/* title is now clickable; removed icon-only link */}
                 </motion.div>
               );
             })}

@@ -1,9 +1,34 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, Users, Eye, FileText, FolderOpen } from 'lucide-react'
-import { NAME, AVATAR_PATH, RESUME_URL, GITHUB_URL, LINKEDIN_URL, DEVTO_URL, EMAIL } from '../config/constants'
+import { useState, useEffect } from 'react'
+import { NAME, AVATAR_PATH, RESUME_URL, GITHUB_URL, LINKEDIN_URL, DEVTO_URL, EMAIL, DEVTO_STATS_JSON_URL } from '../config/constants'
 import Counter from '../components/Counter'
 
 const Home = () => {
+  const [totalViews, setTotalViews] = useState(9200)
+  const [followers, setFollowers] = useState(1400)
+
+  useEffect(() => {
+    const fetchStatsJson = async () => {
+      if (!DEVTO_STATS_JSON_URL) return
+      try {
+        const res = await fetch(DEVTO_STATS_JSON_URL, { cache: 'no-store' })
+        if (!res.ok) {
+          console.error('Error fetching stats JSON:', res)
+          return
+        }
+        const j = await res.json()
+        if (typeof j.totalViews === 'number') setTotalViews(j.totalViews)
+        if (typeof j.followers !== 'undefined') setFollowers(j.followers)
+      } catch (e) {
+        console.error('error fetching json:', e)
+        // fail silently; views will be empty
+      }
+    }
+
+    fetchStatsJson()
+  }, [])
+
   const techStack = [
     { name: 'Go', logo: 'https://www.nicepng.com/png/full/264-2641184_111-kb-png-golang-logo.png' },
     { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
@@ -107,11 +132,11 @@ const Home = () => {
             </div>
             <div className="stat-item">
               <Users size={24} />
-              <span><Counter target={1400} suffix="+ Dev.to Followers" /></span>
+              <span><Counter target={followers} suffix="+ Dev.to Followers" /></span>
             </div>
             <div className="stat-item">
               <Eye size={24} />
-              <span><Counter target={9200} suffix="+ Blog Readers" /></span>
+              <span><Counter target={totalViews} suffix="+ Blog Readers" /></span>
             </div>
           </div>
 

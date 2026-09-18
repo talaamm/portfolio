@@ -3,45 +3,27 @@ import { Github, ExternalLink, Calendar } from 'lucide-react'
 
 const Projects = () => {
   const projects = [
-    {
-      id: 'social-n',
-      title: 'Social Network App',
-      description: 'A full-stack Facebook-like social networking application. Developed a feature-rich social network supporting authentication, profiles, followers, posts, groups, real-time chat (WebSockets), and notifications. The system was fully containerized with Docker for smooth deployment of frontend and backend services.',
-      techStack: ['Go', 'Vue.js', 'JavaScript', 'HTML', 'CSS', 'Docker', 'SQLite'],
-      role_label: ['Team Leader', 'Integration Engineer'],
-      role_description: ['Led a 6-person team to deliver a production-ready social platform', 'Integrated Go REST APIs with Vue.js frontend for seamless communication.'],
-      features: [
-        'Implemented session & cookie-based authentication with bcrypt encryption.',
-        'Integrated real-time chat and group messaging using Gorilla WebSocket.',
-        'Designed and migrated relational database schemas with golang-migrate.',
-        'Containerized services into separate Docker images for frontend & backend.',
-      ],
-      githubUrl: 'https://github.com/talaamm/Social-Network-March2025/',
-      // demoUrl: 'https://socialnetwork-demo.vercel.app',
-      // image: '/project-socialnetwork.jpg',
-      date: 'February 2025'
-    },
-    {
-      id: 'mini-framework',
-      title: 'Custom JavaScript Mini Framework + TodoMVC',
-      description: 'Built a lightweight JavaScript framework from scratch implementing DOM abstraction, routing, state management, and custom event handling. To demonstrate its functionality, developed a TodoMVC application entirely on top of this framework. The project also included full documentation and usage examples.',
-      techStack: ['JavaScript', 'HTML', 'CSS'],
-      role_label: ['Framework Developer'],
-      role_description: [
-        'Designed and implemented the framework core (virtual DOM, routing, state management, and custom event system).',
-      ],
-      features: [
-        'Abstracted and manipulated the DOM using a virtual DOM-like structure.',
-        'Implemented client-side routing synced with URL state.',
-        'Built a lightweight state management system for app-wide data consistency.',
-        'Developed a custom event handling mechanism without relying on addEventListener.',
-        'Created a fully functional TodoMVC demo powered by the framework.',
-      ],
-      githubUrl: 'https://github.com/talaamm/mini-js-framework',
-      demoUrl: 'https://talaamm.github.io/mini-js-framework/',
-      // image: '/project-miniframework.jpg',
-      date: 'March 2025'
-    },
+  {
+  id: 'cpu-scheduler',
+  title: 'CPU Scheduler Visualizer',
+  description: 'An interactive CPU scheduling simulator that visualizes how processes are selected, executed, and interrupted over time. Implements classic scheduling algorithms and calculates key performance metrics, making operating-system scheduling concepts easier to understand through visual simulation.',
+  techStack: ['Go', 'Vue / Javascript'],
+  role_label: ['Systems Programming', 'Simulation Developer'],
+  role_description: [
+    'Designed and implemented the scheduling simulation engine and algorithm logic.',
+    'Built an interactive visualization for process execution, CPU activity, and scheduling metrics.'
+  ],
+  features: [
+    'Implemented FCFS, SJF, SRTF, Round Robin, and Priority scheduling algorithms.',
+    'Visualized process execution using interactive Gantt charts and CPU timelines.',
+    'Calculated waiting time, turnaround time, response time, and other scheduling metrics.',
+    'Supported multiple CPUs, CPU bursts, and I/O operations to simulate more realistic workloads.',
+    'Migrated the original scheduling implementation from C to Go and developed a browser-based interface.'
+  ],
+  githubUrl: 'https://github.com/talaamm/CPU-Scheduler-Visualizer',
+  demoUrl: 'https://cpu-scheduler-visualizer-kce3.onrender.com',
+  date: 'JUNE 2026'
+},
     {
       id: '0-shell',
       title: '0-Shell: Minimalist Unix Shell in Rust',
@@ -65,27 +47,6 @@ const Projects = () => {
       // image: '/project-0shell.jpg',
       date: 'September 2025'
     },
-    {
-      id: 'dog-classifier',
-      title: 'Dog Breed Image Classifier',
-      description: 'Applied Python skills to build an image classification system for a citywide dog show. Leveraged pretrained CNN models (AlexNet, VGG, ResNet) to identify whether uploaded images were dogs, and if so, classify the breed. Compared accuracy and runtime performance across models to determine the best fit for the application.',
-      techStack: ['Python', 'Deep Learning (CNNs)', 'ImageNet'],
-      role_label: ['Python Developer'],
-      role_description: [
-        'Integrated pretrained CNN architectures for classification.',
-        'Wrote evaluation scripts to compare accuracy, runtime, and misclassification cases.',
-        'Automated dataset preprocessing and results reporting.'
-      ],
-      features: [
-        'Classified images as dog vs. not-dog using CNN models.',
-        'Identified specific dog breeds from the ImageNet-trained models.',
-        'Benchmarked AlexNet, VGG, and ResNet architectures for accuracy and runtime trade-offs.',
-        'Handled visually similar breeds (e.g., Beagle vs. Walker Hound) with precision testing.',
-      ],
-      githubUrl: 'https://github.com/talaamm/Image-Classifier-Udacity', // replace with your repo if available
-      // image: '/project-dogclassifier.jpg',
-      date: 'September 2025'
-    },
   ]
 
   const otherProjects = [
@@ -95,9 +56,11 @@ const Projects = () => {
     //   techstack:['Rust'],
     //   githubUrl: 'https://github.com/talaamm/multiplayer-fps'
     // },
-    {
+    // SOCIAL NETWORK ADD IT 
+    {  // used by ~20 people solved a real problem
       id: 'gitea to github',
       title: 'Gitea To GitHub Script',
+      description : "solved a problem", // 1 sentence description
       techstack:['Shell' , 'PowerShell' , 'Batch'],
       githubUrl: 'https://github.com/talaamm/gitea-to-github'
     },
@@ -108,28 +71,28 @@ const Projects = () => {
       githubUrl: 'https://github.com/talaamm/Web-Docker-AsciiArt_March2024',
       demourl: 'https://web-docker-asciiart-march2024.onrender.com'
     },
-    {
-      id: 'math-skills',
-      title: 'Math Skills',
-      techstack:['Go'],
-      githubUrl: 'https://github.com/talaamm/math-skills_April2024'
-    },
+    // {
+    //   id: 'math-skills',
+    //   title: 'Math Skills',
+    //   techstack:['Go'],
+    //   githubUrl: 'https://github.com/talaamm/math-skills_April2024'
+    // },
     // {
     //   id: 'localhost',
     //   title: 'LocalHost - Rust Server',
     //   techstack:['Rust'],
     //   githubUrl: 'https://github.com/talaamm/localhost'
     // },
-    {
-      id: 'library',
-      title: 'Online Library Website',
-      techstack:['HTML' , 'CSS' , 'JavaScript'],
-      githubUrl: 'https://github.com/talaamm/Library-Website-2020',
-      demourl: 'https://talaamm.github.io/Library-Website-2020/home%20page.html'
-    },
+    // {
+    //   id: 'library',
+    //   title: 'Online Library Website',
+    //   techstack:['HTML' , 'CSS' , 'JavaScript'],
+    //   githubUrl: 'https://github.com/talaamm/Library-Website-2020',
+    //   demourl: 'https://talaamm.github.io/Library-Website-2020/home%20page.html'
+    // },
     {
       id: 'inv',
-      title: 'Investigate a Data Set',
+      title: 'Investigate a Data Set', // i hate this project i just did it to see if i like data analysis
       techstack:['Python'],
       githubUrl: 'https://github.com/talaamm/Investigate-a-Data-Set_Udacity_Nov2024'
     },
@@ -142,16 +105,10 @@ const Projects = () => {
     
     {
       id: 'gt',
-      title: 'Groupie Tracker',
+      title: 'Groupie Tracker', // love it!
       techstack:['Go' , 'HTML' , 'CSS' , 'Docker'],
       githubUrl: 'https://github.com/talaamm/groupie-tracker_April2024',
       demourl:'https://groupie-tracker-x4fz.onrender.com/'
-    },
-    {
-      id: 'fg',
-      title: 'Lem-in',
-      techstack:['Go'],
-      githubUrl: 'https://github.com/talaamm/lem-in_June2024'
     },
     {
       id: 'fg',
@@ -162,19 +119,13 @@ const Projects = () => {
     },
     {
       id: 'fg',
-      title: 'Smart Road',
-      techstack:['Rust'],
-      githubUrl: 'https://github.com/talaamm/Smart-Road-May2025'
-    },
-    {
-      id: 'fg',
       title: 'ATM Management System',
       techstack:['C'],
       githubUrl: 'https://github.com/talaamm/ATM-managemnet-system-June2025'
     },
     {
       id: 'fg',
-      title: 'BookStore System',
+      title: 'BookStore System', // univ project
       techstack:['C'],
       githubUrl: 'https://github.com/talaamm/BookStore-bzu-June2025'
     },
@@ -187,10 +138,10 @@ const Projects = () => {
     },
     {
       id: 'fg',
-      title: 'Graphql-01',
+      title: 'Graphql-01', // provides marks and rank naalysis for adam's students
       techstack:['JavaScript' , 'HTML' , 'CSS'],
       githubUrl: 'https://github.com/talaamm/graphql-01',
-      demourl: 'https://noorhalabi911.github.io/graphql-01/'
+      demourl: 'https://noorhalabi911.github.io/graphql-01/' // works only for students
     },
 
   ]
@@ -337,6 +288,7 @@ const Projects = () => {
                 whileHover={{ y: -3, scale: 1.02 }}
               >
                 <h3 className="other-project-title">{project.title}</h3>
+                <div className="section-subtitle">{project.description}</div>
                 <div className="other-project-tech">
                   <div className="other-tech-tags">
                     {project.techstack.map((tech) => (

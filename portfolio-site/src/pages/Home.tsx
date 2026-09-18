@@ -29,67 +29,67 @@ const Home = () => {
     fetchStatsJson()
   }, [])
 
-  const techStack = [
-    { name: 'Go', logo: 'https://www.nicepng.com/png/full/264-2641184_111-kb-png-golang-logo.png' },
-    { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
-    {name: 'Rust', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png'},
-    // { name: 'TypeScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
-    // { name: 'React Native', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
-    { name: 'Node.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
-    {name: 'Java', logo: 'https://img.icons8.com/color/512/java-coffee-cup-logo--v2.png'},
-    { name: 'SQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png' },
-    { name: 'Python', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
-    { name: 'Docker', logo: 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png' },
-    { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
-    { name: 'Git', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg' },
-    {name: 'Vue.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg'},
-    // {name: 'Tailwind CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg'},
-    {name: 'HTML', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg'},
-    {name: 'CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/250px-CSS3_logo_and_wordmark.svg.png'},
-    // {name: 'Sass', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg'},
-    // {name: 'Bootstrap', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_Bootstrap.svg'},
-    // {name: 'Material UI', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Material-UI.svg'},
-    // {name: 'Ant Design', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Material-UI.svg'},
-    {name: 'C' , logo:'https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png'},
-    {name: 'Supabase', logo: 'https://img.icons8.com/fluent/512/supabase.png'},
- {name: 'Slack', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png'},
- {name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
-//  {name: 'Jira', logo: 'https://cdn.worldvectorlogo.com/logos/jira-1.svg'},
- {name: 'Cursor' , logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/cursor.png'},
- {name:'GitHub' , logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png'},
- {name:'Kubernetes' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/3840px-Kubernetes_logo_without_workmark.svg.png'},
- {name:'REST API' , logo: 'https://dfdmyvckxgqn5.cloudfront.net/_app/immutable/assets/building-elegant-rest-apis.d8f4cbc6.jpg'},
- {name:'GraphQL' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/960px-GraphQL_Logo.svg.png'},
- {name:'Postman' , logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png'},
- {name:'Websockets' , logo: 'https://cdn.freebiesupply.com/logos/large/2x/websocket-logo-png-transparent.png'},
- {name:'Linux' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1280px-Tux.svg.png'},
+//   const techStack = [
+//     { name: 'Go', logo: 'https://www.nicepng.com/png/full/264-2641184_111-kb-png-golang-logo.png' },
+//     { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
+//     {name: 'Rust', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png'},
+//     // { name: 'TypeScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
+//     // { name: 'React Native', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
+//     { name: 'Node.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
+//     {name: 'Java', logo: 'https://img.icons8.com/color/512/java-coffee-cup-logo--v2.png'},
+//     { name: 'SQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png' },
+//     { name: 'Python', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
+//     { name: 'Docker', logo: 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png' },
+//     { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+//     { name: 'Git', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg' },
+//     {name: 'Vue.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg'},
+//     // {name: 'Tailwind CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg'},
+//     {name: 'HTML', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg'},
+//     {name: 'CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/250px-CSS3_logo_and_wordmark.svg.png'},
+//     // {name: 'Sass', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg'},
+//     // {name: 'Bootstrap', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_Bootstrap.svg'},
+//     // {name: 'Material UI', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Material-UI.svg'},
+//     // {name: 'Ant Design', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Material-UI.svg'},
+//     {name: 'C' , logo:'https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png'},
+//     {name: 'Supabase', logo: 'https://img.icons8.com/fluent/512/supabase.png'},
+//  {name: 'Slack', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png'},
+//  {name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+// //  {name: 'Jira', logo: 'https://cdn.worldvectorlogo.com/logos/jira-1.svg'},
+//  {name: 'Cursor' , logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/cursor.png'},
+//  {name:'GitHub' , logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png'},
+//  {name:'Kubernetes' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/3840px-Kubernetes_logo_without_workmark.svg.png'},
+//  {name:'REST API' , logo: 'https://dfdmyvckxgqn5.cloudfront.net/_app/immutable/assets/building-elegant-rest-apis.d8f4cbc6.jpg'},
+//  {name:'GraphQL' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/960px-GraphQL_Logo.svg.png'},
+//  {name:'Postman' , logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png'},
+//  {name:'Websockets' , logo: 'https://cdn.freebiesupply.com/logos/large/2x/websocket-logo-png-transparent.png'},
+//  {name:'Linux' , logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1280px-Tux.svg.png'},
 
- //  {name: 'Confluence', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
-//  {name: 'Notion', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
-//  {name: 'Trello', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+//  //  {name: 'Confluence', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+// //  {name: 'Notion', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
+// //  {name: 'Trello', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'},
  
-  ]
+//   ]
 
-  // const featuredBlogs = [
-  //   {
-  //     title: "Building Scalable APIs with Go",
-  //     url: "https://dev.to/yourusername/building-scalable-apis-with-go",
-  //     views: "15.2k",
-  //     date: "2024-01-15"
-  //   },
-  //   {
-  //     title: "React Performance Optimization Tips",
-  //     url: "https://dev.to/yourusername/react-performance-optimization-tips",
-  //     views: "12.8k",
-  //     date: "2024-02-03"
-  //   },
-  //   {
-  //     title: "Database Design Best Practices",
-  //     url: "https://dev.to/yourusername/database-design-best-practices",
-  //     views: "9.5k",
-  //     date: "2024-02-20"
-  //   }
-  // ]
+//   // const featuredBlogs = [
+//   //   {
+//   //     title: "Building Scalable APIs with Go",
+//   //     url: "https://dev.to/yourusername/building-scalable-apis-with-go",
+//   //     views: "15.2k",
+//   //     date: "2024-01-15"
+//   //   },
+//   //   {
+//   //     title: "React Performance Optimization Tips",
+//   //     url: "https://dev.to/yourusername/react-performance-optimization-tips",
+//   //     views: "12.8k",
+//   //     date: "2024-02-03"
+//   //   },
+//   //   {
+//   //     title: "Database Design Best Practices",
+//   //     url: "https://dev.to/yourusername/database-design-best-practices",
+//   //     views: "9.5k",
+//   //     date: "2024-02-20"
+//   //   }
+//   // ]
 
   return (
     <div className="container">
@@ -123,9 +123,13 @@ const Home = () => {
 
           <h1>Hi, I'm {NAME}</h1>
           <p className="hero-subtitle">
-          Computer Engineering student, Full-Stack Developer & Technical Writer. Building systems, real-time applications and sharing knowledge with the developer community. </p>
+          {/* Computer Engineering student, Full-Stack Developer & Technical Writer. Building systems, real-time applications and sharing knowledge with the developer community. 
+           */}
+           Computer Engineering Student & Full-Stack Developer exploring systems from software to hardware. I build real-world applications, and software simulations while diving deeper into computer architecture, systems programming, and how computing works under the hood.
 
-          <div className="hero-stats mb-8">
+          </p>
+
+          {/* <div className="hero-stats mb-8">
             <div className="stat-item">
               <FolderOpen size={24} />
               <span><Counter target={20} suffix="+ Projects" /></span>
@@ -138,7 +142,7 @@ const Home = () => {
               <Eye size={24} />
               <span><Counter target={totalViews} suffix="+ Blog Readers" /></span>
             </div>
-          </div>
+          </div> */}
 
           <div className="hero-links">
             <a href={RESUME_URL} className="btn-primary" download>
@@ -149,12 +153,31 @@ const Home = () => {
               <Mail size={20} />
               Get In Touch
             </a>
+             <div className="social-links">
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+            <Github size={24} />
+            GitHub
+          </a>
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+            <Linkedin size={24} />
+            LinkedIn
+          </a>
+          <a href={DEVTO_URL} target="_blank" rel="noopener noreferrer">
+            <ExternalLink size={24} />
+            Dev.to
+          </a>
+          {/* <a href={`mailto:${EMAIL}`} target="_blank" rel="noopener noreferrer"></a> */}
+          {/* <a href={`mailto:${EMAIL}`} target="_blank" rel="noopener noreferrer">
+            <Mail size={24} />
+            Email
+          </a> */}
+        </div>
           </div>
         </div>
       </motion.section>
 
       {/* Tech Stack Section */}
-      <motion.section 
+      {/* <motion.section 
         className="section"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -186,7 +209,7 @@ const Home = () => {
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 
      {/* { Featured Blog Posts
       <motion.section 
@@ -225,37 +248,19 @@ const Home = () => {
       </motion.section>} */}
 
       {/* Quick Links */}
-      <motion.section 
+      {/* <motion.section 
         className="section text-center"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
       >
         <h2 className="mb-8">Let's Connect</h2>
-        <div className="social-links">
-          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-            <Github size={24} />
-            GitHub
-          </a>
-          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-            <Linkedin size={24} />
-            LinkedIn
-          </a>
-          <a href={DEVTO_URL} target="_blank" rel="noopener noreferrer">
-            <ExternalLink size={24} />
-            Dev.to
-          </a>
-          {/* <a href={`mailto:${EMAIL}`} target="_blank" rel="noopener noreferrer"></a> */}
-          <a href={`mailto:${EMAIL}`} target="_blank" rel="noopener noreferrer">
-            <Mail size={24} />
-            Email
-          </a>
-        </div>
-        <p className="hero-subtitle" style={{ fontSize: '1.0rem' }}>
+       
+        {/* <p className="hero-subtitle" style={{ fontSize: '1.0rem' }}>
           You can also find me by Googling my name.
-        </p>
-      </motion.section>
-    </div>
+        </p> */}
+      {/* </motion.section> */}
+    // </div>
   )
 }
 

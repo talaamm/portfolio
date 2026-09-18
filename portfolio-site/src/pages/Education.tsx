@@ -9,10 +9,10 @@ const Education = () => {
       institution: 'Birzeit University',
       degree: 'Bachelor of Engineering in Computer Engineering',
       location: 'Birzeit City',
-      startDate: '2023',
+      startDate: '2024',
       endDate: '2028',
       status: 'In Progress',
-      gpa: '89/100',
+      gpa: 'A',
       achievements: [
         {
           title: 'Honor\'s List',
@@ -44,7 +44,7 @@ const Education = () => {
         // },
         {
           title: 'Relevant Course Work',
-          description: 'Object Oriented Programming, Data Structures, Algorithms, Linux Laboratory, Computer Organization, Micro-Processors, and more.',
+          description: 'Object Oriented Programming, Data Structures & Algorithms, Linux, Operating Systems, Computer Organization, Computer Design, Micro-Processors, and more.',
           icon: '📊',
           highlight: 'Software & Hardware',
           color: '#10b981'
@@ -57,7 +57,7 @@ const Education = () => {
           color: '#3b82f6'
         }
       ],
-      description: 'Pursuing a Computer Engineering degree with focus on software engineering, algorithms, and modern development practices.',
+      description: 'Pursuing a Computer Engineering degree with a focus on computer systems, software engineering, algorithms, computer architecture, and hardware-software integration.',
       logo: 'https://upload.wikimedia.org/wikipedia/ar/thumb/1/16/Birzeit_University_logo.svg/1280px-Birzeit_University_logo.svg.png'
     },
     {
@@ -94,7 +94,7 @@ const Education = () => {
           color: '#3b82f6'
         }
       ],
-      description: 'Enrolled in a comprehensive coding and professional development program that combines technical training with mentorship. The program connected me with multiple experienced IT mentors, providing insights into real-world work environments and guidance on building a career in technology.',
+      description: 'Completed an intensive full-stack development and professional development program combining hands-on software engineering, systems programming, cloud technologies, and mentorship from experienced industry professionals.',
       logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGVx9FXWENtIw/company-logo_200_200/company-logo_200_200/0/1734096794786/notre_dame_international_jerusalem_logo?e=2147483647&v=beta&t=QCkMEwPTF7WMIC-MfUjjZi8vujBjgU4fWu5fwhcciBg'
     },
     {

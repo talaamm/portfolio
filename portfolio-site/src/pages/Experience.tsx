@@ -80,7 +80,17 @@ const Experience = () => {
       description: 'Contributed to a real-world app by developing a functional support system that allows users to submit inquiries directly through the app\'s support page, and assisted with deployment-related work.',
       impact: 'Designed and developed the support page and its user-facing form. Implemented form submission and automated delivery of support requests to the team\'s support email. Integrated the feature into the existing application and user experience.',
       skills: ['Technical Evaluation', 'Mentoring'],
-      hours: '12',
+      hours: '12 hours',
+      location: 'Remote'
+    },
+  {
+      title: 'Technical Speaker & Community Member',
+      organization: 'CodeHer - Birzeit University',
+      period: 'March 2026 - Present',
+      description: 'Contribute to the CodeHer student community at Birzeit University by sharing technical knowledge and supporting peer learning through student-led sessions.',
+      impact: 'Delivered, prepared and presented technical session in an accessible, student-focused format, for students interested in technology and software development.',
+      skills: ['Technical Speaking', 'Knowledge Sharing' , 'Community Engagement'],
+      hours: 'Ongoing',
       location: 'Remote'
     },
 
@@ -125,6 +135,7 @@ const Experience = () => {
       hours: '30+ hours',
       location: 'On-site / Jerusalem'
     },
+
     {
       title: 'Mentor - Hour of Code Events',
       organization: "Rosary Sister's High School",

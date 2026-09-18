@@ -79,8 +79,8 @@ const Blog = () => {
     return dateB - dateA
   })
 
-  const featuredPosts = sortedPosts.slice(0, 3);
-  const regularPosts = sortedPosts.slice(3);
+  const featuredPosts = sortedPosts.slice(0, 4);
+  const regularPosts = sortedPosts.slice(4);
 
   const totalViewsComputed = backendTotalViews ?? 0
 

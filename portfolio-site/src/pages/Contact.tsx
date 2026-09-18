@@ -262,7 +262,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="card">
+            {/* <div className="card">
               <h2>Response Time</h2>
               <p>I typically respond to messages within 24 hours.</p>
               <div className="response-time">
@@ -274,9 +274,9 @@ const Contact = () => {
                 </div>
                 {/* <div className="time-item">
                   <strong>Phone:</strong> Same day
-                </div> */}
+                </div> 
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </motion.section>

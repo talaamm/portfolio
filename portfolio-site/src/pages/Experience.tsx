@@ -5,6 +5,22 @@ import { Calendar, MapPin, Code, GraduationCap } from 'lucide-react'
 
 const Experience = () => {
   const experiences = [
+       {
+      type: 'Contract',
+      title: 'Full-Stack Developer',
+      company: 'Proofessional Security App',
+      location: 'Remote',
+      period: 'August 2026 - Present',
+      description: 'Designed and developed a production employee time-tracking application from the ground up for a company managing 50+ employees. Responsible for the application\'s architecture, implementation, database design, core features, testing, and deployment process, collaborating with a development partner during deployment.',
+      achievements: [
+'Designed and developed the application end-to-end using Flutter and Supabase.',
+'Implemented employee authentication, GPS-based check-in/out, work-session tracking, workplace management, and administrative controls.',
+'Built dashboards and reporting functionality for monitoring employee work hours and generating monthly reports.',
+'Prepared the application for Android and iOS deployment and worked through the production deployment process collaboratively.',
+'Built the system around the operational requirements of a real company and its 50+ employees.',
+],
+      skills: ['Flutter', 'Supabase', 'Mobile Development', 'GPS']
+    },
     {
       type: 'freelance',
       title: 'Technical Writer',
@@ -57,21 +73,32 @@ const Experience = () => {
   }
 
   const volunteering = [
+  {
+      title: 'Software Developer',
+      organization: 'Jerusalem Spikers App',
+      period: 'May 2026 - June 2026',
+      description: 'Contributed to a real-world app by developing a functional support system that allows users to submit inquiries directly through the app\'s support page, and assisted with deployment-related work.',
+      impact: 'Designed and developed the support page and its user-facing form. Implemented form submission and automated delivery of support requests to the team\'s support email. Integrated the feature into the existing application and user experience.',
+      skills: ['Technical Evaluation', 'Mentoring'],
+      hours: '12',
+      location: 'Remote'
+    },
+
     {
       title: 'DEV Challenge Judge',
       organization: 'Forem / DEV Community',
-      period: 'Feb 2026 - Present',
-      description: 'Review and evaluate coding challenge submissions from developers worldwide, focusing on code quality, creativity, technical implementation, and problem-solving approaches.',
-      impact: 'Provided constructive feedback and guidance to developers, helping improve the quality of projects and supporting community learning.',
-      skills: ['Code Review', 'Technical Evaluation', 'Mentoring'],
-      hours: 'Ongoing',
+      period: 'Feb 2026 - May 2026',
+      description: 'Assess technical project submissions for DEV Community challenges, evaluating whether projects meet the challenge requirements and function as intended.',
+      impact: 'Reviewed project submissions against challenge requirements and evaluation criteria. Verified that required functionality and project components were present. Tested projects from a user\'s perspective to assess whether they worked as expected. Evaluated overall completeness, presentation, and adherence to the challenge brief.',
+      skills: ['Technical Evaluation', 'Mentoring'],
+      hours: '-',
       location: 'Remote'
     },
     {
       title: 'Data Collection Volunteer',
       organization: 'PALLAM Chatbot Project at BZU',
       period: 'March 2025 - April 2025',
-      description: 'Assisted in building a specialized chatbot by collecting and organizing thousands of question-answer pairs to support the training of a fine-tuned large language model (LLM).',
+      description: 'Contributed to collecting, organizing, and preparing 500+ question-answer pairs used to support the development of a specialized educational chatbot.',
       impact: 'Contributed to the creation of a cross-platform educational chatbot and API, improving accuracy and accessibility of knowledge for students and researchers.',
       skills: ['Data Collection', 'Research', 'Team Collaboration', 'Documentation'],
       hours: '40+ hours',

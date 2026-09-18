@@ -1744,6 +1744,44 @@ main {
   }
 }
 
+/* In Progress section styles */
+.in-progress-card {
+  position: relative;
+  border: 1px dashed var(--primary-light);
+  background: repeating-linear-gradient(
+    135deg,
+    white,
+    white 10px,
+    var(--accent) 10px,
+    var(--accent) 20px
+  );
+}
+
+.in-progress-badge {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
 /* Language Skills page styles */
 .language-stats {
   margin-bottom: 3rem;

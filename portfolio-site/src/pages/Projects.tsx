@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, ExternalLink, Calendar } from 'lucide-react'
+import { Github, ExternalLink, Calendar, Wrench } from 'lucide-react'
 
 const Projects = () => {
   const projects = [
@@ -17,7 +17,7 @@ const Projects = () => {
     'Implemented FCFS, SJF, SRTF, Round Robin, and Priority scheduling algorithms.',
     'Visualized process execution using interactive Gantt charts and CPU timelines.',
     'Calculated waiting time, turnaround time, response time, and other scheduling metrics.',
-    'Supported multiple CPUs, CPU bursts, and I/O operations to simulate more realistic workloads.',
+    'Supported multiple CPU bursts, and I/O operations to simulate more realistic workloads.',
     'Migrated the original scheduling implementation from C to Go and developed a browser-based interface.'
   ],
   githubUrl: 'https://github.com/talaamm/CPU-Scheduler-Visualizer',
@@ -45,8 +45,29 @@ const Projects = () => {
       ],
       githubUrl: 'https://github.com/talaamm/zero-shell',
       // image: '/project-0shell.jpg',
-      date: 'September 2025'
+      date: 'SEPTEMBER 2025'
     },
+  ]
+
+  const inProgressProjects = [
+    {
+      id: 'demo-in-progress',
+      title: 'Pseudo-Code → Assembly Translator',
+      description: 'An educational translator that converts a simplified pseudo-code language into assembly instructions, exploring how high-level operations can be represented at the instruction level.',
+      techstack: ['Assembly', 'Computer Architecture'],
+    },
+     {
+      id: 'demo-in-progress',
+      title: 'Banker\'s Algorithm Visualizer',
+      description: 'An educational tool that visualizes the Banker\'s algorithm for deadlock avoidance in operating systems.',
+      techstack: ['JavaScript', 'HTML', 'CSS'],
+    },
+    //  {
+    //   id: 'demo-in-progress',
+    //   title: 'Pseudo-Code → Assembly Translator',
+    //   description: 'An educational translator that converts a simplified pseudo-code language into assembly instructions, exploring how high-level operations can be represented at the instruction level.',
+    //   techstack: ['Assembly', 'Computer Architecture'],
+    // },
   ]
 
   const otherProjects = [
@@ -57,20 +78,35 @@ const Projects = () => {
     //   githubUrl: 'https://github.com/talaamm/multiplayer-fps'
     // },
     // SOCIAL NETWORK ADD IT 
-    {  // used by ~20 people solved a real problem
-      id: 'gitea to github',
-      title: 'Gitea To GitHub Script',
-      description : "solved a problem", // 1 sentence description
-      techstack:['Shell' , 'PowerShell' , 'Batch'],
-      githubUrl: 'https://github.com/talaamm/gitea-to-github'
-    },
+    // {  // used by ~20 people solved a real problem
+    //   id: 'gitea to github',
+    //   title: 'Gitea To GitHub Script',
+    //   description : "solved a problem", // 1 sentence description
+    //   techstack:['Shell' , 'PowerShell' , 'Batch'],
+    //   githubUrl: 'https://github.com/talaamm/gitea-to-github'
+    // },
+      {
+    id: 'gitea-to-github',
+    title: 'Gitea To GitHub Script',
+    description: 'A migration utility that automates transferring repositories from a self-hosted Gitea instance to GitHub, reducing repetitive manual migration work.',
+    techstack: ['Shell', 'PowerShell', 'Batch'],
+    githubUrl: 'https://github.com/talaamm/gitea-to-github'
+  },
     {
-      id: 'ascii-art',
-      title: 'Ascii Art Web',
-      techstack:['Go' , 'Docker' , 'HTML' , 'CSS'],
-      githubUrl: 'https://github.com/talaamm/Web-Docker-AsciiArt_March2024',
-      demourl: 'https://web-docker-asciiart-march2024.onrender.com'
-    },
+    id: 'matrix-multiplication',
+    title: 'Matrix Multiplication Performance Analysis',
+    description: 'A performance study comparing sequential, row-wise, column-wise, and block-based matrix multiplication using POSIX threads, benchmarking speedup, efficiency, and cache locality.',
+    techstack: ['C', 'POSIX Threads'],
+    githubUrl: 'https://github.com/talaamm/Matrix-Multiplication-Performance-Analysis',
+    demourl: 'https://dev.to/talaamm/i-thought-more-threads-always-improve-performance-my-assumption-was-wrong-370k'
+  },
+    // {
+    //   id: 'ascii-art',
+    //   title: 'Ascii Art Web',
+    //   techstack:['Go' , 'Docker' , 'HTML' , 'CSS'],
+    //   githubUrl: 'https://github.com/talaamm/Web-Docker-AsciiArt_March2024',
+    //   demourl: 'https://web-docker-asciiart-march2024.onrender.com'
+    // },
     // {
     //   id: 'math-skills',
     //   title: 'Math Skills',
@@ -90,59 +126,74 @@ const Projects = () => {
     //   githubUrl: 'https://github.com/talaamm/Library-Website-2020',
     //   demourl: 'https://talaamm.github.io/Library-Website-2020/home%20page.html'
     // },
-    {
-      id: 'inv',
-      title: 'Investigate a Data Set', // i hate this project i just did it to see if i like data analysis
-      techstack:['Python'],
-      githubUrl: 'https://github.com/talaamm/Investigate-a-Data-Set_Udacity_Nov2024'
-    },
-    {
-      id: 'go-rel',
-      title: 'Go Reloaded',
-      techstack:['Go'],
-      githubUrl: 'https://github.com/talaamm/go-reloaded_Oct2023'
-    },
+    // {
+    //   id: 'inv',
+    //   title: 'Investigate a Data Set', // i hate this project i just did it to see if i like data analysis
+    //   techstack:['Python'],
+    //   githubUrl: 'https://github.com/talaamm/Investigate-a-Data-Set_Udacity_Nov2024'
+    // },
+    // {
+    //   id: 'go-rel',
+    //   title: 'Go Reloaded',
+    //   techstack:['Go'],
+    //   githubUrl: 'https://github.com/talaamm/go-reloaded_Oct2023'
+    // },
     
     {
       id: 'gt',
       title: 'Groupie Tracker', // love it!
+          description: 'A Go web application that consumes external APIs to explore artists, albums, members, concert locations, and relationships between musical data.',
       techstack:['Go' , 'HTML' , 'CSS' , 'Docker'],
       githubUrl: 'https://github.com/talaamm/groupie-tracker_April2024',
       demourl:'https://groupie-tracker-x4fz.onrender.com/'
     },
-    {
-      id: 'fg',
-      title: 'Filler Game',
-      techstack:['Rust'],
-      githubUrl: 'https://github.com/talaamm/Filler-Game-May2025',
-      demourl: 'https://cosmic-grid-filler.lovable.app/'
-    },
-    {
-      id: 'fg',
-      title: 'ATM Management System',
-      techstack:['C'],
-      githubUrl: 'https://github.com/talaamm/ATM-managemnet-system-June2025'
-    },
-    {
-      id: 'fg',
-      title: 'BookStore System', // univ project
-      techstack:['C'],
-      githubUrl: 'https://github.com/talaamm/BookStore-bzu-June2025'
-    },
-    {
-      id: 'fg',
-      title: 'Duck Hunt Game',
-      techstack:['JavaScript' , 'HTML' , 'CSS'],
-      githubUrl: 'https://github.com/talaamm/make-your-game',
-      demourl: 'https://talaamm.github.io/make-your-game_Nov2024/'
-    },
-    {
-      id: 'fg',
-      title: 'Graphql-01', // provides marks and rank naalysis for adam's students
-      techstack:['JavaScript' , 'HTML' , 'CSS'],
-      githubUrl: 'https://github.com/talaamm/graphql-01',
-      demourl: 'https://noorhalabi911.github.io/graphql-01/' // works only for students
-    },
+    
+    // {
+    //   id: 'fg',
+    //   title: 'BookStore System', // univ project
+    //   techstack:['C'],
+    //   githubUrl: 'https://github.com/talaamm/BookStore-bzu-June2025'
+    // },
+    // {
+    //   id: 'fg',
+    //   title: 'Duck Hunt Game',
+    //   techstack:['JavaScript' , 'HTML' , 'CSS'],
+    //   githubUrl: 'https://github.com/talaamm/make-your-game',
+    //   demourl: 'https://talaamm.github.io/make-your-game_Nov2024/'
+    // },  {
+ {   id: 'graphql-01',
+    title: 'GraphQL Student Analytics',
+    description: 'A web application that uses GraphQL to retrieve and visualize academic performance and ranking data for students in the ADAM program.',
+    techstack: ['JavaScript', 'HTML', 'CSS', 'GraphQL'],
+    githubUrl: 'https://github.com/talaamm/graphql-01',
+    demourl: 'https://noorhalabi911.github.io/graphql-01/'
+  },
+
+  {
+    id: 'ascii-art',
+    title: 'ASCII Art Web',
+    description: 'A Go web application that converts text into ASCII art using multiple rendering styles through a browser-based interface.',
+    techstack: ['Go', 'Docker', 'HTML', 'CSS'],
+    githubUrl: 'https://github.com/talaamm/Web-Docker-AsciiArt_March2024',
+    demourl: 'https://web-docker-asciiart-march2024.onrender.com'
+  },
+
+  {
+    id: 'filler-game',
+    title: 'Filler Game',
+    description: 'A Rust implementation of a strategic grid-based game involving algorithmic decision-making and competitive territory control.',
+    techstack: ['Rust'],
+    githubUrl: 'https://github.com/talaamm/Filler-Game-May2025',
+    demourl: 'https://cosmic-grid-filler.lovable.app/'
+  },
+
+  {
+    id: 'atm-management',
+    title: 'ATM Management System',
+    description: 'A C-based console application for managing ATM operations and user banking transactions using structured programming and file handling.',
+    techstack: ['C'],
+    githubUrl: 'https://github.com/talaamm/ATM-managemnet-system-June2025'
+  },
 
   ]
 
@@ -262,6 +313,48 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* In Progress Section */}
+        <motion.section
+          className="section mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="text-center mb-8">
+            <h2>In Progress</h2>
+            <p className="section-subtitle">
+              Projects I'm currently building — check back for updates.
+            </p>
+          </div>
+
+          <div className="other-projects-grid">
+            {inProgressProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                className="other-project-card in-progress-card"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.4 }}
+                whileHover={{ y: -3, scale: 1.02 }}
+              >
+                <div className="in-progress-badge">
+                  <Wrench size={12} />
+                  In Progress
+                </div>
+                <h3 className="other-project-title">{project.title}</h3>
+                <div className="section-subtitle">{project.description}</div>
+                <div className="other-project-tech">
+                  <div className="other-tech-tags">
+                    {project.techstack.map((tech) => (
+                      <span key={tech} className="other-tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
         {/* Other Projects Section */}
         <motion.section

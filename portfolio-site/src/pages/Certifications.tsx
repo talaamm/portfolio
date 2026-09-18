@@ -3,6 +3,15 @@ import { ExternalLink, Award, Calendar } from 'lucide-react'
 
 const Certifications = () => {
   const certifications = [
+       {
+      title: 'Flutter Programing & Coding in the Age of AI',
+      issuer: 'Techlinic',
+      date: 'May 2026',
+      // credentialId: 'MINNA-AI-2025-001',
+      verifyUrl: 'https://drive.google.com/file/d/1nom6ycHr3q-p4nBl50dx2sYuErsBMrT-/view?usp=sharing',
+      logo: 'https://jinnovate.tech/wp-content/uploads/2024/04/techlinic.png',
+      description: 'A hands-on program covering Flutter application development and modern AI-assisted software engineering. Explored how companies integrate AI into development workflows such as Claude Code and Codex as engineering collaborators.',
+    },
     {
       title: 'Data Analyst Essentials',
       issuer: 'Udacity',
@@ -161,7 +170,7 @@ description: 'Studied research skills and web development fundamentals. Complete
                 className="verify-link"
               >
                 <ExternalLink size={16} />
-                Verify Credential
+                View Certificate
               </a>
             </motion.div>
           ))}
@@ -229,7 +238,7 @@ description: 'Studied research skills and web development fundamentals. Complete
                   className="verify-link"
                 >
                   <ExternalLink size={16} />
-                  Verify Credential
+                  View Certificate
                 </a>
               </motion.div>
             ))}

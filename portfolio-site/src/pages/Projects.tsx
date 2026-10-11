@@ -154,13 +154,13 @@ const Projects = () => {
     //   techstack:['C'],
     //   githubUrl: 'https://github.com/talaamm/BookStore-bzu-June2025'
     // },
-    // {
-    //   id: 'fg',
-    //   title: 'Duck Hunt Game',
-    //   techstack:['JavaScript' , 'HTML' , 'CSS'],
-    //   githubUrl: 'https://github.com/talaamm/make-your-game',
-    //   demourl: 'https://talaamm.github.io/make-your-game_Nov2024/'
-    // },  {
+    {
+      id: 'fg',
+      title: 'Duck Hunt Game',
+      techstack:['JavaScript' , 'HTML' , 'CSS'],
+      githubUrl: 'https://github.com/talaamm/make-your-game',
+      demourl: 'https://talaamm.github.io/make-your-game_Nov2024/'
+    },  {
  {   id: 'graphql-01',
     title: 'GraphQL Student Analytics',
     description: 'A web application that uses GraphQL to retrieve and visualize academic performance and ranking data for students in the ADAM program.',
